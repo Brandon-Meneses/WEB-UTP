@@ -1,33 +1,79 @@
 /* Estilos generales */
+
+:root {
+    --color-turquesa: #3bbad8;
+    --color-negro: #212529;
+    --color-plomo: #dddddd;
+    --color-plomo-claro: #f3f3f3;
+    --color-blanco: #ffffff;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
-    color: black;
+    background-color: var(--color-turquesa);
+    color: var(--color-negro);
     margin: 0;
     padding: 0;
 }
 
+
 /* Header */
 header {
-    background-color: #00CED1; 
-    color: white;
-    text-align: center;
+    background-image: url('/Imagenes/Fondo_header_ajustado.jpg');
+    background-size: contain;
+    position: relative;
+    color: var(--color-blanco); 
+    text-align: left;
+    font-size: 30px;
     padding: 20px 0;
+    display: grid;
+    grid-template-columns: auto auto 1fr; 
+    align-items: center;
+}
+/* Capa semitransparente */
+.header-overlay {
+    position: absolute; /* Establece la posición absoluta para que la capa se superponga a la imagen */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho del encabezado */
+    height: 100%; /* Ocupa toda la altura del encabezado */
+    background-color: var(--color-turquesa); /* Color de fondo deseado */
+    opacity: 0.7; /* Ajusta la opacidad según sea necesario */
+    backdrop-filter: blur(10px);
 }
 
-header h1 {
-    margin: 0;
-}
 
+/* Estilos para la imagen del logo */
+.logo {
+    width: auto;
+    height: 80px; 
+    margin-right: 20px; 
+    display: inline-block; 
+    vertical-align: middle;
+    align-items: left;
+    
+}
+header h1, header nav { 
+    position: relative;
+    z-index: 1; 
+    -webkit-text-stroke: 1px var(--color-negro);
+}
+header nav {
+    justify-self: end; 
+    padding: 10px;
+    margin: 70px;
+    font-size: 25px;
+}
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 nav ul li:last-child {
@@ -36,25 +82,34 @@ nav ul li:last-child {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: var(--color-blanco);
+    -webkit-text-stroke: 0.5px var(--color-negro);
 }
+
 
 /* Aside */
 aside {
-    background-color: #00CED1;
-    color: white;
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
     padding: 20px;
 }
 
 /* Section */
 section {
+    
     padding: 20px;
+}
+.a{
+    background-color: var(--color-plomo-claro);
+}
+.b{
+    background-color: var(--color-plomo);
 }
 
 /* Footer */
 footer {
-    background-color: #00CED1; 
-    color: white;
+    background-color: var(--color-turquesa);
+    color: var(--color-blanco);
     text-align: center;
     padding: 20px 0;
 }
@@ -77,7 +132,7 @@ footer {
 
 .footer-section h3 {
     margin: 0 0 10px;
-    color: black;
+    color: var(--color-negro);
     font-size: 25px;
     
 }
@@ -93,7 +148,7 @@ footer {
 
 .footer-section ul li a {
     text-decoration: none;
-    color: white;
+    color: var(--color-plomo-claro)
 }
 
 .copyright {
@@ -102,7 +157,7 @@ footer {
 
 /* Enlaces */
 a {
-    color: white; 
+    color: var(--color-plomo-claro)
 }
 
 a:hover {
