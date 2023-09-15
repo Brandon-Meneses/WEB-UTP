@@ -1,11 +1,20 @@
 /* Estilos generales */
 
+
 :root {
     --color-turquesa: #3bbad8;
     --color-negro: #212529;
     --color-plomo: #dddddd;
     --color-plomo-claro: #f3f3f3;
     --color-blanco: #ffffff;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
 }
 
 body {
@@ -24,21 +33,21 @@ header {
     position: relative;
     color: var(--color-blanco); 
     text-align: left;
-    font-size: 30px;
-    padding: 20px 0;
+    font-size: 3rem;
+    padding: 2rem 0;
     display: grid;
     grid-template-columns: auto auto 1fr; 
     align-items: center;
 }
 /* Capa semitransparente */
 .header-overlay {
-    position: absolute; /* Establece la posición absoluta para que la capa se superponga a la imagen */
+    position: absolute; 
     top: 0;
     left: 0;
-    width: 100%; /* Ocupa todo el ancho del encabezado */
-    height: 100%; /* Ocupa toda la altura del encabezado */
-    background-color: var(--color-turquesa); /* Color de fondo deseado */
-    opacity: 0.7; /* Ajusta la opacidad según sea necesario */
+    width: 100%; 
+    height: 100%; 
+    background-color: var(--color-turquesa); 
+    opacity: 0.7;
     backdrop-filter: blur(10px);
 }
 
@@ -47,22 +56,23 @@ header {
 .logo {
     width: auto;
     height: 80px; 
-    margin-right: 20px; 
+    margin-right: 2rem; 
     display: inline-block; 
     vertical-align: middle;
     align-items: left;
     
 }
+/*Superponer h1 y nav sobre difuminación*/
 header h1, header nav { 
     position: relative;
     z-index: 1; 
-    -webkit-text-stroke: 1px var(--color-negro);
+    -webkit-text-stroke: 1px var(--color-negro); /*Contorno de letras*/
 }
 header nav {
     justify-self: end; 
-    padding: 10px;
-    margin: 70px;
-    font-size: 25px;
+    padding: 1rem;
+    margin: 7rem;
+    font-size: 2.5rem;
 }
 
 nav ul {
@@ -83,7 +93,7 @@ nav ul li:last-child {
 nav ul li a {
     text-decoration: none;
     color: var(--color-blanco);
-    -webkit-text-stroke: 0.5px var(--color-negro);
+    -webkit-text-stroke: 0.5px var(--color-negro);/*Contorno de letras*/
 }
 
 
@@ -91,13 +101,15 @@ nav ul li a {
 aside {
     background-color: var(--color-negro);
     color: var(--color-blanco);
-    padding: 20px;
+    padding: 2rem;
+    font-size: 1.6rem;
 }
 
 /* Section */
 section {
     
-    padding: 20px;
+    padding: 2rem;
+    font-size: 1.6rem;
 }
 .a{
     background-color: var(--color-plomo-claro);
@@ -112,6 +124,7 @@ footer {
     color: var(--color-blanco);
     text-align: center;
     padding: 20px 0;
+    font-size: 1.6rem;
 }
 
 .footer-container {
@@ -122,7 +135,7 @@ footer {
 
 .footer-section {
     flex: 1;
-    margin-right: 20px;
+    margin-right: 2rem;
     text-align: left;
 }
 
@@ -131,9 +144,9 @@ footer {
 }
 
 .footer-section h3 {
-    margin: 0 0 10px;
+    margin: 0 0 1rem;
     color: var(--color-negro);
-    font-size: 25px;
+    font-size: 2.5rem;
     
 }
 
@@ -143,7 +156,7 @@ footer {
 }
 
 .footer-section ul li {
-    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
 }
 
 .footer-section ul li a {
