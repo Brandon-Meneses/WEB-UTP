@@ -176,3 +176,20 @@ a {
 a:hover {
     text-decoration: underline;
 }
+/* Media Query para vista de móvil */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 1.6rem; 
+    }
+    header nav {
+        display: none;
+    }
+}
+
+/* Media Query para vista de escritorio */
+@media screen and (min-width: 769px) {
+    
+    header nav {
+        display: block;
+    }
+}
