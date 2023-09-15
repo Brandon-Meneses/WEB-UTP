@@ -1,26 +1,8 @@
-/* Estilos generales */
-
-
-:root {
-    --color-turquesa: #3bbad8;
-    --color-negro: #212529;
-    --color-plomo: #dddddd;
-    --color-plomo-claro: #f3f3f3;
-    --color-blanco: #ffffff;
-}
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-html{
-    font-size: 62.5%;
-}
 
 body {
     font-family: Arial, sans-serif;
-    background-color: var(--color-turquesa);
-    color: var(--color-negro);
+    background-color: $color-turquesa;
+    color: $color-negro;
     margin: 0;
     padding: 0;
 }
@@ -28,10 +10,10 @@ body {
 
 /* Header */
 header {
-    background-image: url('/Imagenes/Fondo_header_ajustado.jpg');
+    background-image: url('../img/Fondo_header_ajustado.jpg');
     background-size: contain;
     position: relative;
-    color: var(--color-blanco); 
+    color: $color-blanco; 
     text-align: left;
     font-size: 3rem;
     padding: 2rem 0;
@@ -46,7 +28,7 @@ header {
     left: 0;
     width: 100%; 
     height: 100%; 
-    background-color: var(--color-turquesa); 
+    background-color: $color-turquesa; 
     opacity: 0.7;
     backdrop-filter: blur(10px);
 }
@@ -66,7 +48,7 @@ header {
 header h1, header nav { 
     position: relative;
     z-index: 1; 
-    -webkit-text-stroke: 1px var(--color-negro); /*Contorno de letras*/
+    -webkit-text-stroke: 1px $color-negro; /*Contorno de letras*/
 }
 header nav {
     justify-self: end; 
@@ -92,15 +74,15 @@ nav ul li:last-child {
 
 nav ul li a {
     text-decoration: none;
-    color: var(--color-blanco);
-    -webkit-text-stroke: 0.5px var(--color-negro);/*Contorno de letras*/
+    color: $color-blanco;
+    -webkit-text-stroke: 0.5px $color-negro;/*Contorno de letras*/
 }
 
 
 /* Aside */
 aside {
-    background-color: var(--color-negro);
-    color: var(--color-blanco);
+    background-color: $color-negro;
+    color: $color-blanco;
     padding: 2rem;
     font-size: 1.6rem;
 }
@@ -112,16 +94,16 @@ section {
     font-size: 1.6rem;
 }
 .a{
-    background-color: var(--color-plomo-claro);
+    background-color: $color-plomo-claro;
 }
 .b{
-    background-color: var(--color-plomo);
+    background-color: $color-plomo;
 }
 
 /* Footer */
 footer {
-    background-color: var(--color-turquesa);
-    color: var(--color-blanco);
+    background-color: $color-turquesa;
+    color: $color-blanco;
     text-align: center;
     padding: 20px 0;
     font-size: 1.6rem;
@@ -145,7 +127,7 @@ footer {
 
 .footer-section h3 {
     margin: 0 0 1rem;
-    color: var(--color-negro);
+    color: $color-negro;
     font-size: 2.5rem;
     
 }
@@ -161,7 +143,7 @@ footer {
 
 .footer-section ul li a {
     text-decoration: none;
-    color: var(--color-plomo-claro)
+    color: $color-plomo-claro
 }
 
 .copyright {
@@ -170,26 +152,9 @@ footer {
 
 /* Enlaces */
 a {
-    color: var(--color-plomo-claro)
+    color: $color-plomo-claro
 }
 
 a:hover {
     text-decoration: underline;
-}
-/* Media Query para vista de móvil */
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 1.6rem; 
-    }
-    header nav {
-        display: none;
-    }
-}
-
-/* Media Query para vista de escritorio */
-@media screen and (min-width: 769px) {
-    
-    header nav {
-        display: block;
-    }
 }
