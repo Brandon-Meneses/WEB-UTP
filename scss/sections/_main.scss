@@ -14,10 +14,11 @@ header {
     background-size: contain;
     position: relative;
     color: $color-blanco; 
-    text-align: left;
-    font-size: 3rem;
+    text-align: center;
+    font-size: 4rem;
     padding: 2rem 0;
-    display: grid;
+    display: flex;
+    justify-content: space-between;
     grid-template-columns: auto auto 1fr; 
     align-items: center;
 }
@@ -37,24 +38,34 @@ header {
 /* Estilos para la imagen del logo */
 .logo {
     width: auto;
-    height: 80px; 
-    margin-right: 2rem; 
+    height: 150px; 
+    margin: 3rem; 
     display: inline-block; 
     vertical-align: middle;
     align-items: left;
-    
+    position: relative;
+    z-index: 1; 
+    -webkit-text-stroke: 2px $color-negro;
 }
+.title{
+    text-align: center;
+    margin: 0rem;
+    padding: 0rem;
+}
+
 /*Superponer h1 y nav sobre difuminación*/
 header h1, header nav { 
     position: relative;
     z-index: 1; 
-    -webkit-text-stroke: 1px $color-negro; /*Contorno de letras*/
+    -webkit-text-stroke: 2px $color-negro; /*Contorno de letras*/
 }
 header nav {
     justify-self: end; 
-    padding: 7rem;
-    margin: 0.1rem;
+    padding: 2rem;
+    margin: 0rem;
     font-size: 3.3rem;
+    white-space: nowrap;
+    
 }
 
 nav ul {
