@@ -164,7 +164,7 @@ footer {
     color: $color-plomo-claro;
 }
 .footer-section ul li a:hover {
-    color: $color-plomo;
+    color: $color-plomo-oscuro;
 }
 
 .copyright {
@@ -173,10 +173,10 @@ footer {
 
 /* Enlaces */
 a {
-    color: $color-plomo-claro
+    color: $color-plomo-claro;
 }
 
 a:hover {
     text-decoration: underline;
-    color: $color-plomo;
+    color: $color-plomo-oscuro;
 }

@@ -173,7 +173,7 @@ footer {
 }
 
 .footer-section ul li a:hover {
-  color: #dddddd;
+  color: #747f8c;
 }
 
 .copyright {
@@ -187,7 +187,7 @@ a {
 
 a:hover {
   text-decoration: underline;
-  color: #dddddd;
+  color: #747f8c;
 }
 
 /* Media Query para vista de móvil */
