@@ -130,6 +130,11 @@ footer {
   font-size: 1.6rem;
 }
 
+/*footer:hover{
+    cursor: pointer;
+    background-color: $color-plomo;
+    color: $color-plomo-claro;
+}*/
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -166,6 +171,10 @@ footer {
   color: #f3f3f3;
 }
 
+.footer-section ul li a:hover {
+  color: #dddddd;
+}
+
 .copyright {
   margin-top: 20px;
 }
@@ -177,6 +186,7 @@ a {
 
 a:hover {
   text-decoration: underline;
+  color: #dddddd;
 }
 
 /* Media Query para vista de móvil */

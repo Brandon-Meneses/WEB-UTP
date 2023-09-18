@@ -119,6 +119,12 @@ footer {
     padding: 20px 0;
     font-size: 1.6rem;
 }
+/*footer:hover{
+    cursor: pointer;
+    background-color: $color-plomo;
+    color: $color-plomo-claro;
+}*/
+
 
 .footer-container {
     display: flex;
@@ -154,7 +160,10 @@ footer {
 
 .footer-section ul li a {
     text-decoration: none;
-    color: $color-plomo-claro
+    color: $color-plomo-claro;
+}
+.footer-section ul li a:hover {
+    color: $color-plomo;
 }
 
 .copyright {
@@ -168,4 +177,5 @@ a {
 
 a:hover {
     text-decoration: underline;
+    color: $color-plomo;
 }
