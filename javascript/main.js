@@ -30,7 +30,6 @@ function crearContenidoCurso(curso) {
   return divCurso;
 }
 
-// Obtén el contenedor de cursos
 const cursoContainer = document.getElementById("cursoContainer");
 
 // Genera y agrega el contenido de los cursos al contenedor
