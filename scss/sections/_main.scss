@@ -180,3 +180,23 @@ a:hover {
     text-decoration: underline;
     color: $color-plomo-oscuro;
 }
+.curso-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    gap: 26px;
+    place-content: center;
+    margin-top: 20px;
+  }
+  
+  .curso {
+    width: 240px;
+    text-align: center;
+  }
+  
+  .curso img {
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  
