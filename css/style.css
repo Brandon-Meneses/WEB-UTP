@@ -208,6 +208,11 @@ a:hover {
   height: 240px;
   border-radius: 20px;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.curso:hover img {
+  transform: scale(1.1);
 }
 
 /* Media Query para vista de móvil */

@@ -11,6 +11,17 @@ const nombresDeCursos = [
     { nombre: 'Curso de Administración', imagen: 'https://veracruz.uo.edu.mx/sites/default/files/pd3_PROMO-UOVER-compressed.jpeg' },
     { nombre: 'Curso de Marketing Digital', imagen: 'https://www.salesforce.com/content/dam/blogs/br/2021/por-que-investir-em-marketing-digital.jpg' }
 ];
+const imagenesCursos = document.querySelectorAll(".curso img");
+//Controlador para cada imagen
+imagenesCursos.forEach((imagen) => {
+  imagen.addEventListener("mouseenter", () => {
+    imagenesCursos.forEach((img) => {
+      img.style.transform = "scale(1.1)";
+    });
+
+    imagen.style.transform = "scale(1)";
+  });
+});
 
 // Función para crear el contenido de los cursos
 function crearContenidoCurso(curso) {
