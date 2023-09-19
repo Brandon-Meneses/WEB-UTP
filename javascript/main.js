@@ -12,6 +12,10 @@ const nombresDeCursos = [
     { nombre: 'Curso de Marketing Digital', imagen: 'https://www.salesforce.com/content/dam/blogs/br/2021/por-que-investir-em-marketing-digital.jpg' }
 ];
 const imagenesCursos = document.querySelectorAll(".curso img");
+
+
+
+
 //Controlador para cada imagen
 imagenesCursos.forEach((imagen) => {
   imagen.addEventListener("mouseenter", () => {

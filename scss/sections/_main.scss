@@ -1,124 +1,119 @@
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: $color-turquesa;
-    color: $color-negro;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: $color-turquesa;
+  color: $color-negro;
+  margin: 0;
+  padding: 0;
 }
-
 
 /* Header */
 header {
-    background-image: url('../img/Fondo_header_ajustado.jpg');
-    background-size: contain;
-    position: relative;
-    color: $color-blanco; 
-    text-align: center;
-    font-size: 4rem;
-    padding: 2rem 0;
-    display: flex;
-    justify-content: space-between;
-    grid-template-columns: auto auto 1fr; 
-    align-items: center;
+  background-image: url("../img/Fondo_header_ajustado.jpg");
+  background-size: contain;
+  position: relative;
+  color: $color-blanco;
+  text-align: center;
+  font-size: 4rem;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
 }
 /* Capa semitransparente */
 .header-overlay {
-    position: absolute; 
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 100%; 
-    background-color: $color-turquesa; 
-    opacity: 0.7;
-    backdrop-filter: blur(10px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-turquesa;
+  opacity: 0.7;
+  backdrop-filter: blur(10px);
 }
-
 
 /* Estilos para la imagen del logo */
 .logo {
-    width: auto;
-    height: 150px; 
-    margin: 3rem; 
-    display: inline-block; 
-    vertical-align: middle;
-    align-items: left;
-    position: relative;
-    z-index: 1; 
-    -webkit-text-stroke: 2px $color-negro;
+  width: auto;
+  height: 150px;
+  margin: 3rem;
+  display: inline-block;
+  vertical-align: middle;
+  align-items: left;
+  position: relative;
+  z-index: 1;
+  -webkit-text-stroke: 2px $color-negro;
 }
-.title{
-    text-align: center;
-    margin: 0rem;
-    padding: 0rem;
-    cursor: pointer;
+.title {
+  text-align: center;
+  margin: 0rem;
+  padding: 0rem;
+  cursor: pointer;
 }
 
 /*Superponer h1 y nav sobre difuminación*/
-header h1, header nav { 
-    position: relative;
-    z-index: 1; 
-    -webkit-text-stroke: 2px $color-negro; /*Contorno de letras*/
+header h1,
+header nav {
+  position: relative;
+  z-index: 1;
+  -webkit-text-stroke: 2px $color-negro; /*Contorno de letras*/
 }
 header nav {
-    justify-self: end; 
-    padding: 2rem;
-    margin: 0rem;
-    font-size: 3.3rem;
-    white-space: nowrap;
-    
+  justify-self: end;
+  padding: 2rem;
+  margin: 0rem;
+  font-size: 3.3rem;
+  white-space: nowrap;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 10px;
+  display: inline;
+  margin-right: 10px;
 }
 
 nav ul li:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: $color-blanco;
-    -webkit-text-stroke: 0.5px $color-negro;/*Contorno de letras*/
+  text-decoration: none;
+  color: $color-blanco;
+  -webkit-text-stroke: 0.5px $color-negro; /*Contorno de letras*/
 }
-
 
 /* Aside */
 aside {
-    background-color: $color-negro;
-    color: $color-blanco;
-    padding: 2rem;
-    font-size: 1.6rem;
+  background-color: $color-negro;
+  color: $color-blanco;
+  padding: 2rem;
+  font-size: 1.6rem;
 }
 
 /* Section */
 section {
-    
-    padding: 2rem;
-    font-size: 1.6rem;
+  padding: 2rem;
+  font-size: 1.6rem;
 }
-.a{
-    background-color: $color-plomo-claro;
+.a {
+  background-color: $color-plomo-claro;
 }
-.b{
-    background-color: $color-plomo;
+.b {
+  background-color: $color-plomo;
 }
 
 /* Footer */
 footer {
-    background-color: $color-turquesa;
-    color: $color-blanco;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 1.6rem;
+  background-color: $color-turquesa;
+  color: $color-blanco;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1.6rem;
 }
 /*footer:hover{
     cursor: pointer;
@@ -126,83 +121,80 @@ footer {
     color: $color-plomo-claro;
 }*/
 
-
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer-section {
-    flex: 1;
-    margin-right: 2rem;
-    text-align: left;
+  flex: 1;
+  margin-right: 2rem;
+  text-align: left;
 }
 
 .footer-section:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .footer-section h3 {
-    margin: 0 0 1rem;
-    color: $color-negro;
-    font-size: 2.5rem;
-    
+  margin: 0 0 1rem;
+  color: $color-negro;
+  font-size: 2.5rem;
 }
 
 .footer-section ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .footer-section ul li {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .footer-section ul li a {
-    text-decoration: none;
-    color: $color-plomo-claro;
+  text-decoration: none;
+  color: $color-plomo-claro;
 }
 .footer-section ul li a:hover {
-    color: $color-plomo-oscuro;
+  color: $color-plomo-oscuro;
 }
 
 .copyright {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 /* Enlaces */
 a {
-    color: $color-plomo-claro;
+  color: $color-plomo-claro;
 }
 
 a:hover {
-    text-decoration: underline;
-    color: $color-plomo-oscuro;
+  text-decoration: underline;
+  color: $color-plomo-oscuro;
 }
 .curso-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 240px);
-    gap: 26px;
-    place-content: center;
-    margin-top: 20px;
-  }
-  
-  .curso {
-    width: 240px;
-    text-align: center;
-  }
-  
-  .curso img {
-    width: 240px;
-    height: 240px;
-    border-radius: 20px;
-    object-fit: cover;
-    transition: transform 0.3s ease; 
-  }
-  
-  .curso:hover img {
-    transform: scale(1.1);
-  }
-  
-  
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 240px);
+  gap: 26px;
+  place-content: center;
+  margin-top: 20px;
+}
+
+.curso {
+  width: 240px;
+  text-align: center;
+}
+
+.curso img {
+  width: 240px;
+  height: 240px;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.curso:hover img {
+  transform: scale(1.1);
+}
+
