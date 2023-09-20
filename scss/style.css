@@ -464,6 +464,7 @@ footer h3 {
 }
 
 .btn-saber-mas, .btn-carrito {
+  max-height: 40px;
   background-color: #39bad8;
   color: #ffffff;
   border: none;
