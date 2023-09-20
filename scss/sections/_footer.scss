@@ -52,8 +52,16 @@ footer h3{
 .fs-3{
     grid-row: 1/3;
 }
+.fs-3 a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
 .fs-4{
     grid-row: 1/3;
+}
+.fs-4 a:hover {
+    color: #ffffff;
+    text-decoration: none;
 }
 .copyright{
     grid-column: 1/5;
