@@ -21,6 +21,17 @@ main section{
   font-family: 'Heebo', sans-serif;
 }
 
+.video-p{
+    max-width: 350px;
+    height: auto;
+
+    border-radius: 40px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .card{
   max-height: 60vh;
   display: grid;
