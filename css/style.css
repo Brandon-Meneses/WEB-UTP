@@ -169,8 +169,8 @@ main section {
 }
 
 .card img {
-  max-height: 250px;
-  width: auto;
+  max-width: 280px;
+  height: auto;
   border-radius: 40px;
   display: block;
   margin-left: auto;
@@ -291,6 +291,13 @@ footer h3 {
   }
 }
 @media screen and (max-width: 630px) {
+  .card {
+    gap: 0.1rem;
+  }
+  .card img {
+    max-width: 300px;
+    height: auto;
+  }
   .card-proyects {
     grid-column: 1/5;
     grid-row: 1/2;
@@ -317,12 +324,6 @@ footer h3 {
   }
 }
 @media screen and (max-width: 650px) {
-  .card {
-    gap: 0.1rem;
-  }
-  .card img {
-    max-width: 310px;
-  }
   .fs-1 {
     grid-column: 1/5;
     grid-row: 3/4;
@@ -348,6 +349,115 @@ footer h3 {
     grid-column: 1/5;
     text-align: center;
   }
+}
+.general-curses-page {
+  max-width: 900px;
+  margin: auto;
+}
+
+.presentation {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  font-family: "Heebo", sans-serif;
+}
+
+.presentation h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.presentation p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.search-bar {
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.search-bar input[type=text] {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.search-bar box-icon {
+  font-size: 24px;
+  margin-left: 10px;
+  color: #b8b8b8;
+  cursor: pointer;
+}
+
+.courses {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.course {
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.course:hover {
+  transform: scale(1.02);
+}
+
+.course img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.course h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.course p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.btn-saber-mas, .btn-carrito {
+  background-color: #39bad8;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.btn-saber-mas:hover, .btn-carrito:hover {
+  background-color: #39bad8;
+}
+
+.precio {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
 }
 
 /*# sourceMappingURL=style.css.map */

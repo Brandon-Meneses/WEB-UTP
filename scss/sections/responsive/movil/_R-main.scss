@@ -1,5 +1,14 @@
 @media screen and (max-width: 630px){
 
+    .card{
+        gap: 0.1rem;
+    }
+
+    .card img{
+        max-width: 300px;
+        height: auto;
+    }
+
     .card-proyects{
         grid-column: 1/5 ;
         grid-row: 1/2;
