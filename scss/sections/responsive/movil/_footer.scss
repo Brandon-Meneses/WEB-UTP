@@ -1,6 +1,14 @@
 
 @media screen and (max-width: 650px){
 
+    .card{
+        gap: 0.1rem;
+    }
+
+    .card img{
+        max-width: 310px;
+    }
+
     .fs-1{
         
         grid-column: 1/5;

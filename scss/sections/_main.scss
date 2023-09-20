@@ -31,16 +31,27 @@ main section{
 }
 
 .card img{
-  //que la imagen se ajuste y no tenga un almo mayor a 60px
-  max-width: 300px;
+  max-height: 250px;
   width: 100%;
-  height: auto;
+
+  border-radius: 40px;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 .card h3{
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
+}
+
+.card .land-section-descr{
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-lessons{
@@ -70,17 +81,5 @@ main section{
   grid-row: 1/3;
 }
 
-.card img{
 
-  max-height: 200px;
-  width: 100%;
-  height: auto;
-
-  border-radius: 40px;
-
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  
-}
 

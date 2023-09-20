@@ -169,15 +169,25 @@ main section {
 }
 
 .card img {
-  max-width: 300px;
+  max-height: 250px;
   width: 100%;
-  height: auto;
+  border-radius: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card h3 {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
+}
+
+.card .land-section-descr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-lessons {
@@ -208,16 +218,6 @@ main section {
 .card-text-s {
   grid-column: 1/3;
   grid-row: 1/3;
-}
-
-.card img {
-  max-height: 200px;
-  width: 100%;
-  height: auto;
-  border-radius: 40px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .footer-container {
@@ -276,7 +276,48 @@ main section {
   margin-top: 2rem;
 }
 
+@media screen and (max-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    position: relative;
+  }
+}
+@media screen and (max-width: 630px) {
+  .card-proyects {
+    grid-column: 1/5;
+    grid-row: 1/2;
+  }
+  .card-text-p {
+    grid-column: 1/5;
+    grid-row: 2/3;
+  }
+  .card-lessons {
+    grid-column: 1/5;
+    grid-row: 1/2;
+  }
+  .card-text-l {
+    grid-column: 1/5;
+    grid-row: 2/3;
+  }
+  .card-suport {
+    grid-column: 1/5;
+    grid-row: 1/2;
+  }
+  .card-text-s {
+    grid-column: 1/5;
+    grid-row: 2/3;
+  }
+}
 @media screen and (max-width: 650px) {
+  .card {
+    gap: 0.1rem;
+  }
+  .card img {
+    max-width: 310px;
+  }
   .fs-1 {
     grid-column: 1/5;
     grid-row: 3/4;
@@ -301,15 +342,6 @@ main section {
     display: block;
     grid-column: 1/5;
     text-align: center;
-  }
-}
-@media screen and (max-width: 600px) {
-  .nav-links {
-    display: none;
-  }
-  .hamburger {
-    display: block;
-    position: relative;
   }
 }
 
