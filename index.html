@@ -1,84 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Easy Code</title>
-    <link rel="stylesheet" href="css/style.css">
-    
-</head>
-<body>
-
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <header>
-        <div class="header-overlay"></div>
-        <img src="img/Logo_cerca.png" alt="logo" class="logo"> 
-        <h1 class="title">Instituto Easy Code
-        </h1>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Cursos</a></li>
-                <li><a href="#">Docentes</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Login</a></li>
-            </ul>
-        </nav>
-        
+      <div class="header-overlay"></div>
+      <img src="img/Logo_cerca.png" alt="logo" class="logo" />
+      <h1 class="title">Instituto Easy Code</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Cursos</a></li>
+          <li><a href="#">Docentes</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </nav>
     </header>
 
     <aside>
-        <h2>Información Adicional</h2>
-        <p>¡Bienvenido al Instituto Easy Code! Estamos comprometidos en brindarte la mejor educación en programación y tecnología.</p>
+      <h2>Información Adicional</h2>
+      <p>
+        ¡Bienvenido al Instituto Easy Code! Estamos comprometidos en brindarte
+        la mejor educación en programación y tecnología.
+      </p>
+    </aside>
+    <aside id="cursosDetail" class="inactive">
+      <div class="cursosDetailClose">
+        <img src="./img/icons/icon_close.png" alt="close" id="cerrarDetalle" />
+      </div>
+      <img
+        src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="python"
+        id="abrirDetalle"
+      />
+      <div class="cursoInfo"></div>
+      <p>S/.25.00</p>
+      <p>Python</p>
+      <p>
+        Aprende Python desde cero en este curso diseñado para principiantes.
+        Adquiere habilidades fundamentales de programación y crea tus propios
+        proyectos en Python. ¡Inscríbete y comienza tu viaje en la programación
+        hoy mismo!
+      </p>
+      <button class="primary-button botonAgregar">
+        <img src="./img/icons/bt_add_to_cart.svg" alt="agregarCarrito">
+        "Agregar al carrito"
+      </button>
     </aside>
     
     <section class="a">
-        <h2>Sobre Nosotros</h2>
-        <p>El Instituto Easy Code se fundó en enero de 2023 con el objetivo de formar a desarrolladores altamente capacitados para enfrentar los desafíos tecnológicos del mundo real.</p>
+      <h2>Sobre Nosotros</h2>
+      <p>
+        El Instituto Easy Code se fundó en enero de 2023 con el objetivo de
+        formar a desarrolladores altamente capacitados para enfrentar los
+        desafíos tecnológicos del mundo real.
+      </p>
     </section>
-    
+
     <!--Section principal de imagenes-->
 
     <section class="b">
-        <h2>Nuestros Cursos</h2>
-        <p>Ofrecemos una amplia gama de cursos en programación y tecnología, diseñados para prepararte para el éxito en la industria.</p>
-        <div class="curso-container" id="cursoContainer">
-        </div>
-
+      <h2>Nuestros Cursos</h2>
+      <p>
+        Ofrecemos una amplia gama de cursos en programación y tecnología,
+        diseñados para prepararte para el éxito en la industria.
+      </p>
+      <div class="curso-container" id="cursoContainer"></div>
     </section>
-    
-    
 
     <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Cursos</h3>
-                <ul>
-                    <li><a href="#">Desarrollo Web</a></li>
-                    <li><a href="#">Diseño Gráfico</a></li>
-                    <li><a href="#">Inteligencia Artificial</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Redes Sociales</h3>
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">YouTube</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contacto</h3>
-                <p>Email: <a href="mailto:easycode@coders.com">easycode@coders.com</a></p>
-                <p>Teléfono: <a href="tel:(01)4772544">(01)4772544</a></p>
-            </div>
-            <div class="footer-section">
-                <h3>Trabaja con Nosotros</h3>
-                <a href="#">Ver oportunidades de trabajo</a>
-            </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Cursos</h3>
+          <ul>
+            <li><a href="#">Desarrollo Web</a></li>
+            <li><a href="#">Diseño Gráfico</a></li>
+            <li><a href="#">Inteligencia Artificial</a></li>
+          </ul>
         </div>
-        <p class="copyright">&copy; 2023 Instituto Easy Code | Todos los derechos reservados</p>
+        <div class="footer-section">
+          <h3>Redes Sociales</h3>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contacto</h3>
+          <p>
+            Email: <a href="mailto:easycode@coders.com">easycode@coders.com</a>
+          </p>
+          <p>Teléfono: <a href="tel:(01)4772544">(01)4772544</a></p>
+        </div>
+        <div class="footer-section">
+          <h3>Trabaja con Nosotros</h3>
+          <a href="#">Ver oportunidades de trabajo</a>
+        </div>
+      </div>
+      <p class="copyright">
+        &copy; 2023 Instituto Easy Code | Todos los derechos reservados
+      </p>
     </footer>
-    
-    <script src="javascript/main.js" ></script>
-</body>
+
+    <script src="javascript/main.js"></script>
+  </body>
 </html>
