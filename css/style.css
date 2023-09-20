@@ -109,7 +109,7 @@ aside {
   font-size: 1.6rem;
 }
 
-/* Product Detail */
+/* Curso Detail */
 .cursosDetailClose {
   background: var(--white);
   width: 14px;
@@ -155,33 +155,33 @@ aside {
 
 #cursosDetail .cursoInfo p:nth-child(1) {
   font-weight: bold;
-  font-size: 16px; /* Ajusta el tamaño de fuente según tu preferencia */
+  font-size: 16px;
   margin-top: 0;
   margin-bottom: 4px;
 }
 
 #cursosDetail .cursoInfo p:nth-child(2) {
-  color: var(--very-light-pink); /* Ajusta el color según tus variables */
-  font-size: 16px; /* Ajusta el tamaño de fuente según tu preferencia */
+  color: #f3f3f3;
+  font-size: 16px;
   margin-top: 0;
   margin-bottom: 16px;
 }
 
 #cursosDetail .cursoInfo p:nth-child(3) {
-  color: var(--very-light-pink); /* Ajusta el color según tus variables */
-  font-size: 14px; /* Ajusta el tamaño de fuente según tu preferencia */
+  color: #f3f3f3;
+  font-size: 14px;
   margin-top: 0;
   margin-bottom: 16px;
 }
 
 .primary-button {
-  background-color: var(--hospital-green); /* Ajusta el color según tus variables */
+  background-color: #3bbad8;
   border-radius: 8px;
   border: none;
-  color: var(--white); /* Ajusta el color según tus variables */
+  color: #ffffff;
   width: 100%;
   cursor: pointer;
-  font-size: 16px; /* Ajusta el tamaño de fuente según tu preferencia */
+  font-size: 16px;
   font-weight: bold;
   height: 50px;
 }
