@@ -10,7 +10,6 @@ main section{
 }
 
 .slogan-main{
-  // poner bonito el texto
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
@@ -23,7 +22,7 @@ main section{
 
 .video-p{
     max-width: 300px;
-    height: auto;
+    max-height: 210px;
 
     border-radius: 40px;
 
