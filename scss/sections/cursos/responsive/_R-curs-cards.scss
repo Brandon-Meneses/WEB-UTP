@@ -1,0 +1,10 @@
+
+// responsiv a menos de 768px
+
+@media (max-width: 767px) {
+  .courses {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+  }
+}
