@@ -19,6 +19,7 @@
 .footer-container a{
     color: #b8b8b8;
     text-decoration: none;
+    //transition: color 0.3s;
 }
 
 footer h3{
@@ -60,8 +61,8 @@ footer h3{
 
     margin-top: 2rem;
 }
-.footer-container li a :hover{
+
+.footer-container li a:hover {
     color: #ffffff;
     text-decoration: none;
-
 }
