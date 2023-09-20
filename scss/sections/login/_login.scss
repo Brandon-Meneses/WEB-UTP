@@ -1,0 +1,76 @@
+:root {
+    --brand_primary: #000000;
+    --brand_secondary: #39BAD8;
+    --brand_heading: #29313C;
+    --brand_text: #29313C;
+    --brand_navbar_text: #ffffff;
+    --brand_navbar_fixed_text: #ffffff;
+    --brand_homepage_heading: #ffffff;
+    --brand_course_heading: #ffffff;
+    --brand_video_player_color: #39BAD8;
+    --font_family: 'Metropolis';
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    font-weight: normal;
+    src: url('//assets.teachablecdn.com/fonts/metropolis/Metropolis-Regular.woff2?v=1') format('woff2'),
+         url('//assets.teachablecdn.com/fonts/metropolis/Metropolis-Regular.woff?v=1') format('woff'),
+         url('//assets.teachablecdn.com/fonts/metropolis/Metropolis-Regular.ttf?v=1') format('ttf'),
+         url('//assets.teachablecdn.com/fonts/metropolis/Metropolis-Regular.otf?v=1') format('otf');
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    font-weight: normal;
+    font-style: italic;
+    src: url('//assets.teachablecdn.com/fonts/metropolis/Metropolis-RegularItalic.woff2?v=1') format('woff2'),
+         url('//assets.teachablecdn.com/fonts/metropolis/Metropolis-RegularItalic.woff?v=1') format('woff'),
+         url('//assets.teachablecdn.com/fonts/metropolis/Metropolis-RegularItalic.ttf?v=1') format('ttf'),
+         url('//assets.teachablecdn.com/fonts/metropolis/Metropolis-RegularItalic.otf?v=1') format('otf');
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    font-weight: 600;
+    src: url('//assets.teachablecdn.com/fonts/metropolis/Metropolis-SemiBold.woff2?v=1') format('woff2'),
+         url('//assets.teachablecdn.com/fonts/metropolis/Metropolis-SemiBold.woff?v=1') format('woff'),
+         url('//assets.teachablecdn.com/fonts/metropolis/Metropolis-SemiBold.ttf?v=1') format('ttf'),
+         url('//assets.teachablecdn.com/fonts/metropolis/Metropolis-SemiBold.otf?v=1') format('otf');
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    font-weight: 600;
+    font-style: italic;
+    src: url('//assets.teachablecdn.com/fonts/metropolis/Metropolis-SemiBoldItalic.woff2?v=1') format('woff2'),
+         url('//assets.teachablecdn.com/fonts/metropolis/Metropolis-SemiBoldItalic.woff?v=1') format('woff'),
+         url('//assets.teachablecdn.com/fonts/metropolis/Metropolis-SemiBoldItalic.ttf?v=1') format('ttf'),
+         url('//assets.teachablecdn.com/fonts/metropolis/Metropolis-SemiBoldItalic.otf?v=1') format('otf');
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    font-weight: bold;
+    src: url('//assets.teachablecdn.com/fonts/metropolis/Metropolis-Bold.woff2?v=1') format('woff2'),
+         url('//assets.teachablecdn.com/fonts/metropolis/Metropolis-Bold.woff?v=1') format('woff'),
+         url('//assets.teachablecdn.com/fonts/metropolis/Metropolis-Bold.ttf?v=1') format('ttf'),
+         url('//assets.teachablecdn.com/fonts/metropolis/Metropolis-Bold.otf?v=1') format('otf');
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Metropolis';
+    font-weight: bold;
+    font-style: italic;
+    src: url('//assets.teachablecdn.com/fonts/metropolis/Metropolis-BoldItalic.woff2?v=1') format('woff2'),
+         url('//assets.teachablecdn.com/fonts/metropolis/Metropolis-BoldItalic.woff?v=1') format('woff'),
+         url('//assets.teachablecdn.com/fonts/metropolis/Metropolis-BoldItalic.ttf?v=1') format('ttf'),
+         url('//assets.teachablecdn.com/fonts/metropolis/Metropolis-BoldItalic.otf?v=1') format('otf');
+    font-display: swap;
+  }
+  
