@@ -170,7 +170,7 @@ main section {
 
 .card img {
   max-height: 250px;
-  width: 100%;
+  width: auto;
   border-radius: 40px;
   display: block;
   margin-left: auto;
@@ -238,6 +238,11 @@ main section {
 .footer-container a {
   color: #b8b8b8;
   text-decoration: none;
+}
+
+footer h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
 }
 
 .fs-1 ul {
