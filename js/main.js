@@ -63,3 +63,26 @@ function crearTarjeta(curso) {
 }
 
 cursos.forEach(curso => crearTarjeta(curso));
+
+
+
+// Buscador:
+
+const buscar = document.querySelector('.search-bar input');
+
+buscar.addEventListener('keyup', (e) => {
+  const busqueda = e.target.value.toLowerCase();
+  const tarjetas = document.querySelectorAll('.course');
+
+  tarjetas.forEach(tarjeta => {
+    const nombre = tarjeta.querySelector('h3').textContent.toLowerCase();
+    const descripcion = tarjeta.querySelector('p').textContent.toLowerCase();
+
+    if(nombre.indexOf(busqueda) !== -1 || descripcion.indexOf(busqueda) !== -1) {
+      tarjeta.style.display = 'block';
+    } else {
+      tarjeta.style.display = 'none';
+    }
+  });
+});
+
