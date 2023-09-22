@@ -551,5 +551,10 @@ footer h3 {
     grid-gap: 1.5rem;
   }
 }
+@media screen and (max-width: 320px) {
+  .main-cursos {
+    padding: 0.5rem;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
