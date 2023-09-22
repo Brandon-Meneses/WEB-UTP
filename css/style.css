@@ -305,6 +305,10 @@ footer h3 {
   text-decoration: none;
 }
 
+.email-text {
+  overflow-wrap: break-word;
+}
+
 @media screen and (max-width: 600px) {
   .nav-links {
     display: none;
