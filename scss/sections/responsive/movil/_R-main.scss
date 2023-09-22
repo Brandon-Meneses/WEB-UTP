@@ -1,39 +1,59 @@
 @media screen and (max-width: 630px){
 
-    .card{
+    .card-main{
         gap: 0.1rem;
     }
 
-    .card img{
+    .card-main img{
         max-width: 300px;
         height: auto;
     }
 
-    .card-proyects{
+    .card-main-proyects{
         grid-column: 1/5 ;
         grid-row: 1/2;
     }
-    .card-text-p{
+    .card-main-text-p{
         grid-column: 1/5 ;
         grid-row: 2/3;
     }
 
-    .card-lessons{
+    .card-main-lessons{
         grid-column: 1/5 ;
         grid-row: 1/2;
     }
-    .card-text-l{
+    .card-main-text-l{
         grid-column: 1/5 ;
         grid-row: 2/3;
     }
 
-    .card-suport{
+    .card-main-suport{
         grid-column: 1/5 ;
         grid-row: 1/2;
     }
-    .card-text-s{
+    .card-main-text-s{
         grid-column: 1/5 ;
         grid-row: 2/3;
     }
     
+}
+
+//imagenes muy anchas
+@media screen and (max-width: 360px) {
+    .card-main-suport, .card-main-proyects, .card-main-lessons{
+       //ancho de la imagen
+         max-width: 280px;
+    }
+
+    .card-main img{
+        width: 70vw;
+        height: auto;
+      
+    }
+
+    .card-main iframe{
+        width: 70vw;
+        height: auto;
+    }
+
 }

@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursos</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.7/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
+
 <body>
     
     <div class="adds">
@@ -29,16 +36,16 @@
 
                 <!-- maximo 600px -->
                 <div class="hamburger">
-                    <box-icon color='#ffffff' size="md" name='menu'></box-icon>
-
-                    <div class="nav-links-mobile">
-                        <ul>
-                            <li><a href="#">Conocenos</a></li>
+                    <div class="dropdown dropdown-end">
+                        <label tabindex="0" class="btn m-1 bg-[#39bad8] border-none">
+                            <box-icon color="#ffffff" size="md" name="menu"></box-icon>
+                        </label>
+                        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-[#39bad8] rounded-box w-52">
+                            <li><a href="./index.html">Conocenos</a></li>
                             <li><a href="#">Cursos</a></li>
-                            <li><a href="#">Login</a></li>
+                            <li><a href="./login.html">Login</a></li>
                         </ul>
                     </div>
-
                 </div>
 
 

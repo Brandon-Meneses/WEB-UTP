@@ -9,12 +9,7 @@
     }
 }
 
-//imagenes muy anchas
 @media screen and (max-width: 360px) {
-    .card-suport, .card-proyects, .card-lessons{
-       //ancho de la imagen
-         max-width: 280px;
-    }
 
     .hero-text{
         padding: 0;
@@ -35,17 +30,6 @@
 
     .logo h4{
         display: none;
-    }
-
-    .card img{
-        width: 70vw;
-        height: auto;
-      
-    }
-
-    .card iframe{
-        width: 70vw;
-        height: auto;
     }
 
 }

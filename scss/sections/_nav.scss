@@ -71,6 +71,10 @@ nav{
     display: none;
 }
 
-.hamburger div {
-    display: none;
+
+// daisyUI  modificar color de class="btn m-1 bg-base-content"
+
+.m-1 .bg-base-content {
+    background-color: #39bad8;
 }
+

@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Easy Code</title>
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.7/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
 </head>
 
 <body>
@@ -31,13 +36,14 @@
 
                 <!-- maximo 600px -->
                 <div class="hamburger">
-                    <box-icon color="#ffffff" size="md" name="menu"></box-icon>
-
-                    <div class="nav-links-mobile">
-                        <ul>
+                    <div class="dropdown dropdown-end">
+                        <label tabindex="0" class="btn m-1 bg-[#39bad8] border-none">
+                            <box-icon color="#ffffff" size="md" name="menu"></box-icon>
+                        </label>
+                        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-[#39bad9] rounded-box w-52">
                             <li><a href="#">Conocenos</a></li>
-                            <li><a href="#">Cursos</a></li>
-                            <li><a href="#">Login</a></li>
+                            <li><a href="./cursos.html">Cursos</a></li>
+                            <li><a href="./login.html">Login</a></li>
                         </ul>
                     </div>
                 </div>
@@ -65,8 +71,8 @@
             <h1 class="slogan-main">EL CAMINO MÁS FÁCIL HACIA EL APRENDIZAJE</h1>
 
             <div class="container-main-landing">
-                <div class="card">
-                    <div class="card-lessons">
+                <div class="card-main">
+                    <div class="card-main-lessons">
                         <iframe class="video-p" width="560" height="315"
                             src="https://www.youtube.com/embed/28JKwGTiyMI?si=M8668XSYKNNj516z"
                             title="YouTube video player" frameborder="0"
@@ -74,7 +80,7 @@
                             allowfullscreen></iframe>
                     </div>
 
-                    <div class="card-text-l land-section-descr">
+                    <div class="card-main-text-l land-section-descr">
                         <h3>Lecciones paso a paso</h3>
                         <p> Avanza desde ser un principiante total hasta convertirte en un
                             desarrollador de nivel mundial sin saltarte pasos. Cada lección
@@ -82,12 +88,12 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-proyects">
+                <div class="card-main">
+                    <div class="card-main-proyects">
                         <img src="img\landing\quienes-somos.jpeg" alt="" />
                     </div>
 
-                    <div class="card-text-p land-section-descr">
+                    <div class="card-main-text-p land-section-descr">
                         <h3>Proyectos reales</h3>
                         <p> Desarrolla proyectos reales que te ayudarán a construir tu
                             portafolio y te darán la experiencia que necesitas para
@@ -95,12 +101,12 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-suport">
+                <div class="card-main">
+                    <div class="card-main-suport">
                         <img src="img\landing\soporte.jpeg" alt="" />
                     </div>
 
-                    <div class="card-text-s land-section-descr">
+                    <div class="card-main-text-s land-section-descr">
                         <h3>Soporte de por vida</h3>
                         <p> Obtén soporte de por vida de nuestro equipo de instructores y de
                             la comunidad de Easy Code. Nunca te quedes atascado y siempre
