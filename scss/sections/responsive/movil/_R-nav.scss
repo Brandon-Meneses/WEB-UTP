@@ -9,4 +9,66 @@
     }
 }
 
-    
+//imagenes muy anchas
+@media screen and (max-width: 360px) {
+    .card-suport, .card-proyects, .card-lessons{
+       //ancho de la imagen
+         max-width: 280px;
+    }
+
+    .hero-text{
+        padding: 0;
+    }
+
+    .hero-text h1{
+        font-size: calc(1.5rem + 1vw);
+        margin: 4px;
+    }
+
+    .hero-text p{
+        font-size: calc(1.2rem + 1vw);
+    }
+
+    .logo{
+        margin-right: 0;
+    }
+
+    .logo h4{
+        display: none;
+    }
+
+    .card img{
+        width: 70vw;
+        height: auto;
+      
+    }
+
+    .card iframe{
+        width: 70vw;
+        height: auto;
+    }
+
+}
+
+@media screen and (max-width: 280px) {
+    .nav-bloq{
+        display: flex;
+        flex-direction: column;
+
+        //centrar el menu
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav{
+        position: relative;
+    }
+
+    .nav-bloq{
+        gap: 1rem;
+    }
+
+    .slogan-main{
+        font-size: calc(1.4rem + 0.5vw);
+    }
+}

@@ -157,6 +157,7 @@ main section {
   margin-top: 1rem;
   margin-bottom: 4rem;
   font-family: "Heebo", sans-serif;
+  overflow-wrap: break-word;
 }
 
 .video-p {
@@ -316,6 +317,52 @@ footer h3 {
   .hamburger {
     display: block;
     position: relative;
+  }
+}
+@media screen and (max-width: 360px) {
+  .card-suport, .card-proyects, .card-lessons {
+    max-width: 280px;
+  }
+  .hero-text {
+    padding: 0;
+  }
+  .hero-text h1 {
+    font-size: calc(1.5rem + 1vw);
+    margin: 4px;
+  }
+  .hero-text p {
+    font-size: calc(1.2rem + 1vw);
+  }
+  .logo {
+    margin-right: 0;
+  }
+  .logo h4 {
+    display: none;
+  }
+  .card img {
+    width: 70vw;
+    height: auto;
+  }
+  .card iframe {
+    width: 70vw;
+    height: auto;
+  }
+}
+@media screen and (max-width: 280px) {
+  .nav-bloq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  nav {
+    position: relative;
+  }
+  .nav-bloq {
+    gap: 1rem;
+  }
+  .slogan-main {
+    font-size: calc(1.4rem + 0.5vw);
   }
 }
 @media screen and (max-width: 630px) {
