@@ -1,162 +1,54 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta
-      content="width=device-width, initial-scale=1.0, user-scalable=no"
-      name="viewport"
-    />
-    <meta id="analytics-keys" name="analytics" data-analytics="{}" />
-    <meta name="asset_host" content="https://fedora.teachablecdn.com" />
-    <title>Easy Code</title>
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://file-uploads.teachablecdn.com/13edd594fe154c08b71b1a7b1b2365f1/37477797198046728f9a75c3016a3008"
-    />
-    <script src="//fast.wistia.com/assets/external/E-v1.js"></script>
-    <meta id="iris-url" data-iris-url="https://eventable.teachable.cloud" />
+<html lang="en">
 
-    <script type="text/javascript">
-      const heapInstanceId = "318805607";
-      window.heap = window.heap || [];
-      heap.load = function (e, t) {
-        window.heap.appid = e;
-        window.heap.config = t = t || {};
-        var r = document.createElement("script");
-        r.type = "text/javascript";
-        r.async = !0;
-        r.src = "https://cdn.heapanalytics.com/js/heap-" + e + ".js";
-        var a = document.getElementsByTagName("script")[0];
-        a.parentNode.insertBefore(r, a);
-        for (
-          var n = function (e) {
-              return function () {
-                heap.push([e].concat(Array.prototype.slice.call(arguments, 0)));
-              };
-            },
-            p = [
-              "addEventProperties",
-              "addUserProperties",
-              "clearEventProperties",
-              "identify",
-              "resetIdentity",
-              "removeEventProperty",
-              "setEventProperties",
-              "track",
-              "unsetEventProperty",
-            ],
-            o = 0;
-          o < p.length;
-          o++
-        )
-          heap[p[o]] = n(p[o]);
-      };
-      heap.load(heapInstanceId);
-    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+</head>
 
-    <script src="https://fedora.teachablecdn.com/packs/identity--e240c604490f83b56026.js"></script>
-    <link
-      rel="stylesheet"
-      media="all"
-      href="https://fedora.teachablecdn.com/packs/identity-4e8240f9a15e86448404.css"
-    />
+<body class="dsp-flex-xs flex-direction-column identity-layout">
 
-    <link
-      rel="stylesheet"
-      media="all"
-      href="https://themes2.teachablecdn.com/themecss/production/base.css?_=723eb0761bf9&amp;brand_course_heading=%23ffffff&amp;brand_heading=%2329313C&amp;brand_homepage_heading=%23ffffff&amp;brand_navbar_fixed_text=%23ffffff&amp;brand_navbar_text=%23ffffff&amp;brand_primary=%23000000&amp;brand_secondary=%2339BAD8&amp;brand_text=%2329313C&amp;font=Metropolis&amp;logged_out_homepage_background_image_overlay=0.0&amp;logged_out_homepage_background_image_url=https%3A%2F%2Ffile-uploads.teachablecdn.com%2F6e3dd24b8b5c4231864e58e2c5a11cf1%2F01504111016d4065be1c91ee6031ac1e&amp;show_signup=false"
-    />
-    <link rel="stylesheet" href="./scss/sections/login/_login.scss" />
-    <meta name="csrf-param" content="authenticity_token" />
-    <meta
-      name="csrf-token"
-      content="wm9Cy+i2f79QL9LOtWY3AP3gAFb1y/fC8zTN4hNqNhWd1iDzIK7UjHPKSrkRxbePMsUrIWYxMyZdKqQj67tNjw=="
-    />
-  </head>
-  <body class="dsp-flex-xs flex-direction-column identity-layout">
-    <header class="dsp-flex-xs flex-justify-content-center-xs navbar-fedora">
-      <a class="btstrp-navbar-brand header-logo" href="index.html">
-        <div class="logo">
-            <box-icon
-            color="#ffffff"
-            size="lg"
-            class="logo"
-            name="code-block"
-            alt="Logo"
-          ></box-icon>
-          <h4>Easy Code</h4>
-        </div>
-      </a>
+    <header class="navbar navbar-expand-md navbar-dark bg-dark justify-content-center">
+        <a class="navbar-brand" href="index.html">
+            <div class="d-flex align-items-center">
+                <i class="bx bx-code-block text-white mr-2"></i>
+                <h4 class="text-white">Easy Code</h4>
+            </div>
+        </a>
     </header>
-    <main class="p-v-5-m">
-      <div class="container m-auto-xs col-4-l col-5-m col-10-xs p-h-6-l">
-        <h3 class="heading3 text-center-xs">Iniciar sesión</h3>
-        <form
-          class="recaptcha-protected password-form"
-          action="/secure/288799/identity/login/password"
-          accept-charset="UTF-8"
-          method="post"
-        >
-          <input name="utf8" type="hidden" value="&#x2713;" />
-          <input
-            type="hidden"
-            name="authenticity_token"
-            value="mYNNEPF/l8FosivruK1zgTW+7eT/M68VOjEXbqf2sprGOi8oOWc88ktXs5wcDvMO+pvGk2zJa/GUL36vXyfJAA=="
-          />
-          <div class="m-b-4-xs">
-            <label class="form-label bodyMain p-b-0-xs m-b-2-xs" for="email"
-              >Correo electrónico</label
-            >
-            <input
-              type="email"
-              name="email"
-              id="email"
-              required="required"
-              autocomplete="email"
-              class="form-input p-v-1-xs p-l-2-xs p-r-4-xs col-12-xs bodyMain"
-            />
-          </div>
-          <div class="m-b-4-xs">
-            <label class="form-label bodyMain p-b-0-xs m-b-2-xs" for="password"
-              >Contraseña</label
-            >
-            <div class="password-container">
-              <input
-                type="password"
-                name="password"
-                id="password"
-                value
-                required="required"
-                autocomplete="current-password"
-                class="password form-input p-v-1-xs p-l-2-xs p-r-6-xs col-12-xs bodyMain"
-              />
-              <svg width="16" height="16" class="icon-e" id="icon-e">
-                <use xlink:href="#icon__Eye"></use>
-              </svg>
+    
+    <main>
+        
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h2 class="text-center mb-4">Inicio de Sesión</h2>
+                    <form>
+                      <div class="mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="password" required>
+                      </div>
+                      <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div
-            class="dsp-flex-xs m-b-1-xs flex-justify-content-space-between-xs"
-          >
-            <div class="m-b-4-xs">
-              <input type="hidden" name="remember_me" value="0" />
-              <input
-                type="checkbox"
-                name="remember_me"
-                id="remember_me"
-                value="1"
-                class="m-l-0-xs"
-                checked="checked"
-              />
-              <label
-                class="v-middle form-footer obsidian bodySmall"
-                for="remember_me"
-                >Recordarme</label
-              >
-            </div>
-          </div>
-        </form>
-      </div>
+          
+   
     </main>
-  </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
 </html>
