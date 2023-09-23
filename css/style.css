@@ -6,7 +6,9 @@
 
 body {
   background-color: #f2f2f2;
-  font: 1rem "Montserrat", sans-serif;
+  font-family: "Kanit", sans-serif;
+  color: #222529;
+  font-size: 1.33rem;
 }
 
 .adds {
@@ -104,7 +106,7 @@ nav {
 
 .hero {
   background: url(../img/landing/hero.jpeg) no-repeat center center/cover;
-  height: 65vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,6 +121,7 @@ nav {
 .hero-text h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 .hero-text p {
@@ -130,7 +133,7 @@ nav {
   font-size: 1.5rem;
   padding: 0.5rem 1rem;
   background: #ffffff;
-  color: #000000;
+  color: #39bad8;
   text-decoration: none;
   border-radius: 10px;
 }
@@ -143,21 +146,36 @@ nav {
 main {
   max-width: 900px;
   margin: auto;
-  padding: 2rem;
+  padding: 0px 2rem;
 }
 
 main section {
   margin-bottom: 2rem;
 }
 
+.frase-slogan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6rem;
+  height: 125px;
+  width: 100%;
+  background-color: #34a6bf;
+}
+
 .slogan-main {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
-  margin-top: 1rem;
-  margin-bottom: 4rem;
-  font-family: "Heebo", sans-serif;
   overflow-wrap: break-word;
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.slogan-span {
+  color: #222529;
 }
 
 .video-p {
@@ -170,21 +188,38 @@ main section {
 }
 
 .card-main {
-  max-height: 60vh;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 1rem;
-  margin-bottom: 2rem;
+  gap: 5rem;
+  margin-bottom: 6rem;
+}
+
+.card-main div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-main iframe {
+  max-width: 270px;
+  min-width: auto;
+  margin: auto;
+  margin-bottom: 1rem;
+  position: absolute;
+  bottom: 0;
 }
 
 .card-main img {
   max-width: 280px;
   height: auto;
   border-radius: 40px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+  margin-bottom: 1rem;
+  position: absolute;
+  bottom: 0;
 }
 
 .card-main h3 {
@@ -310,6 +345,10 @@ footer h3 {
   overflow-wrap: break-word;
 }
 
+.footer-section {
+  overflow-wrap: break-word;
+}
+
 @media screen and (max-width: 600px) {
   .nav-links {
     display: none;
@@ -320,16 +359,6 @@ footer h3 {
   }
 }
 @media screen and (max-width: 360px) {
-  .hero-text {
-    padding: 0;
-  }
-  .hero-text h1 {
-    font-size: calc(1.5rem + 1vw);
-    margin: 4px;
-  }
-  .hero-text p {
-    font-size: calc(1.2rem + 1vw);
-  }
   .logo {
     margin-right: 0;
   }
@@ -340,7 +369,6 @@ footer h3 {
 @media screen and (max-width: 280px) {
   .nav-bloq {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
@@ -359,8 +387,13 @@ footer h3 {
     gap: 0.1rem;
   }
   .card-main img {
-    max-width: 300px;
-    height: auto;
+    max-width: 280px;
+    height: max-content;
+    border-radius: 40px;
+    margin: auto;
+    margin-bottom: 1rem;
+    position: absolute;
+    bottom: 0;
   }
   .card-main-proyects {
     grid-column: 1/5;
@@ -398,6 +431,15 @@ footer h3 {
   .card-main iframe {
     width: 70vw;
     height: auto;
+  }
+  .hero-text {
+    padding: 0.1rem;
+  }
+  .hero-text h1 {
+    font-size: calc(1.5rem + 5vw);
+  }
+  .card-main-lessons {
+    height: 150px;
   }
 }
 @media screen and (max-width: 650px) {

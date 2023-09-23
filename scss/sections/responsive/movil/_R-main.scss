@@ -5,8 +5,20 @@
     }
 
     .card-main img{
-        max-width: 300px;
-        height: auto;
+        max-width: 280px;
+        height: max-content;
+
+        border-radius: 40px;
+
+        margin:auto;
+        margin-bottom: 1rem;  
+
+        position: absolute;
+        bottom: 0;
+    }
+
+    .img-1{
+        
     }
 
     .card-main-proyects{
@@ -44,16 +56,26 @@
        //ancho de la imagen
          max-width: 280px;
     }
-
+        
     .card-main img{
         width: 70vw;
-        height: auto;
-      
+        height: auto;            
     }
 
     .card-main iframe{
         width: 70vw;
         height: auto;
+    }
+
+    .hero-text{
+        padding: 0.1rem;
+    }
+    .hero-text h1{
+        font-size: calc(1.5rem + 5vw);
+    }
+
+    .card-main-lessons{
+        height: 150px;
     }
 
 }

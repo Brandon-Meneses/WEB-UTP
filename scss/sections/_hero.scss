@@ -1,6 +1,6 @@
 .hero{
     background: url(../img/landing/hero.jpeg) no-repeat center center/cover;
-    height: 65vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,6 +15,7 @@
 .hero-text h1{
     font-size: 3rem;
     margin-bottom: 1rem;
+    font-weight: 700;
 }
 
 .hero-text p{
@@ -26,7 +27,7 @@
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
     background: #ffffff;
-    color: #000000;
+    color: #39bad8;
     text-decoration: none;
     border-radius: 10px;
 }

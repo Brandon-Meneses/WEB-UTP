@@ -11,19 +11,6 @@
 
 @media screen and (max-width: 360px) {
 
-    .hero-text{
-        padding: 0;
-    }
-
-    .hero-text h1{
-        font-size: calc(1.5rem + 1vw);
-        margin: 4px;
-    }
-
-    .hero-text p{
-        font-size: calc(1.2rem + 1vw);
-    }
-
     .logo{
         margin-right: 0;
     }
@@ -37,7 +24,7 @@
 @media screen and (max-width: 280px) {
     .nav-bloq{
         display: flex;
-        flex-direction: column;
+        // flex-direction: column;
 
         //centrar el menu
         justify-content: center;
