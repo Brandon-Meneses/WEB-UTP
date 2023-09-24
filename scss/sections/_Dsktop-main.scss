@@ -2,8 +2,9 @@
 @media screen and (min-width: 600px) {
 
     main{
-      max-width: 600px;
+      max-width: 800px;
       margin: auto;
+      padding: 2rem;
     }
   
     .card-main{
@@ -13,9 +14,6 @@
       gap: 3rem;
       margin-bottom: 4rem;
     }
-  
-    
-  
   
     .card-main-lessons{
       grid-column: 1/2 ;
@@ -64,7 +62,7 @@
   
     .card-main div p{
       font-size: 1.3rem;
-      text-align: center;
+      text-align: left;
       margin-bottom: 1rem;
     }
   }

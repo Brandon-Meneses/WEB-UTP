@@ -115,7 +115,7 @@ nav {
 .hero-text {
   color: #ffffff;
   padding: 2rem;
-  text-align: center;
+  text-align: left;
 }
 
 .hero-text h1 {
@@ -197,14 +197,14 @@ main {
 .card-main div h3 {
   font-size: calc(1.5rem + 1vw);
   font-weight: bold;
-  text-align: center;
+  text-align: left;
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
 
 .card-main div p {
   font-size: calc(1rem + 1vw);
-  text-align: center;
+  text-align: left;
   margin-bottom: 1rem;
 }
 
@@ -214,8 +214,9 @@ main {
 
 @media screen and (min-width: 600px) {
   main {
-    max-width: 600px;
+    max-width: 800px;
     margin: auto;
+    padding: 2rem;
   }
   .card-main {
     height: auto;
@@ -262,7 +263,7 @@ main {
   }
   .card-main div p {
     font-size: 1.3rem;
-    text-align: center;
+    text-align: left;
     margin-bottom: 1rem;
   }
 }
