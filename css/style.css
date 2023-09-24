@@ -268,6 +268,7 @@ main {
   }
 }
 .footer-container {
+  margin-top: 1rem;
   background: #000000;
   color: #b8b8b8;
   padding: 2rem;
@@ -421,24 +422,28 @@ footer h3 {
   margin: auto;
 }
 
+/*
+   font-family: 'Kanit', sans-serif;
+*/
 .presentation {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
   margin-top: 1rem;
   margin-bottom: 4rem;
-  font-family: "Heebo", sans-serif;
 }
 
 .presentation h2 {
-  font-size: 2rem;
+  font-family: "Kanit", sans-serif;
   font-weight: bold;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 .presentation p {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
   font-size: 1.5rem;
-  font-weight: bold;
   margin-bottom: 1rem;
 }
 
@@ -500,12 +505,16 @@ footer h3 {
 }
 
 .course h3 {
+  font-family: "Kanit", sans-serif;
+  font-weight: bold;
   font-size: 1.5rem;
   margin: 10px 0;
 }
 
 .course p {
-  font-size: 1rem;
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
   margin-bottom: 15px;
 }
 

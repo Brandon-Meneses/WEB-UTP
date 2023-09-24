@@ -3,6 +3,9 @@
     max-width: 900px;
     margin: auto;
 }
+/*
+   font-family: 'Kanit', sans-serif;
+*/
 
 .presentation{
     text-align: center;
@@ -12,18 +15,21 @@
     margin-top: 1rem;
     margin-bottom: 4rem;
 
-    font-family: 'Heebo', sans-serif;
 }
 
 .presentation h2{
-    font-size: 2rem;
+    font-family: 'Kanit', sans-serif;
     font-weight: bold;
+    
+    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 .presentation p{
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+
     font-size: 1.5rem;
-    font-weight: bold;
     margin-bottom: 1rem;
 }
 
