@@ -8,3 +8,12 @@
     grid-gap: 1.5rem;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .courses {
+    max-width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+  }
+}

@@ -213,7 +213,7 @@ main {
 }
 
 @media screen and (min-width: 600px) {
-  main {
+  .main-index {
     max-width: 800px;
     margin: auto;
     padding: 2rem;
@@ -422,9 +422,12 @@ footer h3 {
   margin: auto;
 }
 
-/*
-   font-family: 'Kanit', sans-serif;
-*/
+.main-cursos {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+}
+
 .presentation {
   text-align: center;
   font-size: 2rem;
@@ -553,6 +556,14 @@ footer h3 {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 1.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .courses {
+    max-width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
   }
 }
 @media screen and (max-width: 320px) {
