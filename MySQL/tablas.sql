@@ -43,7 +43,7 @@ CREATE TABLE Links_archivos (
     ID_curso INT,
     Nombre_archivo VARCHAR(255) NOT NULL,
     URL_del_Archivo VARCHAR(255) NOT NULL,
-    FOREIGN KEY (ID_del_Curso) REFERENCES Cursos(ID)
+    FOREIGN KEY (ID_curso) REFERENCES Cursos(ID)
 );
 
 
