@@ -1,5 +1,17 @@
 @import "sections/_variables";
 @import "sections/_reset";
-@import "sections/_main";
-@import "sections/responsive/_movil";
-@import "sections/responsive/_desktop";
+@import "sections/_adds";
+@import "sections/_nav";
+@import "sections/_hero";
+@import "sections/responsive/movil/_Movile-main";
+@import "sections/_Dsktop-main";
+@import "sections/_footer";
+@import "sections/responsive/movil/_R-nav";
+@import "sections/responsive/movil/_R-hero";
+@import "sections/responsive/movil/_R-footer";
+
+@import "sections/cursos/_curs-main";
+@import "sections/cursos/_curs-seachBar";
+@import "sections/cursos/_curs-cards";
+@import "sections/cursos/responsive/_R-curs-cards";
+@import "sections/cursos/responsive/_R-curs-main";

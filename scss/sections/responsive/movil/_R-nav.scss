@@ -1,0 +1,43 @@
+@media screen and (max-width: 600px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    .logo{
+        margin-right: 0;
+    }
+
+    .logo h4{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 280px) {
+    .nav-bloq{
+        display: flex;
+        // flex-direction: column;
+
+        //centrar el menu
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav{
+        position: relative;
+    }
+
+    .nav-bloq{
+        gap: 1rem;
+    }
+
+
+}

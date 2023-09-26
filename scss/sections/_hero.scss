@@ -1,0 +1,38 @@
+.hero{
+    background: url(../img/landing/hero.jpeg) no-repeat center center/cover;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text{
+    color: #ffffff;
+    padding: 2rem;
+    text-align: left;    
+}
+
+.hero-text h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-text p{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text a{
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    background: #ffffff;
+    color: #39bad8;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.hero-text a:hover{
+    background: #39bad8;
+    color: #ffffff;
+}

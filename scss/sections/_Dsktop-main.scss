@@ -1,0 +1,68 @@
+//si sobrepasa el ancho de la pantalla de 599px
+@media screen and (min-width: 600px) {
+
+    .main-index{
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+    }
+  
+    .card-main{
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+  
+    .card-main-lessons{
+      grid-column: 1/2 ;
+      grid-row: 1/2;
+    }
+  
+    .card-main-text-l{
+      grid-column: 2/3 ;
+      grid-row: 1/2;
+    }
+  
+    .card-main-proyects{
+      grid-column: 2/3 ;
+      grid-row: 1/2;
+    }
+  
+    .card-main-text-p{
+      grid-column: 1/2 ;
+      grid-row: 1/2;
+    }
+  
+    .card-main-suport{
+      grid-column: 1/2 ;
+      grid-row: 1/2;
+    }
+  
+    .card-main-text-s{
+      grid-column: 2/3 ;
+      grid-row: 1/2;
+    }
+  
+    .card-main-lessons{
+      max-height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .card-main-proyects, .card-main-suport{
+      //alinear verticalmente la imagen
+      max-height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .card-main div p{
+      font-size: 1.3rem;
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+  }
