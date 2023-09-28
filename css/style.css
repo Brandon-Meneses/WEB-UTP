@@ -450,6 +450,10 @@ footer h3 {
   margin-bottom: 1rem;
 }
 
+.contador-rojo {
+  color: red;
+}
+
 .search-bar {
   max-width: 600px;
   display: flex;
