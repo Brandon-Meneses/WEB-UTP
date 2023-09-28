@@ -7,7 +7,7 @@ USE proyecto_web;
 -- MySQL
 
 CREATE TABLE Usuarios (
-    ID INT AUTO_INCREMENT PRIMARY KEY,
+    DNI INT PRIMARY KEY UNIQUE NOT NULL,
     Nombre VARCHAR(255) NOT NULL,
     Correo VARCHAR(255) NOT NULL,
     Contraseña VARCHAR(255) NOT NULL
@@ -26,7 +26,7 @@ CREATE TABLE Compras (
     ID_usuario INT,
     ID_curso INT,
     Fecha_compra TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (ID_usuario) REFERENCES Usuarios(ID),
+    FOREIGN KEY (ID_usuario) REFERENCES Usuarios(DNI),
     FOREIGN KEY (ID_curso) REFERENCES Cursos(ID)
 );
 
