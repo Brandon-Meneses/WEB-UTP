@@ -23,7 +23,7 @@ CREATE PROCEDURE añadir_curso(
     IN url_imagen VARCHAR(255)
 )
 BEGIN
-    INSERT INTO Cursos (Nobre_curso, Descripción, Precio, URL_imagen) VALUES (nombre_curso, descripcion, precio, url_imagen);
+    INSERT INTO Cursos (Nombre_curso, Descripción, Precio, URL_imagen) VALUES (nombre_curso, descripcion, precio, url_imagen);
 END$$
 DELIMITER ;
 
@@ -65,17 +65,18 @@ DELIMITER ;
 -- funcion que retorna un true si correo y contraseña coinciden sino false
 DELIMITER $$
 CREATE FUNCTION login(
-    IN correo VARCHAR(255),
-    IN contraseña VARCHAR(255)
+    correo VARCHAR(255),
+    contrasena VARCHAR(255)
 )
 RETURNS BOOLEAN
 BEGIN
     DECLARE existe INT;
-    SELECT COUNT(*) INTO existe FROM Usuarios WHERE Correo = correo AND Contraseña = contraseña;
+    SELECT COUNT(*) INTO existe FROM Usuarios WHERE Correo = correo AND Contraseña = contrasena;
     IF existe > 0 THEN
-        RETURN TRUE;    
+        RETURN 1;
     ELSE
-        RETURN FALSE;
+        RETURN 0;
     END IF;
 END$$
 DELIMITER ;
+

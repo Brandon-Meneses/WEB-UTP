@@ -6,12 +6,12 @@ CALL añadir_usuario(222, 'Brandon Meneses', 'brandon@brandon.com', 'contra');
 CALL añadir_usuario(333, 'Giovanni Dantas', 'dantas@dantas.com', 'contra');
 
 -- Añadir cursos
-CALL añadir_curso('Desarrollo Web con HTML, CSS y JS', 'Aprende a crear sitios web interactivos desde cero con tecnologías web.', 49.99, './img/courses/web.jpg');
-CALL añadir_curso('Programación en Python', 'Domina uno de los lenguajes más populares y versátiles.', 59.99, './img/courses/python.jpg');
-CALL añadir_curso('Desarrollo de Aplicaciones Móviles', 'Crea aplicaciones móviles multiplataforma con React Native.', 79.99, './img/courses/movilReact.jpg');
-CALL añadir_curso('Bases de Datos SQL y MySQL', 'Aprende a diseñar y administrar bases de datos relacionales.', 69.99, './img/courses/sql.jpg');
-CALL añadir_curso('Desarrollo de Aplicaciones con Node.js', 'Construye aplicaciones del lado del servidor con Node.js.', 59.99, './img/courses/node.jpg');
-CALL añadir_curso('Desarrollo de Aplicaciones con Java', 'Aprende Java y desarrolla aplicaciones empresariales robustas.', 79.99, './img/courses/java.jpg');
+CALL añadir_curso('Desarrollo Web con HTML, CSS y JS', 'Aprende a crear sitios web interactivos desde cero con tecnologías web.', 49.99, 'https://i.postimg.cc/brjJ9TmR/web.jpg');
+CALL añadir_curso('Programación en Python', 'Domina uno de los lenguajes más populares y versátiles.', 59.99, 'https://i.postimg.cc/j5f2f945/python.jpg');
+CALL añadir_curso('Desarrollo de Aplicaciones Móviles', 'Crea aplicaciones móviles multiplataforma con React Native.', 79.99, 'https://i.postimg.cc/jS8DYyjs/movil-React.jpg');
+CALL añadir_curso('Bases de Datos SQL y MySQL', 'Aprende a diseñar y administrar bases de datos relacionales.', 69.99, 'https://i.postimg.cc/wBZ37HJZ/sql.jpg');
+CALL añadir_curso('Desarrollo de Aplicaciones con Node.js', 'Construye aplicaciones del lado del servidor con Node.js.', 59.99, 'https://i.postimg.cc/d3m0HyXc/node.jpg');
+CALL añadir_curso('Desarrollo de Aplicaciones con Java', 'Aprende Java y desarrolla aplicaciones empresariales robustas.', 79.99, 'https://i.postimg.cc/W4hhNtD0/java.jpg');
 
 -- Añadir links de video
 CALL añadir_link_video(1, 'Introducción a HTML', 'https://www.example.com/html_intro_video');

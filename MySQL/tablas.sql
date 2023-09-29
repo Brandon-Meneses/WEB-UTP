@@ -15,7 +15,7 @@ CREATE TABLE Usuarios (
 
 CREATE TABLE Cursos (
     ID INT AUTO_INCREMENT PRIMARY KEY,
-    Nobre_curso VARCHAR(255) NOT NULL,
+    Nombre_curso VARCHAR(255) NOT NULL,
     Descripción TEXT NOT NULL,
     Precio DECIMAL(10, 2) NOT NULL,
     URL_imagen VARCHAR(255) NOT NULL
