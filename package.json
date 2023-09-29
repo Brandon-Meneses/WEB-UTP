@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch-sass": "sass --watch scss/style.scss:css/style.css",
-    "open-php": "php -S localhost:80 -t C:\\xampp\\htdocs\\PROYECTOS\\WEB-UTP"
+    "open-php": "php -S localhost:80 -t C:\\xampp\\htdocs\\WEB-UTP"
   },
   "keywords": [],
   "author": "",
