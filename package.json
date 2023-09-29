@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch-sass": "sass --watch scss/style.scss:css/style.css"
+    "watch-sass": "sass --watch scss/style.scss:css/style.css",
+    "php-leo": "php -S localhost:8080 -t C:\\xampp\\htdocs\\WEB-UTP"
   },
   "keywords": [],
   "author": "",
