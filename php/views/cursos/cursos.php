@@ -1,13 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <?php echo $data["titulo"]; ?>
-    </title>
+    <title>Cursos</title>
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Google Fonts -->
@@ -59,7 +56,8 @@
 
                 <div class="cart">
                     <box-icon color='#ffffff' size="md" name='cart'></box-icon>
-                    <div class="cart-indicator">O</div>
+                   
+                    <span color='#ffffff' id="contador" class="contador-carrito contador-rojo">0</span>
                 </div>
             </div>
         </div>
@@ -102,28 +100,9 @@
 
 
 
-                <!-- ------------------------------------- -->
-                <!-- Cursos por PHP de la Base de Datos !! -->
-                <!-- ------------------------------------- -->
-
-                <?php
-
-                    foreach($data["cursos"] as $curso){
-                        echo "<div class='course'>";
-                        echo "<img src='" . $curso["URL_imagen"] . "' alt='Curso 1'>";
-                        echo "<h3>" . $curso["Nombre_curso"] . "</h3>";
-                        echo "<p>" . $curso["Descripción"] . "</p>";
-                        echo "<div class='venta-p'>";
-                        echo "<button class='btn-saber-mas'>Más</button>";
-                        echo "<button class='btn-carrito'>";
-                        echo "<box-icon color='#ffffff' name='cart'></box-icon>";
-                        echo "</button>";
-                        echo "<p class='precio'>$" . $curso["Precio"] . "</p>";
-                        echo "</div>";
-                        echo "</div>";
-                    }
-
-                ?>
+                <!-- ------------------------ -->
+                <!-- Cursos por JavaScript !! -->
+                <!-- ------------------------ -->
 
                 
 
@@ -138,40 +117,41 @@
 
     <footer>
         <div class="footer-container">
-
             <div class="fs-1 footer-section social-net-top">
-
                 <div class="fs-img">
-                    <box-icon color='#b8b8b8' size="lg" name='code-block' alt="Logo"></box-icon>
+                    <box-icon color="#b8b8b8" size="lg" name="code-block" alt="Logo"></box-icon>
                 </div>
-                
+
                 <ul>
-                    
-                    <li><a href="https://fb.com/">
-                        <box-icon name='facebook-circle' type='logo' color='#b8b8b8' ></box-icon>
-                    </a></li>
+                    <li>
+                        <a href="https://fb.com/">
+                            <box-icon name="facebook-circle" type="logo" color="#b8b8b8"></box-icon>
+                        </a>
+                    </li>
 
-                    <li><a href="https://instagram.com/">
-                        <box-icon name='instagram-alt' type='logo' color='#b8b8b8' ></box-icon>
-                    </a></li>
+                    <li>
+                        <a href="https://instagram.com/">
+                            <box-icon name="instagram-alt" type="logo" color="#b8b8b8"></box-icon>
+                        </a>
+                    </li>
 
-                    <li><a href="https://youtube.com/">
-                        <box-icon name='youtube' type='logo' color='#b8b8b8' ></box-icon>
-                    </a></li>
-
+                    <li>
+                        <a href="https://youtube.com/"> <box-icon name="youtube" type="logo" color="#b8b8b8"></box-icon>
+                        </a>
+                    </li>
                 </ul>
             </div>
 
             <div class="fs-2 footer-section">
                 <h3>Cursos</h3>
                 <ul>
-                    <li><a href="#">Todos los cursos</a></li>
+                    <li><a href="./cursos.html">Todos los cursos</a></li>
                     <li><a href="#">Desarrollo Web</a></li>
-                    <li><a href="#">Diseño Gráfico</a></li>
-                    <li><a href="#">Inteligencia Artificial</a></li>
+                    <li><a href="#">Python</a></li>
+                    <li><a href="#">React Native</a></li>
                 </ul>
             </div>
-            
+
             <div class="fs-3 footer-section">
                 <h3>Contacto</h3>
                 <div class="email-container">
@@ -185,20 +165,14 @@
                 <a href="#">Ver oportunidades de trabajo</a>
             </div>
 
-
-
-        <p class="copyright">&copy; 2023 Instituto Easy Code | Todos los derechos reservados</p>
-    
-
-
+            <p class="copyright"> &copy; 2023 Instituto Easy Code | Todos los derechos reservados </p>
         </div>
-
     </footer>
 
 
 
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <!-- <script src="js/main.js"></script> -->
+    <script src="js/main.js"></script>
 </body>
 </html>
