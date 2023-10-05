@@ -57,7 +57,9 @@
                 <div class="cart">
                     <box-icon color='#ffffff' size="md" name='cart'></box-icon>
                    
-                    <span color='#ffffff' id="contador" class="contador-carrito contador-rojo">0</span>
+                    <div class="cart-indicator">
+                        <p>0</p>
+                    </div>
                 </div>
             </div>
         </div>
