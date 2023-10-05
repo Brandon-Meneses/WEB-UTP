@@ -9,7 +9,10 @@
             $data["titulo"] = "Cursos";
             $data["cursos"] = $cursos->get_cursos();
 
-            require_once "php/views/cursos/cursos.php";
+            require_once "utils.php";
+            $dirname = $__dirname;
+
+            require_once "$dirname/php/views/usuario/cursos/cursos.php"; // Importo la vista de Cursos
 
         }
 
