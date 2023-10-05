@@ -2,7 +2,7 @@
 
     class CursosController{
             
-        public function index(){
+        public function cursos(){
             require_once "php/models/CursosModel.php";
             $cursos = new Cursos_model();
 

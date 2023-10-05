@@ -4,6 +4,6 @@
     require_once "php/controllers/Cursos.php";
 
     $control = new CursosController();
-    $control->index();
+    $control->cursos();
     
 ?>

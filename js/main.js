@@ -38,6 +38,7 @@ const cursos = [
   },
 ];
 
+/*
 
 const repertorio = document.querySelector('.tarjetas-cursos');
 
@@ -68,6 +69,8 @@ function crearTarjeta(curso) {
 
 cursos.forEach(curso => crearTarjeta(curso));
 
+*/
+
 // Buscador:
 const buscar = document.querySelector('.search-bar input');
 
@@ -87,6 +90,9 @@ buscar.addEventListener('keyup', (e) => {
   });
 });
 
+/*
+
+//Carrito de compras:
 const carrito = [];
 const contadorCarrito = document.querySelector('.contador-carrito');
 const carritoElement = document.getElementById('carrito');
@@ -100,28 +106,18 @@ function agregarAlCarrito(curso) {
 function actualizarCarrito() {
   contadorCarrito.textContent = carrito.length;
 
-  const carritoElement = document.getElementById('carrito');
 
-  if (carritoElement) {
-    carritoElement.innerHTML = '';
+  carritoElement.innerHTML = '';
 
-    carrito.forEach(curso => {
-      const divCurso = document.createElement('div');
-      divCurso.classList.add('curso-en-carrito');
-      divCurso.innerHTML = `
-        <p>${curso.nombre}</p>
-        <p>${curso.precio}</p>
-      `;
-      carritoElement.appendChild(divCurso);
-    });
-     const contadorNumero = parseInt(contadorCarrito.textContent);
 
-     if (contadorNumero > 0) {
-       contadorCarrito.style.color = 'red';
-     } else {
-       contadorCarrito.style.color = 'white'; 
-     }
+  const contadorNumero = parseInt(contadorCarrito.textContent);
+
+  if (contadorNumero > 0) {
+    contadorCarrito.style.color = 'red';
+  } else {
+    contadorCarrito.style.color = 'white'; 
   }
+
 }
 
 const botonesCarrito = document.querySelectorAll('.btn-carrito');
@@ -131,3 +127,66 @@ botonesCarrito.forEach((boton, index) => {
     agregarAlCarrito(curso);
   });
 });
+
+*/
+
+
+class carritoCompras{
+
+  listaCarrito = []; // Lista de IDs de los cursos en el carrito
+
+  constructor() {
+    this.listaCarrito = [];
+    this.cargarCarritoLS();
+  }
+
+  agregarCurso(objCurso) {
+    // si el curso ya está en el carrito, no lo agrego
+    if (this.listaCarrito.find(curso => curso.ID === objCurso.ID)) {
+      console.log('No agregado, ID: ' + objCurso.ID +' ya está en el carrito');
+      return;
+    }
+
+    this.listaCarrito.push(objCurso);
+    console.log('Se agregó el curso ID: ' + objCurso.ID + ' al carrito');
+    console.log(this.listaCarrito);
+
+    this.guardarCarritoLS();
+
+  }
+
+  // alerta de curso agregado por SweetAlert2
+  alertaCursoAgregado() {
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Curso agregado al carrito',
+      showConfirmButton: false,
+      timer: 1500
+    })
+  }
+
+  // Elimina un curso del carrito
+  eliminarCurso(ID) {
+    this.listaCarrito = this.listaCarrito.filter(curso => curso.ID !== ID);
+    console.log('Se eliminó el curso ID: ' + ID + ' del carrito');
+    console.log(this.listaCarrito);
+  }
+
+  // local storage - guardar carrito
+  guardarCarritoLS() {
+    localStorage.setItem('carrito', JSON.stringify(this.listaCarrito));
+    console.log('Se guardó el carrito en el local storage');
+  }
+
+  // local storage - cargar carrito
+  cargarCarritoLS() {
+    let datosLS = JSON.parse(localStorage.getItem('carrito'));
+    if (datosLS !== null){
+      this.listaCarrito = datosLS;
+    }
+    console.log(this.listaCarrito)
+  }
+  
+}
+const classCarrito = new carritoCompras();
