@@ -112,7 +112,7 @@
                         echo "<h3>" . $curso["Nombre_curso"] . "</h3>";
                         echo "<p>" . $curso["Descripción"] . "</p>";
                         echo "<div class='venta-p'>";
-                        echo "<button class='btn-saber-mas'>Más</button>";
+                        // echo "<button class='btn-saber-mas'>Más</button>";
                         echo "<button class='btn-carrito' onclick='classCarrito.agregarCurso(" . json_encode($curso) . ")'>";
                         echo "<box-icon color='#ffffff' name='cart'></box-icon>";
                         echo "</button>";
