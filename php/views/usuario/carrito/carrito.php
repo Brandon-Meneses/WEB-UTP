@@ -28,14 +28,14 @@
         }
         .body-carrito {
             background-color: #f3f4f6;
-            min-height: 100vh;
+            min-height: 110vh;
         }
 
     </style>
 
     <div class="container mx-auto mt-8 max-w-4xl">
         <!-- Tabla de productos en el carrito -->
-        <table class="table-auto w-full">
+        <table class="table-auto w-full ">
             <thead>
                 <tr>
                     <th class="px-4 py-2 bg-cyan-400 text-white">Imagen</th>
@@ -44,7 +44,7 @@
                     <th class="px-4 py-2 bg-cyan-400 text-white">Acciones</th>
                 </tr>
             </thead>
-            <tbody class="tabla-cursos-carrito">
+            <tbody class="tabla-cursos-carrito bg-gray-200/50">
 
                 <!-- Formato: -->
                 <!-- <tr>
@@ -70,7 +70,7 @@
         <div class="place-content-center bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             <!-- estilo: Total: $ -->
             <div>
-                <p class="text-2xl font-bold">Total: $ <span class="total"></span></p>
+                <p class="text-2xl font-bold">Total: $ <span class="total">0</span></p>
                 <!-- Boton pagar -->
                 <button class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded w-full mt-4">Pagar</button>
                 
