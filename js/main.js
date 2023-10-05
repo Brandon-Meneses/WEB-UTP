@@ -141,6 +141,9 @@ class carritoCompras{
   }
 
   agregarCurso(objCurso) {
+
+    this.alertaCursoAgregado();
+
     // si el curso ya está en el carrito, no lo agrego
     if (this.listaCarrito.find(curso => curso.ID === objCurso.ID)) {
       console.log('No agregado, ID: ' + objCurso.ID +' ya está en el carrito');
