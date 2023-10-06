@@ -55,11 +55,13 @@
 
 
                 <div class="cart">
-                    <box-icon color='#ffffff' size="md" name='cart'></box-icon>
-                   
-                    <div class="cart-indicator">
-                        <p>0</p>
-                    </div>
+                    <a href="../usuario/carrito/carrito.php">
+                        <box-icon color='#ffffff' size="md" name='cart'></box-icon>
+                    
+                        <div class="cart-indicator">
+                            <p>0</p>
+                        </div>
+                    </a>                    
                 </div>
             </div>
         </div>
