@@ -36,7 +36,7 @@
                 <ul class="nav-links">
                     <li><a href="#">Conocenos</a></li>
                     <li><a href="php/views/cursos/cursos.php">Cursos</a></li>
-                    <li><a href="php/views/usuaio/login.html">Login</a></li>
+                    <li><a href="php/views/usuario/login.php">Login</a></li>
                 </ul>
 
                 <!-- maximo 600px -->
