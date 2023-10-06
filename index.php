@@ -58,7 +58,7 @@
                         <box-icon color='#ffffff' size="md" name='cart'></box-icon>
                     
                         <div class="cart-indicator">
-                            <p>0</p>
+                            <p style="color: #ffffff;">0</p>
                         </div>
                     </a>                    
                 </div>

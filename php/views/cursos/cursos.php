@@ -59,7 +59,7 @@
                         <box-icon color='#ffffff' size="md" name='cart'></box-icon>
                     
                         <div class="cart-indicator">
-                            <p>0</p>
+                            <p style="color: #ffffff;">0</p>
                         </div>
                     </a>                    
                 </div>
@@ -223,7 +223,7 @@
 
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <script src="../../../js/main.js"></script>
+    <script src="../../../js/cursos.js"></script>
 
     <!-- Sweet Alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
