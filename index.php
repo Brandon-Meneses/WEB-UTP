@@ -35,8 +35,8 @@
                 <!-- minimo 600px -->
                 <ul class="nav-links">
                     <li><a href="#">Conocenos</a></li>
-                    <li><a href="./cursos.html">Cursos</a></li>
-                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="php/views/cursos/cursos.php">Cursos</a></li>
+                    <li><a href="php/views/usuaio/login.html">Login</a></li>
                 </ul>
 
                 <!-- maximo 600px -->
@@ -47,8 +47,8 @@
                         </label>
                         <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-[#39bad9] rounded-box w-52">
                             <li><a href="#">Conocenos</a></li>
-                            <li><a href="./cursos.html">Cursos</a></li>
-                            <li><a href="./login.html">Login</a></li>
+                            <li><a href="php/views/cursos/cursos.php">Cursos</a></li>
+                            <li><a href="php/views/usuaio/login.html">Login</a></li>
                         </ul>
                     </div>
                 </div>

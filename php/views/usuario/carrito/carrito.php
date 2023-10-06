@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="../../../css/style.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,15 +45,6 @@
                 </tr>
             </thead>
             <tbody class="tabla-cursos-carrito bg-gray-200/50">
-
-                <!-- Formato: -->
-                <!-- <tr>
-                    <td class="px-4 py-2"><img src="imagen_producto_1.jpg" alt="Producto 1" class="w-16 h-16"></td>
-                    <td class="px-4 py-2">Producto 1</td>
-                    <td class="px-4 py-2">$50.00</td>
-                    <td class="px-4 py-2"><button class="bg-red-500 hover:bg-red-600 text-white py-1 px-2 rounded">Borrar</button></td>
-                </tr> -->
-
 
                 <!-- Volcar datos del LocalStorage por JavaScript: -->
 

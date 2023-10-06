@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursos</title>
-    <link rel="stylesheet" href="../../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/style.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -109,8 +109,8 @@
                 <?php
 
 
-                    require_once "../../../config/database.php"; // Importo la configuración de la base de datos
-                    require_once "../../../controllers/Cursos.php"; // Importo el controlador de Cursos
+                    require_once "../../config/database.php"; // Importo la configuración de la base de datos
+                    require_once "../../controllers/Cursos.php"; // Importo el controlador de Cursos
 
                     $control = new CursosController(); // Instancio el controlador de Cursos
                     $data = $control->cursos(); // Ejecuto el método "cursos" del controlador de Cursos
@@ -221,7 +221,7 @@
 
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../../../js/main.js"></script>
 
     <!-- Sweet Alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
