@@ -34,9 +34,9 @@
 
                 <!-- minimo 600px -->
                 <ul class="nav-links">
-                    <li><a href="./index.html">Conocenos</a></li>
+                    <li><a href="../../../index.php">Conocenos</a></li>
                     <li><a href="#">Cursos</a></li>
-                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="../usuario/login.php">Login</a></li>
                 </ul>
 
                 <!-- maximo 600px -->
