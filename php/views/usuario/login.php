@@ -12,7 +12,7 @@
 <body class="dsp-flex-xs flex-direction-column identity-layout">
 
     <header class="navbar navbar-expand-md navbar-dark bg-dark justify-content-center">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="../../../index.php">
             <div class="d-flex align-items-center">
                 <i class="bx bx-code-block text-white mr-2"></i>
                 <h4 class="text-white">Easy Code</h4>
