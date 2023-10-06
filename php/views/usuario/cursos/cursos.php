@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursos</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../../../css/style.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -108,7 +108,14 @@
 
                 <?php
 
-                    foreach($data["cursos"] as $curso){
+
+                    require_once "../../../config/database.php"; // Importo la configuración de la base de datos
+                    require_once "../../../controllers/Cursos.php"; // Importo el controlador de Cursos
+
+                    $control = new CursosController(); // Instancio el controlador de Cursos
+                    $data = $control->cursos(); // Ejecuto el método "cursos" del controlador de Cursos
+
+                    foreach($data as $curso){
                         echo "<div class='course'>";
                         echo "<img src='" . $curso["URL_imagen"] . "' alt='Curso 1'>";
                         echo "<h3>" . $curso["Nombre_curso"] . "</h3>";
