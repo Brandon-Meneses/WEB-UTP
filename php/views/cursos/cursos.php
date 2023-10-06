@@ -46,9 +46,9 @@
                             <box-icon color="#ffffff" size="md" name="menu"></box-icon>
                         </label>
                         <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-[#39bad8] rounded-box w-52">
-                            <li><a href="./index.html">Conocenos</a></li>
+                            <li><a href="../../../index.php">Conocenos</a></li>
                             <li><a href="#">Cursos</a></li>
-                            <li><a href="./login.html">Login</a></li>
+                            <li><a href="../usuario/login.php">Login</a></li>
                         </ul>
                     </div>
                 </div>
