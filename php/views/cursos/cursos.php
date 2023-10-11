@@ -160,17 +160,7 @@
                             <box-icon name="facebook-circle" type="logo" color="#b8b8b8"></box-icon>
                         </a>
                     </li>
-                    <li>
-                        <a href="https://fb.com/">
-                            <box-icon name="facebook-circle" type="logo" color="#b8b8b8"></box-icon>
-                        </a>
-                    </li>
 
-                    <li>
-                        <a href="https://instagram.com/">
-                            <box-icon name="instagram-alt" type="logo" color="#b8b8b8"></box-icon>
-                        </a>
-                    </li>
                     <li>
                         <a href="https://instagram.com/">
                             <box-icon name="instagram-alt" type="logo" color="#b8b8b8"></box-icon>
@@ -181,10 +171,7 @@
                         <a href="https://youtube.com/"> <box-icon name="youtube" type="logo" color="#b8b8b8"></box-icon>
                         </a>
                     </li>
-                    <li>
-                        <a href="https://youtube.com/"> <box-icon name="youtube" type="logo" color="#b8b8b8"></box-icon>
-                        </a>
-                    </li>
+
                 </ul>
             </div>
 
