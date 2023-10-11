@@ -150,25 +150,25 @@
             <div class="fs-1 footer-section social-net-top">
                 <div class="fs-img">
                     <box-icon color="#b8b8b8" size="lg" name="code-block" alt="Logo"></box-icon>
-                    <box-icon color="#b8b8b8" size="lg" name="code-block" alt="Logo"></box-icon>
                 </div>
 
 
                 <ul>
                     <li>
-                        <a href="https://fb.com/">
+                        <a href="https://www.facebook.com/profile.php?id=61552031410825">
                             <box-icon name="facebook-circle" type="logo" color="#b8b8b8"></box-icon>
                         </a>
                     </li>
 
                     <li>
-                        <a href="https://instagram.com/">
+                        <a href="https://www.instagram.com/easycodeutp/">
                             <box-icon name="instagram-alt" type="logo" color="#b8b8b8"></box-icon>
                         </a>
                     </li>
 
                     <li>
-                        <a href="https://youtube.com/"> <box-icon name="youtube" type="logo" color="#b8b8b8"></box-icon>
+                        <a href="https://twitter.com/EasyCodeUTP"> 
+                            <box-icon name="twitter" type="logo" color="#b8b8b8"></box-icon>
                         </a>
                     </li>
 
@@ -179,10 +179,7 @@
                 <h3>Cursos</h3>
                 <ul>
                     <li><a href="./cursos.html">Todos los cursos</a></li>
-                    <li><a href="./cursos.html">Todos los cursos</a></li>
                     <li><a href="#">Desarrollo Web</a></li>
-                    <li><a href="#">Python</a></li>
-                    <li><a href="#">React Native</a></li>
                     <li><a href="#">Python</a></li>
                     <li><a href="#">React Native</a></li>
                 </ul>
