@@ -27,7 +27,7 @@
               <div class="col-md-6">
                 <div class="card">
                   <div class="card-body">
-                    <h2 class="text-center mb-4">Inicio de Sesión</h2>
+                    <h2 class="text-center mb-4">Registro</h2>
                     
                     <?php
                       if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -58,31 +58,30 @@
                       }
                       ?>
 
-<form method="post" class="max-w-sm mx-auto mt-10 p-4 border rounded-lg shadow-md">
-  <div class="mb-4">
-    <label for="dni" class="block text-gray-700">DNI:</label>
-    <input type="text" name="dni" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300">
-  </div>
+                  <form method="post" class="max-w-md mx-auto p-4">
+                    <div class="mb-3">
+                      <label for="dni" class="form-label">DNI:</label>
+                      <input type="text" name="dni" required class="form-control" id="dni">
+                    </div>
 
-  <div class="mb-4">
-    <label for="nombre" class="block text-gray-700">Nombre:</label>
-    <input type="text" name="nombre" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300">
-  </div>
+                    <div class="mb-3">
+                      <label for="nombre" class="form-label">Nombre:</label>
+                      <input type="text" name="nombre" required class="form-control" id="nombre">
+                    </div>
 
-  <div class="mb-4">
-    <label for="correo" class="block text-gray-700">Correo:</label>
-    <input type="email" name="correo" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300">
-  </div>
+                    <div class="mb-3">
+                      <label for="correo" class="form-label">Correo Electrónico:</label>
+                      <input type="email" name="correo" required class="form-control" id="correo">
+                    </div>
 
-  <div class="mb-4">
-    <label for="contraseña" class="block text-gray-700">Contraseña:</label>
-    <input type="password" name="contraseña" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300">
-  </div>
+                    <div class="mb-3">
+                      <label for="contraseña" class="form-label">Contraseña:</label>
+                      <input type="password" name="contraseña" required class="form-control" id="contraseña">
+                    </div>
 
-  <div class="mt-4">
-    <input type="submit" value="Registrar" class="w-full bg-blue-500 text-black p-2 rounded-lg cursor-pointer hover:bg-blue-600">
-  </div>
-</form>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                  </form>
+
 
 
                   </div>
