@@ -45,6 +45,13 @@ class Carrito {
         const totalElement = document.querySelector('.total');
         totalElement.innerHTML = `${total}`;
     }
+    
+
 }
+var titulo = document.getElementById('titulo');
+
+        titulo.addEventListener('click', function() {
+            window.location.href = '../../../../index.php';
+        });
 
 const carrito = new Carrito();

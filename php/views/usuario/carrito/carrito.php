@@ -18,20 +18,30 @@
 </head>
 <body class="body-carrito">
     <div class="bg-cyan-400 text-white py-4 text-center">
-        <h1 class="text-3xl titulo-bold">Tu Carrito</h1>
+        <h1 id="titulo" class="text-3xl titulo-bold">Tu Carrito</h1>
     </div>
 
     <style>
         .titulo-bold {
             font-family: "Kanit", sans-serif;
             font-weight: bold;
+            cursor: pointer;
         }
         .body-carrito {
             background-color: #f3f4f6;
             min-height: 110vh;
         }
+        
 
     </style>
+    
+    <script>
+        var titulo = document.getElementById('titulo');
+
+        titulo.addEventListener('click', function() {
+            window.location.href = '../../../../index.php';
+        });
+    </script>
 
     <div class="container mx-auto mt-8 max-w-4xl">
         <!-- Tabla de productos en el carrito -->
