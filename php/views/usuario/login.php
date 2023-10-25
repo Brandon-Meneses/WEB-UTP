@@ -28,17 +28,52 @@
                 <div class="card">
                   <div class="card-body">
                     <h2 class="text-center mb-4">Inicio de Sesión</h2>
-                    <form>
-                      <div class="mb-3">
-                        <label for="email" class="form-label">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="email" required>
-                      </div>
-                      <div class="mb-3">
-                        <label for="password" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="password" required>
-                      </div>
-                      <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
-                    </form>
+                    
+                    <?php
+                      if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                          // Procesar el formulario cuando se envía
+                          $dni = $_POST['dni'];
+                          $nombre = $_POST['nombre'];
+                          $correo = $_POST['correo'];
+                          $contraseña = $_POST['contraseña'];
+
+                          // Conectar a la base de datos (debes tener la clase Conectar definida)
+                          $db = new mysqli("localhost", "root", "", "proyecto_web");
+
+                          if ($db->connect_error) {
+                              die("Conexión fallida: " . $db->connect_error);
+                          }
+
+                          // Llamar al procedimiento almacenado para añadir usuarios
+                          $sql = "CALL añadir_usuario($dni, '$nombre', '$correo', '$contraseña')";
+
+                          if ($db->query($sql) === TRUE) {
+                              echo "Usuario registrado con éxito.";
+                          } else {
+                              echo "Error al registrar el usuario: " . $db->error;
+                          }
+
+                          // Cerrar la conexión a la base de datos
+                          $db->close();
+                      }
+                      ?>
+
+                      <form method="post">
+                          <label for="dni">DNI:</label>
+                          <input type="text" name="dni" required><br>
+
+                          <label for="nombre">Nombre:</label>
+                          <input type="text" name="nombre" required><br>
+
+                          <label for "correo">Correo:</label>
+                          <input type="email" name="correo" required><br>
+
+                          <label for="contraseña">Contraseña:</label>
+                          <input type="password" name="contraseña" required><br>
+
+                          <input type="submit" value="Registrar">
+                      </form>
+
                   </div>
                 </div>
               </div>
