@@ -58,21 +58,32 @@
                       }
                       ?>
 
-                      <form method="post">
-                          <label for="dni">DNI:</label>
-                          <input type="text" name="dni" required><br>
+<form method="post" class="max-w-sm mx-auto mt-10 p-4 border rounded-lg shadow-md">
+  <div class="mb-4">
+    <label for="dni" class="block text-gray-700">DNI:</label>
+    <input type="text" name="dni" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300">
+  </div>
 
-                          <label for="nombre">Nombre:</label>
-                          <input type="text" name="nombre" required><br>
+  <div class="mb-4">
+    <label for="nombre" class="block text-gray-700">Nombre:</label>
+    <input type="text" name="nombre" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300">
+  </div>
 
-                          <label for "correo">Correo:</label>
-                          <input type="email" name="correo" required><br>
+  <div class="mb-4">
+    <label for="correo" class="block text-gray-700">Correo:</label>
+    <input type="email" name="correo" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300">
+  </div>
 
-                          <label for="contraseña">Contraseña:</label>
-                          <input type="password" name="contraseña" required><br>
+  <div class="mb-4">
+    <label for="contraseña" class="block text-gray-700">Contraseña:</label>
+    <input type="password" name="contraseña" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300">
+  </div>
 
-                          <input type="submit" value="Registrar">
-                      </form>
+  <div class="mt-4">
+    <input type="submit" value="Registrar" class="w-full bg-blue-500 text-black p-2 rounded-lg cursor-pointer hover:bg-blue-600">
+  </div>
+</form>
+
 
                   </div>
                 </div>
