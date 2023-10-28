@@ -115,43 +115,21 @@
         <div class="w-full md:w-3/4 p-4 min-h-max">
             <h1 class="text-2xl font-semibold mb-4">Cursos</h1>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <!-- Producto 1 -->
-                <div class="card bg-base-100 shadow-xl">
-                    <figure><img src="https://i.postimg.cc/W4hhNtD0/java.jpg" alt="Shoes" /></figure>
-                    <div class="card-body">
-                      <h2 class="card-title">Java
-                        <div class="badge badge-secondary">NUEVO</div>
-                      </h2>
-                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus maiores voluptatum tenetur provident ipsum repudiandae.</p>
-                      <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Comprar</button>
-                      </div>
-                    </div>
-                  </div>
+               
+                
 
-                <!-- Producto 2 -->
-                <div class="card bg-base-100 shadow-xl">
-                    <figure><img src="https://i.postimg.cc/jS8DYyjs/movil-React.jpg" alt="Shoes" /></figure>
-                    <div class="card-body">
-                      <h2 class="card-title">React</h2>
-                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque?</p>
-                      <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Comprar</button>
-                      </div>
+                @foreach ($cursos as $curso)
+                    <div class="card bg-base-100 shadow-xl">
+                        <figure><img src="{{ $curso['imagen'] }}" alt="{{ $curso['nombre'] }}" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title">{{ $curso['nombre'] }}</h2>
+                            <p>{{ $curso['descripcion'] }}</p>
+                            <div class="card-actions justify-end">
+                                <button class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-
-                <!-- Producto 3 -->
-                <div class="card bg-base-100 shadow-xl">
-                    <figure><img src="https://i.postimg.cc/d3m0HyXc/node.jpg" alt="Shoes" /></figure>
-                    <div class="card-body">
-                      <h2 class="card-title">Node</h2>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nam, harum, maxime minus ullam, totam molestias pariatur inventore aut praesentium dolor rem.</p>
-                      <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Comprar</button>
-                      </div>
-                    </div>
-                  </div>
+                  @endforeach
 
 
             </div>
