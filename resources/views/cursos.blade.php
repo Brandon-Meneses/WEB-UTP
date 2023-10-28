@@ -105,10 +105,10 @@
 
                 @foreach ($cursos as $curso)
                     <div class="card bg-base-100 shadow-xl max-w-[260px] hover:scale-[1.01] ease-in duration-300">
-                        <figure><img src="{{ $curso->URL_imagen }}" alt="{{ $curso->Nombre_curso }}" /></figure>
+                        <figure><img src="{{ $curso->url_imagen }}" alt="{{ $curso->nombre }}" /></figure>
                         <div class="card-body">
-                            <h2 class="card-title">{{ $curso->Nombre_curso }}</h2>
-                            <p>{{ $curso->Descripción }}</p>
+                            <h2 class="card-title">{{ $curso->nombre }}</h2>
+                            <p>{{ $curso->descripcion }}</p>
                             <div class="card-actions justify-end">
                                 <button class="btn btn-primary">Comprar</button>
                             </div>
