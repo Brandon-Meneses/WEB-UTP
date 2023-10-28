@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CursoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,3 +24,17 @@ Route::get('/cursos', function () {
 Route::get('/registro', function () {
     return view('registro');
 });
+
+
+
+// CRUD de cursos 
+Route::get('/cursos', [CursoController::class, 'index'])->name('cursos.index');
+Route::get('/cursos/create', [CursoController::class, 'create'])->name('cursos.create');
+Route::post('/cursos', [CursoController::class, 'store'])->name('cursos.store');
+Route::get('/cursos/{idCurso}', [CursoController::class, 'show'])->name('cursos.show');
+Route::get('/cursos/{idCurso}/edit', [CursoController::class, 'edit'])->name('cursos.edit');
+Route::put('/cursos/{idCurso}', [CursoController::class, 'update'])->name('cursos.update');
+Route::delete('/cursos/{idCurso}', [CursoController::class, 'destroy'])->name('cursos.destroy');
+
+// CRUD de usuarios
+
