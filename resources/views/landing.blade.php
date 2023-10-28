@@ -101,7 +101,7 @@
     <div class="max-w-3xl">
       <h1 class="text-5xl font-bold">Aprende a programar como un experto</h1>
       <p class="py-6">Conviértete en un desarrollador de clase mundial desde cualquier parte del mundo.</p>
-      <button class="btn btn-primary">Crea tu cuenta gratis</button>
+      <a href="./registro" class="btn btn-primary">Crea tu cuenta gratis</a>
     </div>
   </div>
 </div>
