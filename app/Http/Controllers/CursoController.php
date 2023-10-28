@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Curso;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB; // para usar DB (similar al comando 'php artisan tinker' por consola)
+use Illuminate\Support\Facades\DB; // NO ES NECESARIO IMPORTARLO -  para usar la DB (similar al comando 'php artisan tinker' por consola)
 
 class CursoController extends Controller
 {
@@ -15,7 +16,7 @@ class CursoController extends Controller
      */
     public function index()
     {
-        $cursos = DB::table('cursos')->get();
+        $cursos = Curso::get();
         //dd($cursos);  // dd() muestra el contenido de la variable y luego para la ejecución del programa 
         return view('cursos')->with('cursos', $cursos);
     }
