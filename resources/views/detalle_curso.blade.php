@@ -24,7 +24,7 @@
         </label>
         <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
           <li><a href="/">Conócenos</a></li>
-          <li><a>Cursos</a></li>
+          <li><a href="/cursos">Cursos</a></li>
   
         </ul>
       </div>
@@ -82,8 +82,8 @@
 
 
     <div class="min-w-screen min-h-screen  flex items-center p-5 lg:p-10 overflow-hidden relative">
-        <div class="w-full max-w-6xl rounded bg-white shadow-xl p-10 lg:p-20 mx-auto text-gray-800 relative md:text-left">
-            <div class="md:flex items-center -mx-10">
+        <div class=" max-w-[400px] w-full md:max-w-5xl rounded bg-white shadow-xl p-10 lg:p-20 mx-auto text-gray-800 relative md:text-left">
+            <div class="md:flex items-center -mx-10 ">
                 <div class="w-full md:w-1/2 px-10 mb-10 md:mb-0">
                     <div class="relative">
                         <img src="{{$curso->url_imagen}}" class="w-full relative z-10" alt="">
