@@ -17,8 +17,9 @@ class CursoController extends Controller
     public function index()
     {
         $cursos = Curso::get();
+        $categorias = DB::table('cursos')->select('categoria')->distinct()->get();
         //dd($cursos);  // dd() muestra el contenido de la variable y luego para la ejecución del programa 
-        return view('cursos')->with('cursos', $cursos);
+        return view('cursos')->with('cursos', $cursos)->with('categorias', $categorias); // en el with el primero es el nombre de la variable que se usará en la vista y el segundo es el valor de la variable
     }
 
     /**
@@ -28,7 +29,7 @@ class CursoController extends Controller
     {
         $cursos = DB::table('cursos')->get();
         
-        return view('gestionar_curso')->with('cursos', $cursos); // en el with el primero es el nombre de la variable que se usará en la vista y el segundo es el valor de la variable
+        return view('gestionar_curso')->with('cursos', $cursos);
     }
 
     /**
@@ -67,6 +68,14 @@ class CursoController extends Controller
      */
     public function show(string $id)
     {
+        /*
+        al clicar el botón de comprar, se ejecuta la función show y se pasa el id del curso
+        Route::get('/cursos/{idCurso}', 'show');
+        */
+
+        $curso = Curso::find($id);
+        //return 'curso: ' . $curso->nombre . ' - ' . $curso->descripcion . ' - ' . $curso->categoria . ' - ' . $curso->precio . ' - ' . $curso->url_imagen . ' - ' . $curso->id;
+        return view('detalle_curso')->with('curso', $curso);
        
     }
 

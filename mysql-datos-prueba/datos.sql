@@ -1,3 +1,9 @@
+
+
+-- OJO   !!!!!!!!!!!!!!!!!!!!
+-- antes de ejecutar este script, configura en el ./.env los datos de tu base de datos
+-- y ejecuta el comando php artisan migrate para crear las tablas
+
 USE proyecto_web_laravel;
 
 -- agregar usuarios

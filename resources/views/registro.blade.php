@@ -12,7 +12,7 @@
 <body class="bg-gray-100">
 
     <div class="navbar bg-primary sticky top-0 z-40">
-        <a class=" btn btn-ghost normal-case text-xl " href="./">EasyCode</a>
+        <a class=" btn btn-ghost normal-case text-xl " href="/">EasyCode</a>
     </div>
 
     <div class="min-h-screen flex flex-col items-center justify-center bg-gray-100">

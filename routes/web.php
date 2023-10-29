@@ -17,14 +17,14 @@ Route::get('/', function () {
     return view('landing');
 });
 
-// Carrito
-Route::get('/carrito', function () {
-    return view('carrito');
+// Registro
+Route::get('/registro', function () {
+    return view('registro');
 });
 
 // CRUD de cursos 
 Route::controller(CursoController::class)->group(function(){
-
+    
     Route::get('/cursos', 'index');
     Route::get('/cursos/gestion', 'create');
     Route::post('/cursos/gestion', 'store');
@@ -32,12 +32,12 @@ Route::controller(CursoController::class)->group(function(){
     Route::get('/cursos/{idCurso}/edit', 'edit');
     Route::put('/cursos/{idCurso}', 'update');
     Route::delete('/cursos/{idCurso}', 'destroy');
-
+    
 });
 
-
-// Registro
-Route::get('/registro', function () {
-    return view('registro');
+// Carrito
+Route::get('/carrito', function () {
+    return view('carrito');
 });
+
 

@@ -23,13 +23,13 @@
 
       </ul>
     </div>
-    <a class="btn btn-ghost normal-case text-xl" href="./">EasyCode</a>
+    <a class="btn btn-ghost normal-case text-xl" href="/">EasyCode</a>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
       <li><a href="./">Conócenos</a></li>
       <li><a>Cursos</a></li>
-      <li><a href="./registro">Regístrate</a></li>
+      <li><a href="/registro">Regístrate</a></li>
 
     </ul>
   </div>
@@ -76,25 +76,20 @@
 {{-- aqui iran los cursos, al costado izquierdo tendrá un aside para filtrar por categoria y en el derecho los cursos mostrados en grid --}}
 <div class="font-sans max-w-[1200px] m-auto">
     <div class="flex flex-col md:flex-row min-h-[80vh]">
+      
         <!-- Aside (Barra lateral izquierda) -->
-        <aside class="max-w-full md:w-1/4 bg-gray-200 p-4 max-h-[300px] m-4">
-            <h2 class="text-lg font-semibold mb-4">Categorías</h2>
-            <!-- Checkbox de filtro 1 -->
-            <label class="flex items-center space-x-2">
-                <input type="checkbox" class="form-checkbox text-indigo-600">
-                <span>Frontend</span>
-            </label>
-            <!-- Checkbox de filtro 2 -->
-            <label class="flex items-center space-x-2">
-                <input type="checkbox" class="form-checkbox text-indigo-600">
-                <span>Backend</span>
-            </label>
-            <!-- Checkbox de filtro 3 -->
-            <label class="flex items-center space-x-2">
-                <input type="checkbox" class="form-checkbox text-indigo-600">
-                <span>Devops</span>
-            </label>
+        <aside class="max-w-[300px] mx-4 my-4 p-6 bg-white shadow-lg rounded-lg">
+          <h2 class="text-xl font-semibold mb-4 text-gray-700">Categorías</h2>
+      
+          @foreach ($categorias as $categoria)
+            <label class="flex items-center space-x-2 text-gray-600">
+              <input type="checkbox" class="form-checkbox text-indigo-600">
+              <span>{{$categoria->categoria}}</span>
+            </label>              
+          @endforeach
+
         </aside>
+      
 
         <!-- Contenido principal (Productos en grilla) -->
         <div class="w-full md:w-3/4 p-4 min-h-max">
@@ -110,7 +105,7 @@
                             <h2 class="card-title">{{ $curso->nombre }}</h2>
                             <p>{{ $curso->descripcion }}</p>
                             <div class="card-actions justify-end">
-                                <button class="btn btn-primary">Comprar</button>
+                                <a class="btn btn-primary" href="/cursos/{{$curso->id}}" >saber más</a>
                             </div>
                         </div>
                     </div>
