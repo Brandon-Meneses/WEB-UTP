@@ -14,7 +14,10 @@
         <h2 class="text-2xl font-semibold text-center mb-6">Crear un Nuevo Curso</h2>
         
         <!-- Formulario para crear un curso -->
-        <form>
+        <form action="/cursos/gestion" method="POST">
+
+          @csrf  {{--  <- Directiva de Blade para proteger el formulario, genera un token unico --}}
+          
           <div class="mb-4">
             <label for="nombre" class="block text-gray-700 font-medium">Nombre del Curso</label>
             <input type="text" id="nombre" name="nombre" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
@@ -29,9 +32,9 @@
             <label for="categoria" class="block text-gray-700 font-medium">Categoría</label>
             <select id="categoria" name="categoria" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
               <option value=""></option>
-              <option value="frontend">Frontend</option>
-              <option value="backend">Backend</option>
-              <option value="devops">Devops</option>
+              <option value="Frontend">Frontend</option>
+              <option value="Backend">Backend</option>
+              <option value="Devops">Devops</option>
             </select>
           </div>
           

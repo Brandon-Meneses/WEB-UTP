@@ -36,7 +36,30 @@ class CursoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request->all());
+
+        /*          //primera forma de guardar en la base de datos
+        $curso = new Curso();
+        $curso->nombre = $request->input('nombre');
+        $curso->descripcion = $request->input('descripcion');
+        $curso->categoria = $request->input('categoria');
+        $curso->precio = $request->input('precio');
+        $curso->url_imagen = $request->input('url_imagen');
+        $curso->save();
+        */
+
+        // segunda forma de guardar en la base de datos
+        Curso::create( // si la tabla es el plural del modelo, no es necesario definir el nombre de la tabla
+            [
+                'nombre' => $request->nombre,
+                'descripcion' => $request->descripcion,
+                'categoria' => $request->categoria,
+                'precio' => $request->precio,
+                'url_imagen' => $request->url_imagen
+            ]
+        );
+
+        return redirect("/cursos/gestion");
     }
 
     /**
