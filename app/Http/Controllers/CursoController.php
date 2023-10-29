@@ -26,7 +26,9 @@ class CursoController extends Controller
      */
     public function create()
     {
-        return "Se ha creado el curso: ";
+        $cursos = DB::table('cursos')->get();
+        
+        return view('crearCurso')->with('cursos', $cursos); // en el with el primero es el nombre de la variable que se usará en la vista y el segundo es el valor de la variable
     }
 
     /**

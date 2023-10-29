@@ -26,12 +26,12 @@ Route::get('/carrito', function () {
 Route::controller(CursoController::class)->group(function(){
 
     Route::get('/cursos', 'index');
-    Route::get('/cursos/create', 'create')->name('cursos.create');
-    Route::post('/cursos', 'store')->name('cursos.store');
-    Route::get('/cursos/{idCurso}', 'show')->name('cursos.show');
-    Route::get('/cursos/{idCurso}/edit', 'edit')->name('cursos.edit');
-    Route::put('/cursos/{idCurso}', 'update')->name('cursos.update');
-    Route::delete('/cursos/{idCurso}', 'destroy')->name('cursos.destroy');
+    Route::get('/cursos/crear', 'create');
+    Route::post('/cursos', 'store');
+    Route::get('/cursos/{idCurso}', 'show');
+    Route::get('/cursos/{idCurso}/edit', 'edit');
+    Route::put('/cursos/{idCurso}', 'update');
+    Route::delete('/cursos/{idCurso}', 'destroy');
 
 });
 
