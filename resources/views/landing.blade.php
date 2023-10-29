@@ -12,7 +12,7 @@
 
     
 <div class="navbar bg-primary text-primary-content sticky top-0 z-40">
-  <div class="navbar-start">
+  <div class="navbar-start ">
     <div class="dropdown">
       <label tabindex="0" class="btn btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -123,31 +123,31 @@
 
 
 <!-- Statistics Section: Simple -->
-<div class="bg-secondary dark:text-gray-100 dark:bg-gray-900">
+<div class=" dark:text-gray-900  dark:bg-gray-100">
   <div class="container xl:max-w-7xl mx-auto px-4 py-16 lg:px-8 lg:py-32">
     <div class="grid grid-cols-1 sm:grid-cols-3 text-center divide-y sm:divide-y-0 sm:divide-x dark:divide-gray-700/75">
       <dl class="space-y-1 px-5 py-8">
-        <dt class="text-4xl font-extrabold text-black dark:text-white">
+        <dt class="text-4xl font-extrabold text-black ">
           00001+
         </dt>
         <dd class="text-sm uppercase tracking-wide font-semibold text-blue-600 dark:text-blue-500">
-          Projects
+          Proyectos
         </dd>
       </dl>
       <dl class="space-y-1 px-5 py-8">
-        <dt class="text-4xl font-extrabold text-black dark:text-white">
+        <dt class="text-4xl font-extrabold text-black ">
           00001+
         </dt>
         <dd class="text-sm uppercase tracking-wide font-semibold text-blue-600 dark:text-blue-500">
-          Clients
+          Clientes
         </dd>
       </dl>
       <dl class="space-y-1 px-5 py-8">
-        <dt class="text-4xl font-extrabold text-black dark:text-white">
+        <dt class="text-4xl font-extrabold text-black ">
           00001+
         </dt>
         <dd class="text-sm uppercase tracking-wide font-semibold text-blue-600 dark:text-blue-500">
-          Earnings
+          Ganancias
         </dd>
       </dl>
     </div>

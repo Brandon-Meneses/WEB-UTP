@@ -26,7 +26,7 @@ Route::get('/carrito', function () {
 Route::controller(CursoController::class)->group(function(){
 
     Route::get('/cursos', 'index');
-    Route::get('/cursos/crear', 'create');
+    Route::get('/cursos/gestion', 'create');
     Route::post('/cursos', 'store');
     Route::get('/cursos/{idCurso}', 'show');
     Route::get('/cursos/{idCurso}/edit', 'edit');
