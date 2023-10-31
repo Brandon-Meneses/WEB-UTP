@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
   @vite('resources/css/app.css')
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
   <title>{{$curso->nombre}}</title>
 </head>
