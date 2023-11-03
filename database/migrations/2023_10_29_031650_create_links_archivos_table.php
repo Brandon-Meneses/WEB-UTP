@@ -14,10 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('links_archivos', function (Blueprint $table) {
-            $table->integer('id', true);
-            $table->integer('id_curso')->nullable()->index('id_curso');
+            $table->id();
+            $table->unsignedBigInteger('id_curso')->nullable()->index('id_curso');
             $table->string('nombre');
             $table->string('url_archivo');
+            $table->timestamps();
         });
     }
 

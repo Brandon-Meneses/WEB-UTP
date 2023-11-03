@@ -14,10 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('compras', function (Blueprint $table) {
-            $table->integer('id', true);
-            $table->integer('id_usuario')->nullable()->index('id_usuario');
-            $table->integer('id_curso')->nullable()->index('id_curso');
-            $table->timestamp('fecha_compra')->useCurrent();
+            $table->id();
+            $table->unsignedBigInteger('id_usuario')->nullable()->index('id_usuario');
+            $table->unsignedBigInteger('id_curso')->nullable()->index('id_curso');
+            $table->timestamps();
         });
     }
 
