@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Curso;
+use App\Models\VideosCurso;
 use Illuminate\Http\Request;
 
 class VideosController extends Controller
@@ -17,9 +19,20 @@ class VideosController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request, string $idCurso)
     {
-        //
+        //dd($request->all());
+
+        VideosCurso::create(
+            [
+                'id_curso' => $idCurso,
+                'nombre' => $request->nombre,
+                'url_video' => $request->url_video,
+                'orden' => $request->orden
+            ]
+        );
+
+        return redirect("/cursos/".$idCurso."/editar");
     }
 
     /**
@@ -41,10 +54,12 @@ class VideosController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
-    {
-        //
+    // editar/actualizar lo que venga por Route::get('/cursos/editvideo/{idVideo}', 'edit');
+    public function edit(Request $request, VideosCurso $idVideo){
+        $idVideo->update($request->all());
+        return redirect("/cursos/".$idVideo->id_curso."/editar");
     }
+    
 
     /**
      * Update the specified resource in storage.

@@ -34,21 +34,6 @@ class CursoController extends Controller
         return view('gestionar_curso')->with('cursos', $cursos);
     }
 
-    public function addVideo(Request $request, string $idCurso)
-    {
-        VideosCurso::create(
-            [
-                'id_curso' => $idCurso,
-                'nombre' => $request->nombre,
-                'url_video' => $request->url_video,
-                'orden' => $request->orden
-            ]
-        );
-
-        //dd($request->all());
-        return redirect("/cursos/".$idCurso."/editar");
-    }
-
     /**
      * Store a newly created resource in storage.
      */
@@ -76,8 +61,9 @@ class CursoController extends Controller
                 'url_imagen' => $request->url_imagen
             ]
         );
-
-        return redirect("/cursos/gestion");
+        //obtener el id del curso que se acaba de crear, que coincida el nombre y la descripción y el ultimo creado
+        $curso = Curso::where('nombre', $request->nombre)->where('descripcion', $request->descripcion)->orderBy('id', 'desc')->first();
+        return redirect("/cursos/".$curso->id."/editar");
     }
 
     /**
@@ -106,7 +92,8 @@ class CursoController extends Controller
     public function edit(string $id)
     {
         $curso = Curso::find($id);
-        return view('editar_curso')->with('curso', $curso);
+        $videos = VideosCurso::where('id_curso', $id)->orderBy('orden')->get();
+        return view('editar_curso')->with('curso', $curso)->with('videos', $videos);
     }
 
     /**
@@ -115,7 +102,7 @@ class CursoController extends Controller
     public function update(Request $request, Curso $idCurso)
     {
         $idCurso->update($request->all());
-        return redirect("/cursos/".$idCurso->id);
+        return redirect("/cursos/".$idCurso->id."/editar");
     }
 
     /**
