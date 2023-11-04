@@ -14,7 +14,7 @@
   <div class="mt-16 p-8 max-w-md mx-auto bg-white rounded-lg shadow-lg">
     <h2 class="text-2xl font-semibold text-center mb-6">Editar Curso</h2>
     
-    <!-- Formulario para crear un curso -->
+    <!-- Formulario para editar un curso -->
     <form action="/cursos/{{$curso->id}}" method="POST">
 
       @csrf  {{--  <- Directiva de Blade para proteger el formulario, genera un token unico --}}
@@ -50,6 +50,8 @@
       </div>
       
       <button type="submit" class="btn btn-primary hover:btn-secondary">Editar</button>
+
+      <a href="/cursos/{{$curso->id}}" class="btn btn-secondary hover:btn-primary">Cancelar</a>
     </form>
   </div>
       
@@ -80,6 +82,43 @@
       <button type="submit" class="btn btn-primary hover:btn-secondary">Agregar</button>
     </form>
   </div>
+
+  <div class="max-w-max md:w-3/4 p-4 min-h-max mx-auto mb-16">
+    <h2 class="text-2xl font-semibold text-center mb-6">Editar clases</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
+      @foreach ($videos as $video)
+      <div class="p-8 max-w-md mx-auto bg-white rounded-lg shadow-lg">
+        
+
+        <form action="/cursos/editvideo/{{$video->id}}" method="POST">
+          @csrf 
+          @method('PATCH') 
+
+          <div class="mb-4">
+            <label for="nombre_video" class="block text-gray-700 font-medium">Nombre del video</label>
+            <input type="text" id="nombre_video" name="nombre" class="w-full px-3 py-2 border border-gray-300 rounded-md" required value="{{$video->nombre}}">
+          </div>
+          
+          <div class="mb-4">
+            <label for="url_video" class="block text-gray-700 font-medium">URL del video</label>
+            <input type="text" id="url_video" name="url_video" class="w-full px-3 py-2 border border-gray-300 rounded-md" required value="{{$video->url_video}}">
+          </div>
+          
+          <div class="mb-4">
+            <label for="orden_video" class="block text-gray-700 font-medium">Numero de orden</label>
+            <input type="number" id="orden_video" name="orden" class="w-full px-3 py-2 border border-gray-300 rounded-md" required value="{{$video->orden}}">
+          </div>
+          
+          <button type="submit" class="btn btn-primary hover:btn-secondary">Editar</button>
+        </form>
+        
+      </div>
+      @endforeach
+    </div>
+  </div>
+
+  {{-- cada video que venga de la bd es bocado para su edicion --}}
+    
       
     
 </body>

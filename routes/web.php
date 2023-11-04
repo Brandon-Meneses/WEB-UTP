@@ -40,7 +40,8 @@ Route::controller(CursoController::class)->group(function(){
 Route::controller(VideosController::class)->group(function(){
 
     Route::post('/cursos/{idCurso}/addvideo', 'create');
-
+    Route::patch('/cursos/editvideo/{idVideo}', 'edit');
+    
 });
 
 // Carrito
