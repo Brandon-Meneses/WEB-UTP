@@ -32,7 +32,7 @@ Route::controller(CursoController::class)->group(function(){
     Route::get('/cursos/{idCurso}', 'show');
     Route::get('/cursos/{idCurso}/editar', 'edit');
     Route::patch('/cursos/{idCurso}', 'update'); // patch es para actualizar, en el html usar el metodo POST y agregar @method('PATCH') en el formulario
-    Route::delete('/cursos/{idCurso}', 'destroy');
+    Route::delete('/cursos/eliminar', 'destroy');
     
 });
 
