@@ -80,7 +80,7 @@
 
         <!-- Aside (Barra lateral izquierda) -->
         <aside class="min-w-[185px] max-w-[300px] max-h-56 mx-4 my-16 p-6  shadow-lg rounded-lg mr-auto ml-auto">
-          <h2 class="text-xl font-semibold mb-4 text-gray-700">Categorías</h2>
+          <h2 class="font-bold uppercase text-xl mb-4 text-gray-700">Categorías</h2>
       
           @foreach ($categorias as $categoria)
             <label class="flex items-center space-x-2 text-gray-600">
@@ -94,7 +94,7 @@
 
         <!-- Contenido principal (Productos en grilla) -->
         <div class="max-w-max md:w-3/4 p-4 min-h-max mx-auto">
-            <h1 class="text-2xl font-semibold mb-4 ml-2">Cursos</h1>
+            <h1 class="font-bold uppercase text-2xl mb-4 ml-2">Cursos</h1>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
                
               @foreach ($cursos as $curso)
@@ -102,7 +102,7 @@
                       <figure><img src="{{ $curso->url_imagen }}" alt="{{ $curso->nombre }}" /></figure>
                       <div class="card-body">
                           <h2 class="card-title">{{ $curso->nombre }}</h2>
-                          <p>{{ $curso->descripcion }}</p>
+                          <p class="line-clamp-3 overflow-hidden">{{ $curso->descripcion }}</p>
                           <div class="card-actions justify-end">
                               <a class="btn btn-primary" href="/cursos/{{$curso->id}}" >saber más</a>
                           </div>
