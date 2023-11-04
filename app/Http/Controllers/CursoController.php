@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Curso;
+use App\Models\VideosCurso;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB; // NO ES NECESARIO IMPORTARLO -  para usar la DB (similar al comando 'php artisan tinker' por consola)
 
@@ -17,7 +19,7 @@ class CursoController extends Controller
     public function index()
     {
         $cursos = Curso::get();
-        $categorias = DB::table('cursos')->select('categoria')->distinct()->get();
+        $categorias = Curso::select('categoria')->distinct()->get();
         //dd($cursos);  // dd() muestra el contenido de la variable y luego para la ejecución del programa 
         return view('cursos')->with('cursos', $cursos)->with('categorias', $categorias); // en el with el primero es el nombre de la variable que se usará en la vista y el segundo es el valor de la variable
     }
@@ -27,7 +29,7 @@ class CursoController extends Controller
      */
     public function create()
     {
-        $cursos = DB::table('cursos')->get();
+        $cursos = Curso::get();
         
         return view('gestionar_curso')->with('cursos', $cursos);
     }
@@ -72,11 +74,15 @@ class CursoController extends Controller
         al clicar el botón de comprar, se ejecuta la función show y se pasa el id del curso
         Route::get('/cursos/{idCurso}', 'show');
         */
+        
+        //si el id no existe, se redirige a la página de cursos
+        if(!Curso::find($id)){
+            return redirect("/cursos");
+        }
 
         $curso = Curso::find($id);
-        //return 'curso: ' . $curso->nombre . ' - ' . $curso->descripcion . ' - ' . $curso->categoria . ' - ' . $curso->precio . ' - ' . $curso->url_imagen . ' - ' . $curso->id;
-        return view('detalle_curso')->with('curso', $curso);
-       
+        $videos = VideosCurso::where('id_curso', $id)->orderBy('orden')->get();
+        return view('detalle_curso')->with('curso', $curso)->with('videos', $videos);  
     }
 
     /**
