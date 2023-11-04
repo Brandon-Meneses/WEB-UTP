@@ -112,7 +112,7 @@
   </div>
 
   {{-- tabla de los nombres video que se brindarán: --}}
-  <div class="mt-4 flex items-center justify-center">
+  <div class="mt-4 flex items-center justify-center mb-16">
     <div class="w-full max-w-screen-md p-4 bg-white rounded-lg shadow-lg">
       <table class="w-full border-collapse border border-gray-300">
         <thead>

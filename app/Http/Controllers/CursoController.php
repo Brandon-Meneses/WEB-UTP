@@ -108,8 +108,11 @@ class CursoController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Request $request)
     {
-        //
+        //dd($request->all());
+        $curso = Curso::find($request->id);
+        $curso->delete();
+        return redirect("/cursos/gestion");
     }
 }

@@ -52,6 +52,29 @@
       <button type="submit" class="btn btn-primary hover:btn-secondary">Crear Curso</button>
     </form>
   </div>
+
+  {{-- aliminar curso, se lecciona de un menu desplegable y se confirma mediante un boton --}}
+  <div class="mt-8 mb-16 p-8 max-w-md mx-auto bg-white rounded-lg shadow-lg">
+    <h2 class="text-2xl font-semibold text-center mb-6">Eliminar un Curso</h2>
+    
+    <!-- Formulario para eliminar un curso -->
+    <form action="/cursos/eliminar" method="POST">
+
+      @csrf  {{--  <- Directiva de Blade para proteger el formulario, genera un token unico --}}
+      @method('DELETE') {{--  <- Directiva de Blade para indicar que el formulario es de tipo DELETE --}}
+      
+      <div class="mb-4">
+        <label for="id" class="block text-gray-700 font-medium">Eliminar Curso</label>
+        <select id="id" name="id" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
+          <option value=""></option>
+          @foreach ($cursos as $curso)
+            <option value="{{$curso->id}}">{{$curso->nombre}}</option>
+          @endforeach
+        </select>
+      </div>
+      
+      <button type="submit" class="btn btn-primary hover:btn-secondary" onclick="return confirm('¿Seguro de eliminar el curso {{$curso->nombre}}?')">Eliminar</button>
+    </form>
     
 </body>
 </html>
