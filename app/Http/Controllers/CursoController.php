@@ -34,21 +34,6 @@ class CursoController extends Controller
         return view('gestionar_curso')->with('cursos', $cursos);
     }
 
-    public function addVideo(Request $request, string $idCurso)
-    {
-        VideosCurso::create(
-            [
-                'id_curso' => $idCurso,
-                'nombre' => $request->nombre,
-                'url_video' => $request->url_video,
-                'orden' => $request->orden
-            ]
-        );
-
-        //dd($request->all());
-        return redirect("/cursos/".$idCurso."/editar");
-    }
-
     /**
      * Store a newly created resource in storage.
      */

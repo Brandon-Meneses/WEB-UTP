@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\VideosController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CursoController;
 /*
@@ -31,9 +32,15 @@ Route::controller(CursoController::class)->group(function(){
     Route::get('/cursos/{idCurso}', 'show');
     Route::get('/cursos/{idCurso}/editar', 'edit');
     Route::patch('/cursos/{idCurso}', 'update'); // patch es para actualizar, en el html usar el metodo POST y agregar @method('PATCH') en el formulario
-    Route::post('/cursos/{idCurso}/addVideo', 'addVideo');
     Route::delete('/cursos/{idCurso}', 'destroy');
     
+});
+
+//CRUD para videos
+Route::controller(VideosController::class)->group(function(){
+
+    Route::post('/cursos/{idCurso}/addvideo', 'create');
+
 });
 
 // Carrito

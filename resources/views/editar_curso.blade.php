@@ -59,7 +59,7 @@
     <h2 class="text-2xl font-semibold text-center mb-6">Agregar clases</h2>
     
     <!-- Formulario para crear enlaces de video -->
-    <form action="/cursos/{{$curso->id}}/addVideo" method="POST">
+    <form action="/cursos/{{$curso->id}}/addvideo" method="POST">
       @csrf 
 
       <div class="mb-4">
