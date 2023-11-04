@@ -29,8 +29,9 @@ Route::controller(CursoController::class)->group(function(){
     Route::get('/cursos/gestion', 'create');
     Route::post('/cursos/gestion', 'store');
     Route::get('/cursos/{idCurso}', 'show');
-    Route::get('/cursos/{idCurso}/edit', 'edit');
-    Route::put('/cursos/{idCurso}', 'update');
+    Route::get('/cursos/{idCurso}/editar', 'edit');
+    Route::patch('/cursos/{idCurso}', 'update'); // patch es para actualizar, en el html usar el metodo POST y agregar @method('PATCH') en el formulario
+    Route::post('/cursos/{idCurso}/addVideo', 'addVideo');
     Route::delete('/cursos/{idCurso}', 'destroy');
     
 });
