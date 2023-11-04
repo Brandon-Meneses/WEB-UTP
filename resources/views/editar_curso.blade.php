@@ -44,10 +44,13 @@
         <input type="text" id="precio" name="precio" class="w-full px-3 py-2 border border-gray-300 rounded-md" required value="{{$curso->precio}}">
       </div>
       
-      <div class="mb-4">
-        <label for="url_imagen" class="block text-gray-700 font-medium">URL de la Imagen</label>
+      <label for="url_imagen" class="block text-gray-700 font-medium">URL de la Imagen</label>
+      <div class="mb-4 flex items-center">
         <input type="text" id="url_imagen" name="url_imagen" class="w-full px-3 py-2 border border-gray-300 rounded-md" required value="{{$curso->url_imagen}}">
-      </div>
+        <div class="h-18 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200 ml-4">
+          <img src="{{$curso->url_imagen}}" alt="{{$curso->nombre}}" class="h-full w-full object-cover object-center">
+        </div>
+      </div>      
       
       <button type="submit" class="btn btn-primary hover:btn-secondary">Editar</button>
 
