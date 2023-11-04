@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Curso;
+use App\Models\VideosCurso;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB; // NO ES NECESARIO IMPORTARLO -  para usar la DB (similar al comando 'php artisan tinker' por consola)
 
@@ -72,11 +74,15 @@ class CursoController extends Controller
         al clicar el botón de comprar, se ejecuta la función show y se pasa el id del curso
         Route::get('/cursos/{idCurso}', 'show');
         */
+        
+        //si el id no existe, se redirige a la página de cursos
+        if(!Curso::find($id)){
+            return redirect("/cursos");
+        }
 
         $curso = Curso::find($id);
-        //return 'curso: ' . $curso->nombre . ' - ' . $curso->descripcion . ' - ' . $curso->categoria . ' - ' . $curso->precio . ' - ' . $curso->url_imagen . ' - ' . $curso->id;
-        return view('detalle_curso')->with('curso', $curso);
-       
+        $videos = VideosCurso::where('id_curso', $id)->orderBy('orden')->get();
+        return view('detalle_curso')->with('curso', $curso)->with('videos', $videos);  
     }
 
     /**
