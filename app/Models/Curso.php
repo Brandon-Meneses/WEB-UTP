@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Curso extends Model
 {
+    public $timestamps = false;
     use HasFactory;
     protected $table = 'cursos'; // no es necesario si la tabla es el plural del modelo, DE PREFERENCIA definir el nombre de la tabla
 

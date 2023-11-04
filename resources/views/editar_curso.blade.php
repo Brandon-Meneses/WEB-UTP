@@ -12,7 +12,7 @@
 <body>
 
   <div class="mt-16 p-8 max-w-md mx-auto bg-white rounded-lg shadow-lg">
-    <h2 class="text-2xl font-semibold text-center mb-6">Ediar Curso</h2>
+    <h2 class="text-2xl font-semibold text-center mb-6">Editar Curso</h2>
     
     <!-- Formulario para crear un curso -->
     <form action="/cursos/{{$curso->id}}" method="POST">
