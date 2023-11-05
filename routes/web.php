@@ -3,6 +3,8 @@
 use App\Http\Controllers\VideosController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CursoController;
+use App\Http\Controllers\CarruselController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +15,8 @@ use App\Http\Controllers\CursoController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//Carrusel
+Route::get('/carrusel', [CarruselController::class, 'showCarrusel']);
 
 Route::get('/', function () {
     return view('landing');
