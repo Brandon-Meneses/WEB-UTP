@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.css-gradient-hero{
+  background: rgb(72,235,193);
+  background: radial-gradient(circle, rgba(72,235,193,1) 0%, rgba(106,247,220,1) 33%, rgba(190,217,248,1) 100%);
+}
