@@ -34,19 +34,6 @@ INSERT INTO links_videos (id_curso, nombre, url_video, orden) VALUES
 (6, 'Java Enterprise', 'https://www.example.com/java_enterprise_video', 1),
 (6, 'Java Spring', 'https://www.example.com/java_spring_video', 2);
 
-INSERT INTO links_archivos (id_curso, nombre, url_archivo) VALUES
-(1, 'Ejemplos HTML', 'https://www.example.com/html_examples.pdf'),
-(1, 'CSS Cheat Sheet', 'https://www.example.com/css_cheat_sheet.pdf'),
-(2, 'Python Cheat Sheet', 'https://www.example.com/python_cheat_sheet.pdf'),
-(2, 'Python Practice Problems', 'https://www.example.com/python_practice_problems.pdf'),
-(3, 'React Native Starter Code', 'https://www.example.com/react_native_code.zip'),
-(3, 'React Native Practice Problems', 'https://www.example.com/react_native_practice_problems.pdf'),
-(4, 'SQL Practice Queries', 'https://www.example.com/sql_practice_queries.pdf'),
-(4, 'SQL Practice Problems', 'https://www.example.com/sql_practice_problems.pdf'),
-(5, 'Node.js Practice Problems', 'https://www.example.com/node_practice_problems.pdf'),
-(5, 'Node.js Practice Code', 'https://www.example.com/node_practice_code.zip'),
-(6, 'Java Enterprise Framework', 'https://www.example.com/java_enterprise_framework.zip'),
-(6, 'Java Spring Practice Problems', 'https://www.example.com/java_spring_practice_problems.pdf');
 
 INSERT INTO compras (id_usuario, id_curso) VALUES
 (1, 1),
