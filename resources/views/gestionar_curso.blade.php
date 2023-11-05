@@ -73,8 +73,28 @@
         </select>
       </div>
       
-      <button type="submit" class="btn btn-primary hover:btn-secondary" onclick="return confirm('¿Seguro de eliminar el curso {{$curso->nombre}}?')">Eliminar</button>
+      <button type="submit" id="eliminar-curso" class="btn btn-primary hover:btn-secondary">Eliminar</button>
     </form>
+
+    <script>
+      // Espera a que el documento esté listo
+      document.addEventListener("DOMContentLoaded", function () {
+        const selectCurso = document.getElementById("id");
+        const botonEliminar = document.getElementById("eliminar-curso");
+    
+        botonEliminar.addEventListener("click", function (event) {
+          const seleccionado = selectCurso.options[selectCurso.selectedIndex];
+          const nombreCurso = seleccionado ? seleccionado.text : "el curso";
+    
+          const confirmacion = confirm(`¿Se eliminará "${nombreCurso}"`);
+          
+          if (!confirmacion) {
+            event.preventDefault(); // Evita el envío del formulario si se cancela la eliminación
+          }
+        });
+      });
+    </script>
+  </div>   
     
 </body>
 </html>
