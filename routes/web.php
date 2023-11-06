@@ -17,7 +17,7 @@ use App\Http\Controllers\CursoController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
