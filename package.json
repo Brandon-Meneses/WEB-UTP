@@ -7,7 +7,7 @@
         "compile-tailwind": "npx tailwindcss build resources/css/app.css -o public/css/app.css"
     },
     "devDependencies": {
-        "@tailwindcss/forms": "^0.5.2",
+        "@tailwindcss/forms": "^0.5.6",
         "alpinejs": "^3.4.2",
         "autoprefixer": "^10.4.16",
         "axios": "^1.1.2",
