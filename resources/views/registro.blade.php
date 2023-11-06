@@ -1,22 +1,9 @@
-<!DOCTYPE html>
-<html lang="es" data-theme="cupcake">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    @vite('resources/css/app.css')
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<x-principal.marco-general titulo="Registro">
 
-    <title>EasyCode - Registro</title>
-</head>
 
-<body class="bg-gray-100">
 
-    <div class="navbar bg-primary sticky top-0 z-40">
-        <a class=" btn btn-ghost normal-case text-xl " href="/">EasyCode</a>
-    </div>
-
-    <div class="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+    <div class="py-8 min-h-screen flex flex-col items-center justify-center bg-gray-100">
         
         <div class="flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-3xl w-50 max-w-md">
             <div class="font-medium self-center text-xl sm:text-3xl text-gray-800">
@@ -81,8 +68,5 @@
     </div>
 
 
-
-    
-
-</body>
-</html>
+</x-principal.marco-general>
+ 
