@@ -28,6 +28,12 @@
                     <div class="card bg-base-100 shadow-xl max-w-[260px] hover:scale-[1.01] ease-in duration-300">
                         <figure><img src="{{ $curso->url_imagen }}" alt="{{ $curso->nombre }}" /></figure>
                         <div class="card-body">
+
+                            {{-- si el curso ha sido creado hace menos de 30 dias, muestra el tag de nuevo --}}
+                            @if (Carbon\Carbon::parse($curso->created_at)->diffInDays(Carbon\Carbon::now()) < 30)
+                              <span class="max-w-min inline-flex items-center rounded-md bg-purple-50 px-2 py-1 text-xs font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10">NUEVO</span>
+                            @endif
+                            
                             <h2 class="card-title">{{ $curso->nombre }}</h2>
                             <p class="line-clamp-3 overflow-hidden">{{ $curso->descripcion }}</p>
                             <div class="card-actions justify-end">
