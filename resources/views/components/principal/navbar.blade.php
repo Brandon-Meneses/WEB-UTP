@@ -7,9 +7,9 @@
       </label>
       <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li><a href="/" class="{{request()->is('/') ? ' font-semibold underline underline-offset-4' : ''}}">Conócenos</a></li>
-        <li><a href="/cursos">Cursos</a></li>
-        <li><a href="/register">Regístrate</a></li>
-      {{-- <li tabindex="0">
+        <li><a href="/cursos" class="{{request()->is('cursos') ? ' font-semibold underline underline-offset-4' : ''}}">Cursos</a></li>
+        <li><a href="/register" class="{{request()->is('register') ? ' font-semibold underline underline-offset-4' : ''}}">Regístrate</a></li>
+        {{-- <li tabindex="0">
         <details>
           <summary>Cursos</summary>
           <ul class="p-2">
@@ -26,8 +26,8 @@
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
       <li><a href="/" class="{{request()->is('/') ? 'text-gray-100 font-semibold underline underline-offset-4' : ''}}">Conócenos</a></li>
-      <li><a href="/cursos" >Cursos</a></li>
-      <li><a href="/register" >Regístrate</a></li>
+      <li><a href="/cursos" class="{{request()->is('cursos') ? 'text-gray-100 font-semibold underline underline-offset-4' : ''}}">Cursos</a></li>
+      <li><a href="/register" class="{{request()->is('register') ? 'text-gray-100 font-semibold underline underline-offset-4' : ''}}">Regístrate</a></li>
       {{-- <li tabindex="0">
         <details>
           <summary>Cursos</summary>
