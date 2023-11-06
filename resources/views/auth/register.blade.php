@@ -1,4 +1,7 @@
 <x-guest-layout>
+
+    <x-principal.auth-github-button></x-principal.auth-github-button>
+    
     <form method="POST" action="{{ route('register') }}">
         @csrf
 

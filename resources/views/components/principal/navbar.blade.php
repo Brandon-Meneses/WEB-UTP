@@ -8,6 +8,7 @@
       <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li><a href="/" class="{{request()->is('/') ? ' font-semibold underline underline-offset-4' : ''}}">Conócenos</a></li>
         <li><a href="/cursos">Cursos</a></li>
+        <li><a href="/register">Regístrate</a></li>
       {{-- <li tabindex="0">
         <details>
           <summary>Cursos</summary>
@@ -26,7 +27,7 @@
     <ul class="menu menu-horizontal px-1">
       <li><a href="/" class="{{request()->is('/') ? 'text-gray-100 font-semibold underline underline-offset-4' : ''}}">Conócenos</a></li>
       <li><a href="/cursos" >Cursos</a></li>
-      <li><a href="/registro" >Regístrate</a></li>
+      <li><a href="/register" >Regístrate</a></li>
       {{-- <li tabindex="0">
         <details>
           <summary>Cursos</summary>
