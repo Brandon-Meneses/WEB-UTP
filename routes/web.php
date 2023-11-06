@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\VideosController;
 use App\Http\Controllers\CursoController;
+use App\Http\Controllers\CarruselController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +37,8 @@ require __DIR__.'/auth.php';
 
 
 // ---------------- Lo Nuestro: -----------------
+
+Route::get('/carrusel', [CarruselController::class, 'showCarrusel']);
 
 Route::view('/layout', 'layouts.app');
 
