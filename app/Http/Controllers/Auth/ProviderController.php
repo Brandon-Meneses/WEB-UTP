@@ -17,19 +17,25 @@ class ProviderController extends Controller
 
     public function callback($provider)
     {
-        $SocialUser = Socialite::driver('github')->user();
- 
-        $user = User::updateOrCreate([
-            'provider_id' => $SocialUser->id,
-            'provider' => $provider
-        ], [
-            'name' => $SocialUser->name,
-            'email' => $SocialUser->email,
-            'provider_token' => $SocialUser->token,
-        ]);
-     
-        Auth::login($user);
-     
-        return redirect('/dashboard');
+        try {
+            $SocialUser = Socialite::driver('github')->user();
+
+            $user = User::updateOrCreate([
+                'provider_id' => $SocialUser->id,
+                'provider' => $provider,
+            ], [
+                'name' => $SocialUser->name,
+                'email' => $SocialUser->email,
+                'provider_token' => $SocialUser->token,
+                'password' => bcrypt($SocialUser->token),
+            ]);
+
+            Auth::login($user);
+
+            return redirect('/dashboard');
+        } catch (\Exception $e) {
+            return redirect('/error')->with('message', 'Error al autenticar con GitHub');
+        }
     }
+
 }
