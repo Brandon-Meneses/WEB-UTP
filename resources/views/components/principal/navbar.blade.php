@@ -9,6 +9,8 @@
         <li><a href="/" class="{{request()->is('/') ? ' font-semibold underline underline-offset-4' : ''}}">Conócenos</a></li>
         <li><a href="/cursos" class="{{request()->is('cursos') ? ' font-semibold underline underline-offset-4' : ''}}">Cursos</a></li>
         <li><a href="/register" class="{{request()->is('register') ? ' font-semibold underline underline-offset-4' : ''}}">Regístrate</a></li>
+        <li><a href="/login" class="{{request()->is('login') ? ' font-semibold underline underline-offset-4' : ''}}">Login</a></li>
+
         {{-- <li tabindex="0">
         <details>
           <summary>Cursos</summary>
@@ -28,6 +30,8 @@
       <li><a href="/" class="{{request()->is('/') ? 'text-gray-100 font-semibold underline underline-offset-4' : ''}}">Conócenos</a></li>
       <li><a href="/cursos" class="{{request()->is('cursos') ? 'text-gray-100 font-semibold underline underline-offset-4' : ''}}">Cursos</a></li>
       <li><a href="/register" class="{{request()->is('register') ? 'text-gray-100 font-semibold underline underline-offset-4' : ''}}">Regístrate</a></li>
+      <li><a href="/login" class="{{request()->is('login') ? ' text-gray-100 font-semibold underline underline-offset-4' : ''}}">Login</a></li>
+
       {{-- <li tabindex="0">
         <details>
           <summary>Cursos</summary>
