@@ -25,6 +25,8 @@ export default {
         require("daisyui")
     ],
 
+    darkMode: 'class', // evita que se aplique el modo oscuro por defecto
+
     daisyui: {
         themes: ["cupcake", "business"],
         base: true, // applies background color and foreground color for root element by default
