@@ -36,15 +36,15 @@ export default {
         themes: [
             {
                 ligth: {
-                    "primary": "#82e7f2",                       
-                    "secondary": "#d6d847",                       
-                    "accent": "#9c61f4",    
-                    "neutral": "#34233e",        
-                    "base-100": "#fcfcfd",      
-                    "info": "#afbce9",      
-                    "success": "#22b96e",     
-                    "warning": "#eec658",      
-                    "error": "#e43a67",
+                    "primary": "#128c80",          
+                    "secondary": "#177ca8",                             
+                    "accent": "#5fef97",                             
+                    "neutral": "#181424",                             
+                    "base-100": "#ffffff",                             
+                    "info": "#4471c1",                             
+                    "success": "#5fe7d7",                             
+                    "warning": "#f9cc43",                             
+                    "error": "#eb6f71",
                 },
                 dark: {
                     "primary": "#ade8ed",         
