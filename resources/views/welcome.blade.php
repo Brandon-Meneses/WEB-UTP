@@ -54,7 +54,7 @@
   
           <div>
             <span class="inline-block rounded-full bg-white shadow-lg p-2 mb-5 dark:bg-gray-700/75 dark:shadow-gray-950">
-              <img src="#" alt="User Avatar" class="inline-block w-28 h-28 rounded-full">
+              <img src="https://i.postimg.cc/QxM6kr7R/avatar.jpg" alt="User Avatar" class="inline-block w-28 h-28 rounded-full">
             </span>
             <h4 class="text-xl font-bold mb-0.5">
               Brandon Meneses
@@ -66,7 +66,7 @@
   
           <div>
             <span class="inline-block rounded-full bg-white shadow-lg p-2 mb-5 dark:bg-gray-700/75 dark:shadow-gray-950">
-              <img src="#" alt="User Avatar" class="inline-block w-28 h-28 rounded-full">
+              <img src="https://i.postimg.cc/QxM6kr7R/avatar.jpg" alt="User Avatar" class="inline-block w-28 h-28 rounded-full">
             </span>
             <h4 class="text-xl font-bold mb-0.5">
               Gianny Dantas
@@ -78,7 +78,7 @@
   
           <div>
             <span class="inline-block rounded-full bg-white shadow-lg p-2 mb-5 dark:bg-gray-700/75 dark:shadow-gray-950">
-              <img src="#" alt="User Avatar" class="inline-block w-28 h-28 rounded-full">
+              <img src="https://i.postimg.cc/QxM6kr7R/avatar.jpg" alt="User Avatar" class="inline-block w-28 h-28 rounded-full">
             </span>
             <h4 class="text-xl font-bold mb-0.5">
               Leonardo Espejo
