@@ -10,7 +10,7 @@
                 Regístrate y únete
             </div>
             <div class="mt-4 self-center text-xl sm:text-sm text-gray-800">
-                Ingresa tus credenciales para obtener acceso a la cuenta
+                Registra tus datos para obtener acceso a la cuenta
             </div>
 
             <!-- Utiliza la lógica del segundo bloque para el formulario -->
