@@ -25,7 +25,7 @@ Route::get('/auth/{provider}/callback', [ProviderController::class, 'callback'])
 |
 */
 
-Route::get('/welcome', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
@@ -44,13 +44,13 @@ require __DIR__.'/auth.php';
 
 // ---------------- Lo Nuestro: -----------------
 
-Route::get('/carrusel', [CarruselController::class, 'showCarrusel']);
+//Route::get('/carrusel', [CarruselController::class, 'showCarrusel']);
 
-Route::view('/layout', 'layouts.app');
+//Route::view('/layout', 'layouts.app');
 
-Route::get('/', function () {
-    return view('landing');
-});
+// Route::get('/', function () {
+//     return view('landing');
+// });
 
 // Registro
 Route::get('/registro', function () {
