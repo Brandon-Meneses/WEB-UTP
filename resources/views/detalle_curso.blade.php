@@ -1,7 +1,9 @@
-<x-principal.marco-general :titulo="$curso->nombre">
 
 
+<x-guest-layout :titulo="$curso->nombre">
 
+  <x-slot name="header">{{$curso->nombre}}</x-slot>
+  
   <div class="mt-4 min-w-screen  flex items-center p-5 lg:p-10 overflow-hidden relative">
     <div class=" max-w-[400px] w-full md:max-w-5xl rounded bg-white shadow-xl p-10 lg:p-20 mx-auto text-gray-800 relative md:text-left">
       <div class="md:flex items-center -mx-10 ">
@@ -30,7 +32,7 @@
       </div>
     </div>
   </div>
-
+  
   {{-- tabla de los nombres video que se brindarán: --}}
   <div class="mt-4 flex items-center justify-center mb-16">
     <div class="w-full max-w-screen-md p-4 bg-white rounded-lg shadow-lg">
@@ -42,17 +44,17 @@
           </tr>
         </thead>
         <tbody>
-
+          
           @foreach ($videos as $video)
-            <tr>
-              <td class="border border-gray-300 px-4 py-2">{{$video->orden}}</td>
-              <td class="border border-gray-300 px-4 py-2">{{$video->nombre}}</td>
-            </tr>
+          <tr>
+            <td class="border border-gray-300 px-4 py-2">{{$video->orden}}</td>
+            <td class="border border-gray-300 px-4 py-2">{{$video->nombre}}</td>
+          </tr>
           @endforeach
-
+          
         </tbody>
       </table>
     </div>
   </div>
-    
-</x-principal.marco-general>
+  
+</x-guest-layout>

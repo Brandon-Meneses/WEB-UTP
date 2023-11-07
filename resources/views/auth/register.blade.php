@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <x-principal.marco-general titulo="Registro">
 
 {{-- <x-guest-layout> --}}
@@ -7,6 +8,15 @@
     <div class="py-8 min-h-screen flex flex-col items-center justify-center dark:bg-neutral light:bg-base-100">
         <div class="flex flex-col dark:bg-gray-900 light:bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-3xl w-50 max-w-md">
             <div class="font-medium self-center text-xl sm:text-3xl dark:text-gray-300 light:text-gray-800">
+=======
+<x-guest-layout titulo="Registro">
+    <!-- Mantén los estilos del primer bloque -->
+
+    <!-- Agrega el título de registro y el formulario -->
+    <div class="py-8 min-h-screen flex flex-col items-center justify-center bg-gray-100">
+        <div class="flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-3xl w-50 max-w-md">
+            <div class="font-medium self-center text-xl sm:text-3xl text-gray-800">
+>>>>>>> 8eb3c304dc29e48ee5f1f3f7f44781dfbdf804d4
                 Regístrate y únete
             </div>
             <div class="mt-4 self-center text-xl sm:text-sm dark:text-gray-300 light:text-gray-800">
@@ -63,6 +73,10 @@
             </div> --}}
         </div>
     </div>
+<<<<<<< HEAD
 {{-- </x-guest-layout> --}}
 </x-principal.marco-general>
+=======
+</x-guest-layout>
+>>>>>>> 8eb3c304dc29e48ee5f1f3f7f44781dfbdf804d4
 
