@@ -49,7 +49,22 @@
                 </div>
             </form>
             <br>
-            <x-principal.auth-github-button></x-principal.auth-github-button>
+            {{-- div para inicion con redes sociales --}}
+            <div class="flex justify-center items-center mt-6">
+                <a href="#" class="inline-flex items-center text-gray-700 font-medium text-xs text-center">
+                    <span class="ml-2">O inicia sesión con: </span>
+                </a>
+                <x-principal.auth-github-button></x-principal.auth-github-button>
+            </div>
+
+            {{-- recuadro para loquearse con otras aplicaciones --}}
+            <div class="flex justify-center items-center mt-6">
+                <a href="#" class="inline-flex items-center text-gray-700 font-medium text-xs text-center">
+                    <span class="ml-2">¿No tienes una cuenta? <a href="/register" class="text-xs ml-2 text-blue-500 font-semibold">Regístrate aquí</a></span>
+                </a>
+            </div>
+
+            
 
         </div>
     </div>
