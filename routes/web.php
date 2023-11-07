@@ -62,7 +62,7 @@ Route::get('/registro', function () {
     return view('registro');
 });
 Route::controller(CompraController::class)->group(function(){
-    Route::get('/dashboard', 'show');
+    Route::get('/dashboard', 'show')->middleware(['auth', 'verified'])->name('dashboard');
 });
 
 // CRUD de cursos 
