@@ -1,5 +1,8 @@
 
-<x-principal.marco-general titulo="Cursos">
+
+<x-guest-layout titulo="Cursos">
+
+  <x-slot name="header">Cursos</x-slot>
 
   {{-- aqui iran los cursos, al costado izquierdo tendrá un aside para filtrar por categoria y en el derecho los cursos mostrados en grid --}}
   <div class="font-sans max-w-[1200px] m-auto">
@@ -49,4 +52,4 @@
       </div>
   </div>
 
-</x-principal.marco-general>
+</x-guest-layout>
