@@ -65,8 +65,11 @@
                     <span class="ml-2">¿Ya tienes una cuenta? <a href="#" class="text-xs ml-2 text-blue-500 font-semibold">Inicia sesión aquí</a></span>
                 </a>
             </div> --}}
+            <br>
+            <x-principal.auth-github-button></x-principal.auth-github-button>
         </div>
     </div>
+    
 {{-- </x-guest-layout> --}}
 </x-principal.marco-general>
 
