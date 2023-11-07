@@ -1,11 +1,6 @@
 
-
-<x-app-layout titulo="">
-
-  <x-slot name="header"></x-slot>
-  
-  
-  <div class="min-h-screen flex items-center justify-center">
+  <div class="my-8  flex items-center justify-center">
+    
     <div class=" max-w-[950px] carousel carousel-center rounded-box ">
       <div class="carousel-item">
         <img src="https://i.postimg.cc/wBZ37HJZ/sql.jpg"  alt="Pizza" />
@@ -28,6 +23,3 @@
   </div>
 </div>
 
-
-
-</x-app-layout>
