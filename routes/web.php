@@ -61,6 +61,7 @@ Route::get('/registro', function () {
 Route::controller(CursoController::class)->group(function(){
     
     Route::get('/cursos', 'index');
+    Route::get('/tienda', 'tienda');
     Route::get('/cursos/gestion', 'create');
     Route::post('/cursos/gestion', 'store');
     Route::get('/cursos/{idCurso}', 'show');

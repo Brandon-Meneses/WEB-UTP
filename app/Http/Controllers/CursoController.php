@@ -23,6 +23,13 @@ class CursoController extends Controller
         //dd($cursos);  // dd() muestra el contenido de la variable y luego para la ejecución del programa 
         return view('cursos')->with('cursos', $cursos)->with('categorias', $categorias); // en el with el primero es el nombre de la variable que se usará en la vista y el segundo es el valor de la variable
     }
+    public function tienda()
+    {
+        $cursos = Curso::orderBy('created_at', 'desc')->get();
+        $categorias = Curso::select('categoria')->distinct()->get();
+        //dd($cursos);  // dd() muestra el contenido de la variable y luego para la ejecución del programa 
+        return view('cursos-logueado')->with('cursos', $cursos)->with('categorias', $categorias); // en el with el primero es el nombre de la variable que se usará en la vista y el segundo es el valor de la variable
+    }
 
     /**
      * Show the form for creating a new resource.
