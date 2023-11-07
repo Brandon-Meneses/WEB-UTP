@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VideosController;
 use App\Http\Controllers\CursoController;
 use App\Http\Controllers\CarruselController;
+use App\Http\Controllers\CompraController;
+
 
 
 
@@ -29,9 +31,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+
+// })
+
+// ->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -55,6 +60,9 @@ require __DIR__.'/auth.php';
 // Registro
 Route::get('/registro', function () {
     return view('registro');
+});
+Route::controller(CompraController::class)->group(function(){
+    Route::get('/dashboard', 'show');
 });
 
 // CRUD de cursos 
