@@ -1,6 +1,4 @@
-<x-principal.marco-general titulo="Registro">
-
-{{-- <x-guest-layout> --}}
+<x-guest-layout titulo="Registro">
     <!-- Mantén los estilos del primer bloque -->
 
     <!-- Agrega el título de registro y el formulario -->
@@ -67,6 +65,5 @@
             </div> --}}
         </div>
     </div>
-{{-- </x-guest-layout> --}}
-</x-principal.marco-general>
+</x-guest-layout>
 
