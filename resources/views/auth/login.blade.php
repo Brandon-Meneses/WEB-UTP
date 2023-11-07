@@ -1,9 +1,18 @@
-<x-guest-layout>
+<x-principal.marco-general titulo="Login">
+
+{{-- <x-guest-layout> --}}
+
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
-
-    <x-principal.auth-github-button></x-principal.auth-github-button>
-
+    
+    <div class="py-8 min-h-screen flex flex-col items-center justify-center bg-gray-100">
+        <div class="flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-3xl w-50 max-w-md">
+            <div class="font-medium self-center text-xl sm:text-3xl text-gray-800">
+                Logueate y únete
+            </div>
+            <div class="mt-4 self-center text-xl sm:text-sm text-gray-800">
+                Ingresa tus credenciales para obtener acceso a la cuenta
+            </div>
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
@@ -46,4 +55,13 @@
             </x-primary-button>
         </div>
     </form>
-</x-guest-layout>
+    <br>
+    <x-principal.auth-github-button></x-principal.auth-github-button>
+
+    </div>
+    </div>
+    
+
+{{-- </x-guest-layout> --}}
+</x-principal.marco-general>
+
