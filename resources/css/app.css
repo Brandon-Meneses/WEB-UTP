@@ -2,7 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-.css-gradient-hero{
-  background: rgb(72,235,193);
-  background: radial-gradient(circle, rgba(72,235,193,1) 0%, rgba(106,247,220,1) 33%, rgba(190,217,248,1) 100%);
+
+/* si el dispositibo está en modo oscuro .css-gradient-hero cambia a rgb(0,0,0); */
+@media (prefers-color-scheme: dark) {
+  .css-gradient-hero{
+    background: rgb(33,41,54);
+    background: linear-gradient(180deg, rgba(33,41,54,1) 0%, rgba(79,117,126,1) 69%, rgba(125,192,198,1) 100%);
+  }
+}
+
+/* si está en modo claro: */
+@media (prefers-color-scheme: light) {
+  .css-gradient-hero{
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(226,253,255,1) 60%, rgba(125,192,198,1) 100%);
+  }
 }
