@@ -13,17 +13,12 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        Continúa Aprendiendo
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link href="/" :active="request()->routeIs('')">
-                        Conócenos
-                    </x-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link href="/cursos" :active="request()->routeIs('cursos/')">
-                        Cursos
+                    <x-nav-link href="/dashboard" :active="request()->routeIs('')">
+                        Tienda de Cursos
                     </x-nav-link>
                 </div>
             </div>
