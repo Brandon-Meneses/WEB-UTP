@@ -17,12 +17,12 @@
     </div>
   
   
-    <div class="h-auto py-7 bg-primary flex items-center justify-center">
+    <div class="h-auto py-7 bg-white dark:bg-neutral flex items-center justify-center dark:text-gray-100">
         <div class="container mx-auto">
             <div class="flex justify-center">
                 <div class="w-1/2">
-                    <h2 class="text-4xl font-bold text-center text">El camino del desarrollo</h2>
-                    <p class="text-center mt-2">Aprende a programar desde cero con nuestros cursos.</p>
+                    <h2 class="text-4xl font-bold text-center ">El camino del desarrollo</h2>
+                    <p class="text-center mt-2 ">Aprende a programar desde cero con nuestros cursos.</p>
                 </div>
             </div>
         </div>
@@ -33,7 +33,7 @@
   
   
     <!-- Equipo -->
-    <div class="bg-white dark:text-gray-100 dark:bg-gray-900">
+    <div class="bg-white dark:text-gray-100 dark:bg-neutral">
   
       <div class="space-y-16 container xl:max-w-7xl mx-auto px-4 py-16 lg:px-8 lg:py-32">
   
@@ -93,3 +93,44 @@
     </div>
   
 </x-guest-layout>
+
+{{-- haz un cuadrito mostrado esta paleta de colores
+  ligth: {
+                    "primary": "#82e7f2",                       
+                    "secondary": "#d6d847",                       
+                    "accent": "#9c61f4",    
+                    "neutral": "#34233e",        
+                    "base-100": "#fcfcfd",      
+                    "info": "#afbce9",      
+                    "success": "#22b96e",     
+                    "warning": "#eec658",      
+                    "error": "#e43a67",
+                },
+                dark: {
+                    "primary": "#ade8ed",         
+                    "secondary": "#b2ce14",        
+                    "accent": "#041fd1",           
+                    "neutral": "#1d1f2a",      
+                    "base-100": "#353a4b",       
+                    "info": "#35b6d0",           
+                    "success": "#3bcea4",       
+                    "warning": "#e7ac23",      
+                    "error": "#e1376a",
+                }, --}}
+
+                <div class="mx-auto max-w-[160px] text-center py-16">
+                  <p class="font-semibold pb-2">Paleta de colores modo actual</p>
+                  <div class="bg-primary text-white p-2 rounded mb-2">primary</div>
+                  <div class="bg-secondary text-white p-2 rounded mb-2">secondary</div>
+                  <div class="bg-accent text-white p-2 rounded mb-2">accent</div>
+                  <div class="bg-neutral text-white p-2 rounded mb-2">neutral</div>
+                  <div class="bg-base-100 text-black p-2 rounded mb-2">base-100</div>
+                  <div class="bg-info text-white p-2 rounded mb-2">info</div>
+                  <div class="bg-success text-white p-2 rounded mb-2">success</div>
+                  <div class="bg-warning text-white p-2 rounded mb-2">warning</div>
+                  <div class="bg-error text-white p-2 rounded mb-2">error</div>
+                </div>
+                
+
+
+
