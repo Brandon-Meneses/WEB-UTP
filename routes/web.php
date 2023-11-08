@@ -29,7 +29,11 @@ Route::get('/auth/{provider}/callback', [ProviderController::class, 'callback'])
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    if (auth()->check()) {
+        return redirect()->route('dashboard');
+    } else {
+        return view('welcome');
+    }
 });
 
 // Route::get('/dashboard', function () {
@@ -70,7 +74,7 @@ Route::controller(CompraController::class)->group(function(){
 Route::controller(CursoController::class)->group(function(){
     
     Route::get('/cursos', 'index');
-    Route::get('/tienda', 'tienda');
+    Route::get('/tienda', 'tienda')->middleware('auth.redirect:cursos');
     Route::get('/cursos/gestion', 'create')->middleware('admin');
     Route::post('/cursos/gestion', 'store')->middleware('admin');
     Route::get('/cursos/{idCurso}', 'show');
