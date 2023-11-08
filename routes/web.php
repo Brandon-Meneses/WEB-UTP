@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\ProviderController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\VideosController;
@@ -70,12 +71,12 @@ Route::controller(CursoController::class)->group(function(){
     
     Route::get('/cursos', 'index');
     Route::get('/tienda', 'tienda');
-    Route::get('/cursos/gestion', 'create');
-    Route::post('/cursos/gestion', 'store');
+    Route::get('/cursos/gestion', 'create')->middleware('admin');
+    Route::post('/cursos/gestion', 'store')->middleware('admin');
     Route::get('/cursos/{idCurso}', 'show');
-    Route::get('/cursos/{idCurso}/editar', 'edit');
-    Route::patch('/cursos/{idCurso}', 'update'); // patch es para actualizar, en el html usar el metodo POST y agregar @method('PATCH') en el formulario
-    Route::delete('/cursos/eliminar', 'destroy');
+    Route::get('/cursos/{idCurso}/editar', 'edit')->middleware('admin');
+    Route::patch('/cursos/{idCurso}', 'update')->middleware('admin'); // patch es para actualizar, en el html usar el metodo POST y agregar @method('PATCH') en el formulario
+    Route::delete('/cursos/eliminar', 'destroy')->middleware('admin');
     
 });
 
@@ -90,4 +91,9 @@ Route::controller(VideosController::class)->group(function(){
 // Carrito
 Route::get('/carrito', function () {
     return view('carrito');
+});
+
+// Profile - añadir o quitar admin
+Route::controller(UserController::class)->group(function(){
+    Route::patch('/admin/switch', 'switchAdmin')->middleware('admin');
 });
