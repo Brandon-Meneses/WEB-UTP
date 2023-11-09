@@ -1,4 +1,5 @@
 <div>
+  @vite('resources/js/app.js'){{-- Reitero colocar el script aqui porque por alguna razon falla si lo pongo en el layout principal app --}}
     
   <!-- Slider -->
 <div data-hs-carousel='{
