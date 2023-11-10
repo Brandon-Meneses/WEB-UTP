@@ -1,6 +1,6 @@
 
 
-<x-guest-layout :titulo="$curso->nombre">
+<x-app-layout :titulo="$curso->nombre">
 
   <x-slot name="header">{{$curso->nombre}}</x-slot>
   
@@ -41,4 +41,4 @@
   <x-video-table :videos="$videos" />
 
   
-</x-guest-layout>
+</x-app-layout>

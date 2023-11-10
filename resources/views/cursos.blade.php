@@ -1,6 +1,6 @@
 
 
-<x-guest-layout titulo="Cursos">
+<x-app-layout titulo="Cursos">
 
   <x-slot name="header">Cursos</x-slot>
 
@@ -52,4 +52,4 @@
       </div>
   </div>
 
-</x-guest-layout>
+</x-app-layout>

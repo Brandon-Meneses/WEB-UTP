@@ -1,5 +1,5 @@
 
-  <div class="my-8  flex items-center justify-center">
+<div class="my-8  flex items-center justify-center">
     <div class="max-w-[950px] carousel carousel-center rounded-box">
         @foreach ($cursos as $curso)
             @foreach ($curso as $item)
@@ -10,12 +10,3 @@
         @endforeach
     </div>
 </div>
-
-
-
-  {{-- {{dd($cursos)}} --}}
-  
-  
- 
-</div>
-

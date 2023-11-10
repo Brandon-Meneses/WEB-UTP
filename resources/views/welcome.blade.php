@@ -1,5 +1,5 @@
 
-<x-guest-layout titulo="Conócenos">
+<x-app-layout titulo="Conócenos">
 
     <x-slot name="header">Conócenos</x-slot>
 
@@ -92,7 +92,7 @@
       </div>
     </div>
   
-</x-guest-layout>
+</x-app-layout>
 
 {{-- haz un cuadrito mostrado esta paleta de colores
   ligth: {
