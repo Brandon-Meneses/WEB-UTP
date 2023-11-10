@@ -1,6 +1,6 @@
 
 
-<x-guest-layout titulo="Registro">
+<x-app-layout titulo="Registro">
 
     <x-slot name="header">Registro</x-slot>
     

@@ -1,6 +1,6 @@
 
 
-<x-guest-layout :titulo="$curso->nombre">
+<x-app-layout :titulo="$curso->nombre">
 
   <x-slot name="header">{{$curso->nombre}}</x-slot>
   
@@ -25,7 +25,11 @@
               <span class="font-bold text-5xl leading-none align-baseline">{{$curso->precio}}</span>
             </div>
             <div class="inline-block align-bottom">
-              <button class="btn btn-primary">Compra ahora</button>
+              <form action="/paypal/pay/{{$curso->id}}">
+                @csrf
+                <input type="hidden" name="precio" value="">
+                <button type="submit" class="btn btn-primary">Compra ahora</button>
+              </form>
             </div>
           </div>
         </div>
@@ -37,4 +41,4 @@
   <x-video-table :videos="$videos" />
 
   
-</x-guest-layout>
+</x-app-layout>
