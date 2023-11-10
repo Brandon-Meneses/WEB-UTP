@@ -8,7 +8,7 @@
 </p> -->
 # Proyecto Laravel
 
-Este proyecto es una aplicación web desarrollada con Laravel y Tailwind css.
+Este proyecto es una aplicación web desarrollada con Laravel.
 
 ## Requisitos previos
 
@@ -16,14 +16,16 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
 - [Git](https://git-scm.com/downloads)
 - [XAMPP](https://www.apachefriends.org/download.html) (para los servicios de Apache, PHP y MySQL)
-- [Composer](https://getcomposer.org/download/)
-- [Node.js](https://nodejs.org/en)
+- [Composer](https://getcomposer.org/download/) (administrador de dependencias de PHP)
+- [Node.js](https://nodejs.org/en) (npm)
 
-Además, debes tener configuradas las variables de entorno para el uso de los comandos de Git, Composer y Node.js (npm).
+Ten configuradas las variables de entorno para el uso de los comandos de Git, Composer y Node.js (npm).
 
 ## Configuración del proyecto
 
 Sigue estos pasos para configurar el proyecto:
+
+De preferencia usa la terminal de [Git Bash](https://git-scm.com/downloads).
 
 1. Clona el repositorio:
     ```bash
@@ -44,7 +46,7 @@ Sigue estos pasos para configurar el proyecto:
     cp .env.example .env
     ```
 
-4. Configura el archivo .env con los datos de tu base de datos:
+4. Configura el nuevo archivo .env con los datos de tu base de datos, no modifiques "DB_DATABASE=proyecto_web_laravel":
     ```bash
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
@@ -54,7 +56,7 @@ Sigue estos pasos para configurar el proyecto:
     DB_PASSWORD=
     ```
 
-5. Si deseas utilizar la funcionalidad de recuperación de contraseña, crea una cuenta gratuita en [Mailtrap](https://mailtrap.io/) y configura el archivo .env con los datos de tu cuenta de Mailtrap:
+5. Crea una cuenta gratuita en [Mailtrap](https://mailtrap.io/) para simular el envío de correos electrónicos. Configura el archivo `.env` con los datos de tu cuenta de Mailtrap:
     ```bash
     MAIL_MAILER=smtp
     MAIL_HOST=sandbox.smtp.mailtrap.io
@@ -69,8 +71,14 @@ Sigue estos pasos para configurar el proyecto:
     ```bash
     php artisan migrate
     ```
+    confirma la creacion de la base de datos con "yes"
+    
+    Genera una clave para la aplicación:
+     ```bash
+    php artisan key:generate
+    ```
 
-* En la carpeta `mysql-datos-prueba` hay un archivo SQL con datos de prueba para la base de datos. Puedes importar estos datos a tu base de datos para tener datos de prueba.
+* En la carpeta `mysql-datos-prueba` hay un archivo SQL con datos de prueba para la base de datos. Importa el archivo a tu base de datos.
     <!-- Si deseas agregar datos de prueba, ejecuta el comando:
     ```bash
     php artisan db:seed
@@ -89,3 +97,4 @@ Sigue estos pasos para configurar el proyecto:
 
 ¡Ahora deberías poder acceder a la aplicación en tu navegador!
 
+Si deseas tenerl el control de el inicio de sesion por GitHub deberás crear una OAuth App en GitHub, para ello sigue los pasos de este [tutorial](https://docs.github.com/es/developers/apps/building-oauth-apps/creating-an-oauth-app). Luego las credenciales reemplázalas al final del archivo `.env`
