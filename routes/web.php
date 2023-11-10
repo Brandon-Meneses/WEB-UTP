@@ -9,6 +9,7 @@ use App\Http\Controllers\VideosController;
 use App\Http\Controllers\CursoController;
 use App\Http\Controllers\CarruselController;
 use App\Http\Controllers\CompraController;
+use App\Http\Controllers\PaypalController;
 
 
 
@@ -100,4 +101,12 @@ Route::get('/carrito', function () {
 // Profile - añadir o quitar admin
 Route::controller(UserController::class)->group(function(){
     Route::patch('/admin/switch', 'switchAdmin')->middleware('admin');
+});
+
+
+//pagos por paypal
+Route::controller(PaypalController::class)->group(function(){
+    Route::get('/paypal/pay/{idCurso}', 'payWithPayPal')->middleware('auth');
+    Route::get('/paypal/status', 'payPalStatus')->middleware('auth');
+    Route::get('/paypal/cancel', 'payPalCancel');
 });
