@@ -6,12 +6,6 @@
 
 USE proyecto_web_laravel;
 
-
-INSERT INTO users (name, email, password) VALUES
-('Leonardo', 'espejo@leonardo.com', 'contra'),
-('Brandon', 'meneses@brandon.com', 'contra'),
-('Gianny', 'dantas@gianny.com', 'contra');
-
 INSERT INTO cursos (nombre, descripcion, categoria, precio, url_imagen, created_at) VALUES
 ('Desarrollo Web con HTML, CSS y JS', 'Aprende a crear sitios web interactivos desde cero con tecnologías web.', 'Frontend', 49.99, 'https://i.postimg.cc/brjJ9TmR/web.jpg', '2023-10-05 22:55:33'),
 ('Programación en Python', 'Domina uno de los lenguajes más populares y versátiles.', 'Backend', 59.99, 'https://i.postimg.cc/j5f2f945/python.jpg', '2023-10-10 22:55:33'),
@@ -38,6 +32,15 @@ INSERT INTO links_videos (id_curso, nombre, url_video, orden) VALUES
 INSERT INTO compras (id_usuario, id_curso) VALUES
 (1, 1),
 (1, 4),
+(1, 3),
+
 (2, 3),
 (2, 6),
-(3, 2);
+(2, 2),
+(2, 1),
+(2, 5),
+
+(3, 2),
+(3, 4),
+(3, 5),
+(3, 6);
