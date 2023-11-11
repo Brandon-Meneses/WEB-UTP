@@ -71,32 +71,41 @@ De preferencia usa la terminal de [Git Bash](https://git-scm.com/downloads).
     ```bash
     php artisan migrate
     ```
-    confirma la creacion de la base de datos con "yes"
+    confirma la creacion de la base de datos con "yes".
 
     Genera los usuarios por defecto:
     ```bash
     php artisan db:seed
-    ```    
+    ```   
+    con el comando anterior se crean los usuarios con los que podras acceder a la aplicacion:
+    - Administrador:
+        - Correo: admin@admin.com
+        - Contraseña: admin
+    - Test 1:
+        - Correo: test1@test.com
+        - Contraseña: test
+    - Test 2:
+        - Correo: test2@test.com
+        - Contraseña: test
+    
+8. En la carpeta `mysql-datos-prueba` hay un archivo SQL `datos.sql` con datos de prueba. Importa el archivo a tu base de datos.
 
-    * En la carpeta `mysql-datos-prueba` hay un archivo SQL `datos.sql` con datos de prueba. Importa el archivo a tu base de datos.
-
-8. Genera una clave para la aplicación:
+9. Genera una clave para la aplicación:
      ```bash
     php artisan key:generate
     ```
 
-
-9. Inicia el servidor:
+10. Inicia el servidor:
     ```bash
     php artisan serve
     ```
-    o (para acceder desde otros dispositivos en la misma red):
+    o para acceder desde otros dispositivos en la misma red:
     ```bash
     php artisan serve --host=YOUR_IP_ADDRESS --port=80
     ```
-* Dirige tu navegador a la dirección que se muestra en la terminal.
+    * Dirige tu navegador a la dirección que se muestra en la terminal.
 
-10. En otra terminal, ejecuta el comando:
+11. En otra terminal, ejecuta el comando:
     ```bash
     npm run dev
     ```
