@@ -20,11 +20,11 @@
             <p class="text-sm">{{$curso->descripcion}}</p>
           </div>
           <div>
-            <div class="inline-block align-bottom mr-5">
+            <div class="inline-block align-bottom mr-5 mt-4">
               <span class="text-2xl leading-none align-baseline">$</span>
               <span class="font-bold text-5xl leading-none align-baseline">{{$curso->precio}}</span>
             </div>
-            <div class="inline-block align-bottom">
+            <div class="inline-block align-bottom mt-4">
               <form action="/paypal/pay/{{$curso->id}}">
                 @csrf
                 <input type="hidden" name="precio" value="">
