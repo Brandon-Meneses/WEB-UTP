@@ -78,7 +78,7 @@ De preferencia usa la terminal de [Git Bash](https://git-scm.com/downloads).
     php artisan key:generate
     ```
 
-* En la carpeta `mysql-datos-prueba` hay un archivo SQL con datos de prueba para la base de datos. Importa el archivo a tu base de datos.
+* En la carpeta `mysql-datos-prueba` hay un archivo SQL con datos de prueba. Importa el archivo a tu base de datos.
     <!-- Si deseas agregar datos de prueba, ejecuta el comando:
     ```bash
     php artisan db:seed
