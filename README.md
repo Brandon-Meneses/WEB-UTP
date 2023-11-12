@@ -31,10 +31,7 @@ De preferencia usa la terminal de [Git Bash](https://git-scm.com/downloads).
     ```bash
     git clone https://github.com/Brandon-Meneses/WEB-UTP
     ```
-    Accede a la carpeta del proyecto:
-    ```bash
-    cd WEB-UTP
-    ```
+    Accede a la carpeta del proyecto.
 
 2. Instala las dependencias:
     ```bash
