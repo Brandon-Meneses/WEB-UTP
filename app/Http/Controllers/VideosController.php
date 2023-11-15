@@ -46,9 +46,20 @@ class VideosController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $idCurso)
     {
-        //
+        // Verifica si el curso con el ID existe
+        $curso = Curso::find($idCurso);
+
+        if (!$curso) {
+            return redirect("/cursos");
+        }
+
+        // Obtén los videos asociados al curso
+        $videos = VideosCurso::where('id_curso', $idCurso)->orderBy('orden')->get();
+
+        // Retorna la vista dashboard con los videos del curso
+        return view('dashboard')->with('videos', $videos);
     }
 
     /**
