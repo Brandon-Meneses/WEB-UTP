@@ -2,14 +2,60 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use App\Models\Curso;
-use App\Models\VideosCurso;
 
+use App\Models\VideosCurso;
 use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\DB; // NO ES NECESARIO IMPORTARLO -  para usar la DB (similar al comando 'php artisan tinker' por consola)
 
 class CursoController extends Controller
 {
+    /**
+     * Obtiene los videos asociados a un curso y devuelve la respuesta JSON.
+     *
+     * @param int $cursoId
+     * @return JsonResponse
+     */
+    public function obtenerVideosDelCurso($cursoId)
+    {
+        try {
+            // Lógica para obtener videos del curso
+            $videos = $this->obtenerVideos($cursoId);
+            return response()->json($videos);
+        } catch (Exception $e) {
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
+    }
+    /**
+     * Obtiene los videos asociados a un curso.
+     *
+     * @param int $cursoId
+     * @return \Illuminate\Http\JsonResponse
+     */
+    private function obtenerVideos($cursoId)
+    {
+        try {
+            // Consulta para obtener los videos asociados al curso
+            $videos = VideosCurso::where('id_curso', $cursoId)->orderBy('orden')->get();
+
+            // Formateado
+            $videosFormateados = [];
+            foreach ($videos as $video) {
+                $videosFormateados[] = [
+                    'id' => $video->id,
+                    'nombre' => $video->nombre,
+                    'url_video' => $video->url_video,
+                    'orden' => $video->orden,
+                ];
+            }
+
+            return $videosFormateados;
+        } catch (\Exception $e) {
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
+    }
 
     
 

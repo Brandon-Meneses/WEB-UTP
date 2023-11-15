@@ -92,6 +92,8 @@ Route::controller(VideosController::class)->group(function(){
     Route::patch('/cursos/editvideo/{idVideo}', 'edit');
     
 });
+Route::get('/api/curso/{id}/videos', [CursoController::class, 'obtenerVideosDelCurso']);
+
 
 // Carrito
 Route::get('/carrito', function () {
