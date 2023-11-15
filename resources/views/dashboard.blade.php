@@ -7,14 +7,11 @@
     <div class="min-h-[60vh]">
 
         @include('components.promo-carrusel')
-
-        {{-- @include('components.video-table') --}}
-
         @include('carrusel')
 
     </div>
     {{-- al hacer click en la imagen del carrusel obtengo su id para mostrar los videos relacionados a ese curso --}}
-    {{-- <script>
+    <script>
         function obtenerVideosDelCurso(cursoId) {
             fetch(`/api/curso/${cursoId}/videos`)
                 .then(response => response.json())
@@ -66,7 +63,7 @@
                 }
             });
         });
-    </script> --}}
+    </script>
     <!-- Contenedor para mostrar los videos -->
     <div id="videos-container"></div>
     {{-- ruta de dashboard.js para anexar a este blade --}}
