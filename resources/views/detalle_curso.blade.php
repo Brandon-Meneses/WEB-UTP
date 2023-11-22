@@ -25,9 +25,9 @@
               <span class="font-bold text-5xl leading-none align-baseline">{{$curso->precio}}</span>
             </div>
             <div class="inline-block align-bottom mt-4">
-              <form action="/paypal/pay/{{$curso->id}}">
+              <form action="/paypal/payment">
                 @csrf
-                <input type="hidden" name="precio" value="">
+                <input type="hidden" name="curso" value="{{$curso->id}}">
                 <button type="submit" class="btn btn-primary">Compra ahora</button>
               </form>
             </div>

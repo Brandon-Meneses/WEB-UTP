@@ -108,7 +108,7 @@ Route::controller(UserController::class)->group(function(){
 
 //pagos por paypal
 Route::controller(PaypalController::class)->group(function(){
-    Route::get('/paypal/pay/{idCurso}', 'payWithPayPal')->middleware('auth');
-    Route::get('/paypal/status', 'payPalStatus')->middleware('auth');
-    Route::get('/paypal/cancel', 'payPalCancel');
+    Route::get('/paypal/payment', 'payment')->middleware('auth')->name('paypal.payment');
+    Route::get('/paypal/success', 'success')->middleware('auth')->name('paypal.success');
+    Route::get('/paypal/cancel', 'cancel')->middleware('auth')->name('paypal.cancel');
 });
