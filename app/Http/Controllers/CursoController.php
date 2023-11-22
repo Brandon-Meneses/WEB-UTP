@@ -40,22 +40,20 @@ class CursoController extends Controller
             // Consulta para obtener los videos asociados al curso
             $videos = VideosCurso::where('id_curso', $cursoId)->orderBy('orden')->get();
 
-            // Formateado
-            $videosFormateados = [];
-            foreach ($videos as $video) {
-                $videosFormateados[] = [
+            return $videos->map(function ($video) { // map() es similar a un foreach
+                return [
                     'id' => $video->id,
                     'nombre' => $video->nombre,
                     'url_video' => $video->url_video,
                     'orden' => $video->orden,
                 ];
-            }
+            })->toArray();
 
-            return $videosFormateados;
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 500);
         }
     }
+
 
     
 
