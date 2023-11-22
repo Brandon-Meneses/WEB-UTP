@@ -8,7 +8,8 @@
 </p> -->
 # Proyecto Laravel
 
-Este proyecto es una aplicación web desarrollada con Laravel.
+Este proyecto es una aplicación web desarrollada con Laravel. 
+Objetivos -> una web de venta de cursos virtuales
 
 ## Requisitos previos
 
