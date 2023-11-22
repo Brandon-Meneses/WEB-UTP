@@ -12,50 +12,8 @@ use Illuminate\Support\Facades\DB; // NO ES NECESARIO IMPORTARLO -  para usar la
 
 class CursoController extends Controller
 {
-    /**
-     * Obtiene los videos asociados a un curso y devuelve la respuesta JSON.
-     *
-     * @param int $cursoId
-     * @return JsonResponse
-     */
-    public function obtenerVideosDelCurso($cursoId)
-    {
-        try {
-            // Lógica para obtener videos del curso
-            $videos = $this->obtenerVideos($cursoId);
-            return response()->json($videos);
-        } catch (Exception $e) {
-            return response()->json(['error' => $e->getMessage()], 500);
-        }
-    }
-    /**
-     * Obtiene los videos asociados a un curso.
-     *
-     * @param int $cursoId
-     * @return \Illuminate\Http\JsonResponse
-     */
-    private function obtenerVideos($cursoId)
-    {
-        try {
-            // Consulta para obtener los videos asociados al curso
-            $videos = VideosCurso::where('id_curso', $cursoId)->orderBy('orden')->get();
 
-            return $videos->map(function ($video) { // map() es similar a un foreach
-                return [
-                    'id' => $video->id,
-                    'nombre' => $video->nombre,
-                    'url_video' => $video->url_video,
-                    'orden' => $video->orden,
-                ];
-            })->toArray();
-
-        } catch (\Exception $e) {
-            return response()->json(['error' => $e->getMessage()], 500);
-        }
-    }
-
-
-    
+      
 
     /**
      * Display a listing of the resource.

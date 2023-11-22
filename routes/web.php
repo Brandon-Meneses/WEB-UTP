@@ -85,15 +85,14 @@ Route::controller(CursoController::class)->group(function(){
     
 });
 
-//CRUD para videos
+// videos
 Route::controller(VideosController::class)->group(function(){
 
+    Route::get('/api/curso/{id}/videos', 'obtenerVideosDelCurso');
     Route::post('/cursos/{idCurso}/addvideo', 'create');
     Route::patch('/cursos/editvideo/{idVideo}', 'edit');
     
 });
-Route::get('/api/curso/{id}/videos', [CursoController::class, 'obtenerVideosDelCurso']);
-
 
 // Carrito
 Route::get('/carrito', function () {
