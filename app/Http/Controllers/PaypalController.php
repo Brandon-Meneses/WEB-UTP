@@ -65,10 +65,8 @@ class PaypalController extends Controller
         $response = $provider->capturePaymentOrder($request->token);
 
         if(isset($response['status']) && $response['status'] == 'COMPLETED') {
-            // Obtén la información del curso comprado
             $curso = Curso::find($request->idCurso);
 
-            // Puedes devolver la información del curso como respuesta
             return response()->json([
                 'status' => 'success',
                 'message' => 'Pago realizado con éxito',
