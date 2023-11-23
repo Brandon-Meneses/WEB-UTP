@@ -12,7 +12,7 @@ class PaypalController extends Controller
     //Route::post('/paypal/pay/{idCurso}', 'payWithPayPal')
     public function payment(Request $request)
     {
-        $curso = Curso::find($request->curso)->toArray();
+        $curso = Curso::find($request->idCurso)->toArray();
         $usuario = auth()->user()->toArray();
         
         //dd($curso, $usuario);
@@ -29,7 +29,7 @@ class PaypalController extends Controller
                 'landing_page' => 'BILLING',
                 'shipping_preference' => 'NO_SHIPPING',
                 'user_action' => 'PAY_NOW',
-                'return_url' => route('paypal.success'),
+                'return_url' => route('paypal.success', ['idCurso' => $curso['id']]), // aqui le paso el id del curso para que lo reciba en el controlador
                 'cancel_url' => route('paypal.cancel'),
             ],
             'purchase_units' => [
@@ -64,14 +64,21 @@ class PaypalController extends Controller
 
         $response = $provider->capturePaymentOrder($request->token);
 
-        //dd($response);
-
         if(isset($response['status']) && $response['status'] == 'COMPLETED') {
-            return ('Pago realizado con éxito');
+            // Obtén la información del curso comprado
+            $curso = Curso::find($request->idCurso);
+
+            // Puedes devolver la información del curso como respuesta
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Pago realizado con éxito',
+                'curso' => $curso,
+            ]);
         } else {
             return redirect()->route('paypal.cancel');
         }
     }
+
 
     public function cancel()
     {
