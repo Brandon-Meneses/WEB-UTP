@@ -35,7 +35,7 @@ Route::get('/', function () {
     } else {
         return view('welcome');
     }
-});
+})->name('/');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
@@ -55,18 +55,6 @@ require __DIR__.'/auth.php';
 
 // ---------------- Lo Nuestro: -----------------
 
-//Route::get('/carrusel', [CarruselController::class, 'showCarrusel']);
-
-//Route::view('/layout', 'layouts.app');
-
-// Route::get('/', function () {
-//     return view('landing');
-// });
-
-// Registro
-Route::get('/registro', function () {
-    return view('registro');
-});
 Route::controller(CompraController::class)->group(function(){
     Route::get('/dashboard', 'show')->middleware(['auth', 'verified'])->name('dashboard');
 });
@@ -74,8 +62,7 @@ Route::controller(CompraController::class)->group(function(){
 // CRUD de cursos 
 Route::controller(CursoController::class)->group(function(){
     
-    Route::get('/cursos', 'index');
-    Route::get('/tienda', 'tienda')->middleware('auth.redirect:cursos');
+    Route::get('/cursos', 'index')->name('cursos');
     Route::get('/cursos/gestion', 'create')->middleware('admin');
     Route::post('/cursos/gestion', 'store')->middleware('admin');
     Route::get('/cursos/{idCurso}', 'show');
