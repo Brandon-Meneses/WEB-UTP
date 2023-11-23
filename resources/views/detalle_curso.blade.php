@@ -27,7 +27,7 @@
             <div class="inline-block align-bottom mt-4">
               <form action="/paypal/payment">
                 @csrf
-                <input type="hidden" name="curso" value="{{$curso->id}}">
+                <input type="hidden" name="idCurso" value="{{$curso->id}}">
                 <button type="submit" class="btn btn-primary">Compra ahora</button>
               </form>
             </div>

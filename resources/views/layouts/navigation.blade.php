@@ -17,7 +17,7 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link href="/tienda" :active="request()->routeIs('')">
+                    <x-nav-link href="/cursos" :active="request()->routeIs('cursos')">
                         Tienda de Cursos
                     </x-nav-link>
                 </div>
@@ -79,7 +79,10 @@
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+                {{ __('Continua Aprendiendo') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="/cursos" :active="request()->routeIs('cursos')">
+                {{ __('Tienda de Cursos') }}
             </x-responsive-nav-link>
         </div>
 

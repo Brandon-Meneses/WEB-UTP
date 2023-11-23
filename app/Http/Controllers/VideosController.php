@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Curso;
 use App\Models\VideosCurso;
+use Exception;
 use Illuminate\Http\Request;
 
 class VideosController extends Controller
@@ -86,5 +87,36 @@ class VideosController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function obtenerVideosDelCurso($cursoId)
+    {
+        try {
+            // Lógica para obtener videos del curso
+            $videos = $this->obtenerVideos($cursoId);
+            return response()->json($videos);
+        } catch (Exception $e) {
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
+    }
+
+    private function obtenerVideos($cursoId)
+    {
+        try {
+            // Consulta para obtener los videos asociados al curso
+            $videos = VideosCurso::where('id_curso', $cursoId)->orderBy('orden')->get();
+
+            return $videos->map(function ($video) { // map() es similar a un foreach
+                return [
+                    'id' => $video->id,
+                    'nombre' => $video->nombre,
+                    'url_video' => $video->url_video,
+                    'orden' => $video->orden,
+                ];
+            })->toArray();
+
+        } catch (Exception $e) {
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
     }
 }
