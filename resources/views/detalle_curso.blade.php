@@ -28,7 +28,11 @@
               <form action="/paypal/payment">
                 @csrf
                 <input type="hidden" name="idCurso" value="{{$curso->id}}">
-                <button type="submit" class="btn btn-primary">Compra ahora</button>
+                @if (Auth::user()->is_admin)
+                  <a href="{{ route('cursos.editar', $curso->id) }}" class="btn btn-primary">Editar curso</a>
+                @else
+                  <button type="submit" class="btn btn-primary">Compra ahora</button>
+                @endif
               </form>
             </div>
           </div>

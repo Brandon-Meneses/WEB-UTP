@@ -29,7 +29,14 @@
                 
                 @foreach ($cursos as $curso)
                     <div class="card bg-base-100 shadow-xl max-w-[260px] hover:scale-[1.01] ease-in duration-300">
-                        <figure><img src="{{ $curso->url_imagen }}" alt="{{ $curso->nombre }}" /></figure>
+                        <figure class="relative">
+                          
+                          @if(Auth::check() && Auth::user()->is_admin)
+                            <a href="{{ route('cursos.editar', $curso->id) }}" class="absolute top-0 right-0 bg-blue-500 text-white px-2 py-1 rounded-md text-sm" style="background-color: #87CEEB;">Editar curso</a>
+                          @endif
+
+                          <img src="{{ $curso->url_imagen }}" alt="{{ $curso->nombre }}" />
+                        </figure>
                         <div class="card-body">
 
                             {{-- si el curso ha sido creado hace menos de 30 dias, muestra el tag de nuevo --}}
