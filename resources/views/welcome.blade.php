@@ -118,7 +118,7 @@
                     "error": "#e1376a",
                 }, --}}
 
-                <div class="mx-auto max-w-[160px] text-center py-16">
+                {{-- <div class="mx-auto max-w-[160px] text-center py-16">
                   <p class="font-semibold pb-2">Paleta de colores modo actual</p>
                   <div class="bg-primary text-white p-2 rounded mb-2">primary</div>
                   <div class="bg-secondary text-white p-2 rounded mb-2">secondary</div>
@@ -129,7 +129,7 @@
                   <div class="bg-success text-white p-2 rounded mb-2">success</div>
                   <div class="bg-warning text-white p-2 rounded mb-2">warning</div>
                   <div class="bg-error text-white p-2 rounded mb-2">error</div>
-                </div>
+                </div> --}}
                 
 
 

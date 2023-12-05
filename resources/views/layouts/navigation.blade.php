@@ -47,6 +47,12 @@
                             {{ __('Profile') }}
                         </x-dropdown-link>
 
+                        @if (Auth::user()->is_admin)
+                            <x-dropdown-link :href="route('cursos.gestion')">
+                                {{ __('Gestión de Cursos') }}
+                            </x-dropdown-link>
+                        @endif
+
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
@@ -99,6 +105,12 @@
                 <x-responsive-nav-link :href="route('profile.edit')">
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
+
+                @if (Auth::user()->is_admin)
+                    <x-dropdown-link :href="route('cursos.gestion')">
+                        {{ __('Gestión de Cursos') }}
+                    </x-dropdown-link>
+                @endif
 
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">

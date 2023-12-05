@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="es"data-theme="cupcake">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-        @vite('resources/css/app.css')
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-        <title>Creando Curso - EasyCode</title>
-</head>
-<body>
+<x-app-layout titulo="">
 
   <div class="mt-16 p-8 max-w-md mx-auto bg-white rounded-lg shadow-lg">
     <h2 class="text-2xl font-semibold text-center mb-6">Editar Curso</h2>
@@ -123,6 +112,4 @@
   {{-- cada video que venga de la bd es bocado para su edicion --}}
     
       
-    
-</body>
-</html>
+</x-app-layout>
