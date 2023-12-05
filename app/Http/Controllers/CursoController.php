@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Exception;
 use App\Models\Curso;
-
+use App\Models\Categoria;
 use App\Models\VideosCurso;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
@@ -117,4 +117,22 @@ class CursoController extends Controller
         $curso->delete();
         return redirect("/cursos/gestion");
     }
+    public function mostrarCursos(Request $request)
+    {
+        $categorias = Curso::select('categoria')->distinct()->get();
+
+        // Check the selected radio button value
+        if ($request->has('mostrar_todos') && $request->input('mostrar_todos') == 1) {
+            $cursos = Curso::all();
+        } else {
+            // Get the selected category
+            $selectedCategory = $request->input('categoria');
+
+            // Filter by the selected category
+            $cursos = Curso::where('categoria', $selectedCategory)->get();
+        }
+
+        return view('cursos', compact('categorias', 'cursos'));
+    }
+
 }

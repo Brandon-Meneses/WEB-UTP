@@ -71,6 +71,8 @@ Route::controller(CursoController::class)->group(function(){
     Route::delete('/cursos/eliminar', 'destroy')->middleware('admin');
     
 });
+Route::get('/mostrar-cursos', [CursoController::class, 'mostrarCursos'])->name('mostrar.cursos');
+
 
 // videos
 Route::controller(VideosController::class)->group(function(){

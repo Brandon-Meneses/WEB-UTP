@@ -9,19 +9,30 @@
       <div class="flex flex-col md:flex-row min-h-[80vh]"> 
 
           <!-- Aside (Barra lateral izquierda) -->
-          <aside class="min-w-[185px] max-w-[300px] max-h-56 mx-4 my-16 p-6  shadow-lg rounded-lg mr-auto ml-auto">
+          <aside class="min-w-[185px] max-w-[300px] max-h-56 mx-4 my-16 p-6 shadow-lg rounded-lg mr-auto ml-auto">
             <h2 class="font-bold uppercase text-xl mb-4 text-gray-700">Categorías</h2>
         
-            @foreach ($categorias as $categoria)
-              <label class="flex items-center space-x-2 text-gray-600">
-                <input type="checkbox" class="form-checkbox text-indigo-600">
-                <span>{{$categoria->categoria}}</span>
-              </label>              
-            @endforeach
-
-          </aside>
+            <form action="{{ route('mostrar.cursos') }}" method="GET" id="categoriaForm">
+                <label class="flex items-center space-x-2 text-gray-600">
+                    <input type="radio" name="mostrar_todos" value="1" class="form-radio text-indigo-600" 
+                           {{ Request::get('mostrar_todos') == 1 ? 'checked' : '' }}
+                           onchange="updateCategoriaForm('mostrar_todos', '')">
+                    <span>Todos</span>
+                </label>
         
-
+                @foreach ($categorias as $categoria)
+                    <label class="flex items-center space-x-2 text-gray-600">
+                        <input type="radio" name="categoria" value="{{ $categoria->categoria }}" class="form-radio text-indigo-600" 
+                               {{ Request::get('categoria') == $categoria->categoria ? 'checked' : '' }}
+                               onchange="updateCategoriaForm('categoria', '{{ $categoria->categoria }}')">
+                        <span>{{ $categoria->categoria }}</span>
+                    </label>
+                @endforeach
+            </form>
+        
+            <script src="{{ asset('js/mostrarCursos.js') }}"></script>
+        </aside>
+        
           <!-- Contenido principal (Productos en grilla) -->
           <div class="max-w-max md:w-3/4 p-4 min-h-max mx-auto">
               <h1 class="font-bold uppercase text-2xl mb-4 ml-2">Cursos</h1>
