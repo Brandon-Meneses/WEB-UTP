@@ -25,15 +25,24 @@
               <span class="font-bold text-5xl leading-none align-baseline">{{$curso->precio}}</span>
             </div>
             <div class="inline-block align-bottom mt-4">
-              <form action="/paypal/payment">
-                @csrf
-                <input type="hidden" name="idCurso" value="{{$curso->id}}">
-                @if (Auth::user()->is_admin)
-                  <a href="{{ route('cursos.editar', $curso->id) }}" class="btn btn-primary">Editar curso</a>
-                @else
-                  <button type="submit" class="btn btn-primary">Compra ahora</button>
-                @endif
-              </form>
+              @if (Auth::check())
+                  @if (Auth::user()->is_admin)
+                      <a href="{{ route('cursos.editar', $curso->id) }}" class="btn btn-primary">Editar curso</a>
+                  @else
+                      <form action="/paypal/payment">
+                          @csrf
+                          <input type="hidden" name="idCurso" value="{{ $curso->id }}">
+                          <button type="submit" class="btn btn-primary">Compra ahora</button>
+                      </form>
+                  @endif
+              @else
+                  <form action="/paypal/payment">
+                      @csrf
+                      <input type="hidden" name="idCurso" value="{{ $curso->id }}">
+                      <button type="submit" class="btn btn-primary">Compra ahora</button>
+                  </form>
+              @endif
+
             </div>
           </div>
         </div>
