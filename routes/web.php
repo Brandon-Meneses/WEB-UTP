@@ -64,9 +64,9 @@ Route::controller(CursoController::class)->group(function(){
     
     Route::get('/cursos', 'index')->name('cursos');
     Route::get('/cursos/gestion', 'create')->middleware('admin');
-    Route::post('/cursos/gestion', 'store')->middleware('admin');
+    Route::post('/cursos/gestion', 'store')->middleware('admin')->name('cursos.gestion');
     Route::get('/cursos/{idCurso}', 'show');
-    Route::get('/cursos/{idCurso}/editar', 'edit')->middleware('admin');
+    Route::get('/cursos/{idCurso}/editar', 'edit')->middleware('admin')->name('cursos.editar');
     Route::patch('/cursos/{idCurso}', 'update')->middleware('admin'); // patch es para actualizar, en el html usar el metodo POST y agregar @method('PATCH') en el formulario
     Route::delete('/cursos/eliminar', 'destroy')->middleware('admin');
     
