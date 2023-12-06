@@ -1,11 +1,11 @@
 function obtenerVideosDelCurso(cursoId) {
   fetch(`/api/curso/${cursoId}/videos`)
       .then(response => response.json())
-      .then(data => mostrarVideos(data))
+      .then(data => mostrarVideos(data, cursoId))
       .catch(error => console.error('Error al obtener los videos', error));
 }
 
-function mostrarVideos(videos) {
+function mostrarVideos(videos, cursoId) {
     // Limpia el contenedor de videos
     const videosContainer = document.getElementById('videos-container');
     videosContainer.innerHTML = '';
@@ -19,18 +19,16 @@ function mostrarVideos(videos) {
                     <thead>
                         <tr>
                             <th class="border border-gray-300 px-4 py-2">N°</th>
-                            <th class="border border-gray-300 px-4 py-2">Contenido</th>
-                            <th class="border border-gray-300 px-4 py-2">Video</th>
+                            <th class="border border-gray-300 px-4 py-2">Contenido</th>                            
                         </tr>
                     </thead>
                     <tbody>
                         ${videos.map(video => `
                             <tr>
                                 <td class="border border-gray-300 px-4 py-2">${video.orden}</td>
-                                <td class="border border-gray-300 px-4 py-2">${video.nombre}</td>
                                 <td class="border border-gray-300 px-4 py-2">
-                                    <a href="${video.url_video}" target="_blank" style="cursor: pointer; color: blue; text-decoration: underline;">
-                                        ${video.url_video}
+                                    <a href="cursos/${cursoId}/${video.orden}" target="_blank" style="cursor: pointer; color: blue; text-decoration: underline;">
+                                        ${video.nombre}
                                     </a>
                                 </td>
                             </tr>

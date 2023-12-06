@@ -135,4 +135,12 @@ class CursoController extends Controller
         return view('cursos', compact('categorias', 'cursos'));
     }
 
+    public function verVideo(Request $request, string $idCurso, string $numVideo)
+    {
+        $curso = Curso::find($idCurso);
+        $video = VideosCurso::where('orden', $numVideo)->where('id_curso', $idCurso)->first();
+        $videos = VideosCurso::where('id_curso', $idCurso)->orderBy('orden')->get();
+
+        return view('video-detalle-curso')->with('curso', $curso)->with('video', $video)->with('videos', $videos);
+    }
 }

@@ -6,24 +6,16 @@
     </x-slot>
     <div class="min-h-[60vh]">
 
-        @include('components.promo-carrusel')
+        {{-- @include('components.promo-carrusel') --}}
         @include('carrusel')
 
+
+        <!-- Contenedor para mostrar los videos -->
+        <div id="videos-container"></div>
+
     </div>
+  
 
-
-    <!-- Contenedor para mostrar los videos -->
-    <div id="videos-container"></div>
-    {{-- Estilos para cambiar el cursor --}}
-    <style>
-        .carousel-item {
-            cursor: pointer;
-        }
-
-        .carousel-item:hover {
-            cursor: pointer; 
-        }
-    </style>
     {{-- ruta de dashboard.js para anexar a este blade --}}
     <script src="{{ asset('js/dashboard.js') }}"></script>
 </x-app-layout>
