@@ -27,7 +27,7 @@ function mostrarVideos(videos, cursoId) {
                             <tr>
                                 <td class="border border-gray-300 px-4 py-2">${video.orden}</td>
                                 <td class="border border-gray-300 px-4 py-2">
-                                    <a href="cursos/${cursoId}/${video.orden}" target="_blank" style="cursor: pointer; color: blue; text-decoration: underline;">
+                                    <a href="cursos/${cursoId}/${video.orden}" style="cursor: pointer; color: blue;">
                                         ${video.nombre}
                                     </a>
                                 </td>
