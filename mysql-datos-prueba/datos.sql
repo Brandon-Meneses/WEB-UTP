@@ -15,18 +15,18 @@ INSERT INTO cursos (nombre, descripcion, categoria, precio, url_imagen, created_
 ('Desarrollo de Aplicaciones con Java', 'Aprende Java y desarrolla aplicaciones empresariales robustas.', 'Frontend', 79.99, 'https://i.postimg.cc/W4hhNtD0/java.jpg', '2023-11-05 22:55:33');
 
 INSERT INTO links_videos (id_curso, nombre, url_video, orden) VALUES
-(1, 'Introducción a HTML', 'https://www.youtube.com/watch?v=AEiRa5xZaZw', 1),
-(1, 'CSS Avanzado', 'https://www.youtube.com/watch?v=UzYgNZlKA4k', 2),
-(2, 'Python Orientado a Objetos', 'https://www.youtube.com/watch?v=4dKuDEWEAmo', 1),
-(2, 'Python Funcional', 'https://www.youtube.com/watch?v=4dKuDEWEAmo', 2),
-(3, 'React Native Fundamentals', 'https://www.youtube.com/watch?v=4dKuDEWEAmo', 1),
-(3, 'React Native Avanzado', 'https://www.youtube.com/watch?v=4dKuDEWEAmo', 2),
-(4, 'SQL Básico', 'https://www.youtube.com/watch?v=4dKuDEWEAmo', 1),
-(4, 'SQL Avanzado', 'https://www.youtube.com/watch?v=AEiRa5xZaZw', 2),
-(5, 'Node.js Express', 'https://www.youtube.com/watch?v=AEiRa5xZaZw', 1),
-(5, 'Node.js MongoDB', 'https://www.youtube.com/watch?v=AEiRa5xZaZw', 2),
-(6, 'Java Enterprise', 'https://www.youtube.com/watch?v=AEiRa5xZaZw', 1),
-(6, 'Java Spring', 'https://www.youtube.com/watch?v=4dKuDEWEAmo', 2);
+(1, 'Introducción a HTML', 'https://www.youtube.com/embed/AEiRa5xZaZw?si=nOHu6OGovwwVSOJP', 1),
+(1, 'CSS Avanzado', 'https://www.youtube.com/embed/AEiRa5xZaZw?si=nOHu6OGovwwVSOJP', 2),
+(2, 'Python Orientado a Objetos', 'https://www.youtube.com/embed/AEiRa5xZaZw?si=nOHu6OGovwwVSOJP', 1),
+(2, 'Python Funcional', 'https://www.youtube.com/embed/AEiRa5xZaZw?si=nOHu6OGovwwVSOJP', 2),
+(3, 'React Native Fundamentals', 'https://www.youtube.com/embed/AEiRa5xZaZw?si=nOHu6OGovwwVSOJP', 1),
+(3, 'React Native Avanzado', 'https://www.youtube.com/embed/AEiRa5xZaZw?si=nOHu6OGovwwVSOJP', 2),
+(4, 'SQL Básico', 'https://www.youtube.com/embed/AEiRa5xZaZw?si=nOHu6OGovwwVSOJP', 1),
+(4, 'SQL Avanzado', 'https://www.youtube.com/embed/AEiRa5xZaZw?si=nOHu6OGovwwVSOJP', 2),
+(5, 'Node.js Express', 'https://www.youtube.com/embed/AEiRa5xZaZw?si=nOHu6OGovwwVSOJP', 1),
+(5, 'Node.js MongoDB', 'https://www.youtube.com/embed/AEiRa5xZaZw?si=nOHu6OGovwwVSOJP', 2),
+(6, 'Java Enterprise', 'https://www.youtube.com/embed/AEiRa5xZaZw?si=nOHu6OGovwwVSOJP', 1),
+(6, 'Java Spring', 'https://www.youtube.com/embed/AEiRa5xZaZw?si=nOHu6OGovwwVSOJP', 2);
 
 
 INSERT INTO compras (id_usuario, id_curso) VALUES
