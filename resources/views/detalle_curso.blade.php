@@ -39,7 +39,7 @@
                   <form action="/paypal/payment">
                       @csrf
                       <input type="hidden" name="idCurso" value="{{ $curso->id }}">
-                      <button type="submit" class="btn btn-primary">Compra ahora</button>
+                      <button type="submit" class="btn btn-primary">Compra ahora!</button>
                   </form>
               @endif
 
